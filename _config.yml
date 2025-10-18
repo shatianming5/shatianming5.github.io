@@ -22,10 +22,10 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Tianming Sha"
-  avatar           : ""
+  avatar           : "images/avatar.png"
   bio              : ""
   location         : "Stony Brook, NY, United States"
-  employer         : "Independent / Student Researcher"
+  employer         : "Student Researcher"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=FQNrxf0AAAAJ&hl=zh-CN"
   email            : "Tianming.sha@stonybrook.edu"
