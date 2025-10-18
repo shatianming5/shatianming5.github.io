@@ -1,4 +1,3 @@
-
 <h1 align="center">
 AcadHomepage
 </h1>
@@ -12,8 +11,7 @@ AcadHomepage
 
 </div>
 
-<p align="center">一个现代、响应式的个人学术主页</p>
-
+<p align="center">一个现代、响应式的学术个人主页模板</p>
 
 <p align="center">
     <br>
@@ -21,47 +19,43 @@ AcadHomepage
     <br>
 </p>
 
-一些例子：
-- [样例页面](https://rayeren.github.io/acad-homepage.github.io/)
-- [作者的个人主页](https://rayeren.github.io/)
+示例：
+- [演示页面](https://rayeren.github.io/acad-homepage.github.io/)
+- [作者主页](https://rayeren.github.io/)
 
-## 主要特点
-- **自动更新谷歌学术引用**: 借助谷歌学术爬虫和github action功能，本仓库可以自动更新作者的引用数和论文引用数。
-- **支持谷歌Analytics**: 你可以通过简单的配置来实现使用谷歌Analytics跟踪网页的流量。
-- **响应式的**: 此主页会针对不同的屏幕尺寸自动调整布局。
-- **美观而简约**: 此主页美观而简约，适合个人学术主页的搭建。
-- **搜索引擎优化**: 搜索引擎优化 (SEO) 帮助搜索引擎轻松找到您在主页上发布的信息，然后将其与类似网站进行排名，并获得排名优势。
+## 主要特性
+- **Google Scholar 引用数自动更新**：通过 Google Scholar 爬虫与 GitHub Action 定时更新引用统计。
+- **支持 Google Analytics**：只需在 `_config.yml` 中配置即可接入访问统计。
+- **高度响应式**：在桌面与移动端都拥有良好展示效果。
+- **设计简洁**：默认样式适合学术主页，可轻松替换为自己的信息。
+- **良好 SEO**：内置搜索引擎优化配置，帮助搜索引擎收录并排名。
 
 ## 快速开始
-
-1. Fork本仓库到`USERNAME/USERNAME.github.io`，其中`USERNAME`是你的github用户名。
-1. 配置谷歌学术引用爬虫：
-    1. 在你的谷歌学术引用页面的url里找到你的谷歌学术ID：例如，在url https://scholar.google.com/citations?user=SCHOLAR_ID 中，`SCHOLAR_ID`部分即为你的谷歌学术ID。
-    1. 在github本仓库页面的`Settings -> Secrets -> Actions -> New repository secret`中，添加`GOOGLE_SCHOLAR_ID`变量：`name=GOOGLE_SCHOLAR_ID`、`value=SCHOLAR_ID`。
-    1. 在github本仓库页面的`Action`中，点击*"I understand my workflows, go ahead and enable them"*启用workflows by clicking *"。本action将会谷歌学术引用的统计量数据`gs_data.json`到本仓库的`google-scholar-stats`分支中。每次修改main分支的内容会触发该action。本action也会在每天08:00 UTC定时触发。
-1. 使用 [favicon-generator](https://redketchup.io/favicon-generator)生成favicon（网页icon文件），并下载所有文件到`REPO/images`。
-1. 修改主页配置文件[_config.yml](../_config.yml):
-    1. `title`: 主页标题
-    1. `description`: 主页的描述
-    1. `repository`: USER_NAME/REPO_NAME  
-    1. `google_analytics_id` (可选的): 谷歌Analytics ID
-    1. SEO相关的键值 (可选的): 从搜索引擎的控制台里获得对应的ID (例如：Google, Bing and Baidu)，然后粘贴到这里。
-    1. `author`: 主页作者信息，包括其他网页、Email、所在城市、大学等。
-    1. `google_scholar_stats_use_cdn`: 使用CDN读取存储于`https://raw.githubusercontent.com/`的google scholar引用统计数据，防止中国大陆地区被墙无法访问的情况。但是CDN有缓存，因此`google_scholar_stats_use_cdn : True`时，引用数据更新会有延迟。
-    1. 更多的配置信息在注释中有详细描述。
-1. 将你的主页内容添加到 [_pages/about.md](../_pages/about.md).
-1. 你的主页将会被部署到`https://USERNAME.github.io`.
+1. Fork 本仓库并改名为 `USERNAME.github.io`，其中 `USERNAME` 为你的 GitHub 用户名。
+2. 配置 Google Scholar 引用数自动更新：
+   1. 在浏览器中打开你的 Google Scholar 主页，复制 URL 中的 `user` 参数，例如 `https://scholar.google.com/citations?user=SCHOLAR_ID`。
+   2. 在 GitHub 仓库的 `Settings -> Secrets -> Actions` 中新建 `GOOGLE_SCHOLAR_ID`，值为上一步复制的 `SCHOLAR_ID`。
+   3. 打开仓库的 `Actions` 页面，启用工作流。此工作流会在提交更新或每天 08:00 UTC 自动生成 `gs_data.json` 并写入 `google-scholar-stats` 分支。
+3. 使用 [favicon-generator](https://redketchup.io/favicon-generator) 生成站点图标，并替换 `images/` 目录下的 favicon 文件。
+4. 编辑 `_config.yml`：
+   - `title`：网站标题（通常为个人姓名）。
+   - `description`：网站描述或一句话简介。
+   - `repository`：仓库路径，例如 `USERNAME/USERNAME.github.io`。
+   - `google_analytics_id`：可选，Google Analytics 统计 ID。
+   - `author`：作者信息（头像、邮箱、GitHub、学校/城市等）。
+   - `google_scholar_stats_use_cdn`：若访问 GitHub Raw 较慢，可改为 `true` 使用 CDN。
+5. 根据需要编辑 `_pages/about.md`，支持 Markdown 和 HTML 混写。
+6. 推送至 `main` 分支后，GitHub Pages 会自动构建发布。
 
 ## 本地调试
+1. 克隆仓库：`git clone https://github.com/USERNAME/USERNAME.github.io.git`。
+2. 按 [Jekyll 官方文档](https://jekyllrb.com/docs/installation/) 安装 Ruby、Bundler、GCC、Make 等依赖。
+3. 安装依赖：`bundle install`。
+4. 启动本地服务：`bash run_server.sh`（或 `bundle exec jekyll serve --livereload`）。
+5. 访问 [http://127.0.0.1:4000](http://127.0.0.1:4000)，修改文件后浏览器会自动刷新。
 
-1. 使用`git clone`将本项目克隆到本地。
-1. 安装Jekyll的构建环境，包括`Ruby`、`RubyGems`、`GCC`和`Make`。可参考[该教程](https://jekyllrb.com/docs/installation/#requirements)。
-1. 运行 `bash run_server.sh` 来启动Jekyll实时重载服务器。
-1. 在浏览器里打开 [http://127.0.0.1:4000](http://127.0.0.1:4000)。如果你修改了网页的源码，服务器会自动重新编译并刷新页面。
-1. 当你修改完毕你的页面以后, 使用`git`命令，`commit`你的改动并`push`到你的github仓库中。
-
-# Acknowledges
-
-- AcadHomepage incorporates Font Awesome, which is distributed under the terms of the SIL OFL 1.1 and MIT License.
-- AcadHomepage is influenced by the github repo [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), which is distributed under the MIT License.
-- AcadHomepage is influenced by the github repo [academicpages/academicpages.github.io](https://github.com/academicpages/academicpages.github.io), which is distributed under the MIT License.
+## 致谢
+- [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io)
+- [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes)
+- [academicpages](https://github.com/academicpages/academicpages.github.io)
+- [Font Awesome](https://fontawesome.com)
