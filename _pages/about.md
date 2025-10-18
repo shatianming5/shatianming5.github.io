@@ -1,4 +1,4 @@
-﻿---
+---
 permalink: /
 title: ""
 excerpt: ""
@@ -16,7 +16,7 @@ Mission-driven researcher focused on **AI safety and reliability**: fairness und
 <span class='anchor' id='education'></span>
 
 # Education
-- **Sun Yat-sen University**, Guangzhou, China -- *B.S., Computer Science (English Program); GPA 3.4/4.0* (Sep 2023 - Aug 2025)
+- **Sun Yat-sen University**, Guangzhou, China -- *B.S., Computer Science; GPA 3.4/4.0* (Sep 2023 - Aug 2025)
 - **Stony Brook University**, Stony Brook, NY -- *B.S., Applied Mathematics and Statistics (AMS); GPA 4.0/4.0* (Aug 2025 - Present)
 
 <span class='anchor' id='publications'></span>
@@ -43,4 +43,5 @@ Mission-driven researcher focused on **AI safety and reliability**: fairness und
 - **China National Olympiad in Informatics (NOI) Winter Camp 2022** -- Silver Medal (roughly comparable to USACO Platinum, informal).
 - **NOIP 2021** -- Provincial First Prize (Guangdong) (roughly comparable to USACO Gold, informal).
 - **National College Student Mathematical Modeling Competition 2024** -- Team Leader/Member, Provincial First Prize.
+
 
