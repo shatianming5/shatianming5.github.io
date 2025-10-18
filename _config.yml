@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Tianming (Tommy) Sha"
-description              : "AI Safety & Reliability Researcher"
+description              : ""
 repository               : "shatianming5/shatianming5.github.io"
 google_scholar_stats_use_cdn : false 
 
@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Tianming (Tommy) Sha"
   avatar           : ""
-  bio              : "AI safety and reliability researcher focused on agentic systems."
+  bio              : ""
   location         : "Stony Brook, NY, United States"
   employer         : "Independent / Student Researcher"
   pubmed           : 
