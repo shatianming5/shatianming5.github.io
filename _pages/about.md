@@ -11,7 +11,7 @@ redirect_from:
 <span class='anchor' id='summary'></span>
 
 # Summary
-Mission-driven researcher focused on **AI safety and reliability**: fairness under distribution shift, interpretable modeling, safety evaluations for *agentic* systems, and governance-aligned ML. End-to-end experience shipping ML in high-stakes and regulated settings; care deeply about auditability, robustness, and reproducibility.
+Mission-driven undergraduate student researcher at Stony Brook University, motivated to pursue challenging, high-impact problems across a rich spectrum of AI topics. I am grateful to be currently advised by Dr. Chenyu You, whose mentorship fuels this journey, and to have been previously guided by Drs. Keze Wang and Hejun Wu during two formative years at Sun Yat-sen University’s HCP Lab—a foundation that keeps me exploring widely and actively seeking new collaborations.
 
 <span class='anchor' id='education'></span>
 
