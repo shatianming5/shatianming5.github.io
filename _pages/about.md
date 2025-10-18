@@ -22,12 +22,6 @@ I am an undergraduate student in computer science at the [University of Minnesot
 
 Previously my research focused on learning with noisy labels, semi-supervised learning, and test-time adaptation. I am currently interested in multimodal large models, reinforcement learning, embodied instruction following, and prompt learning.
 
-<span class='anchor' id='experience'></span>
-
-# Experience
-- *Dec 2024 &ndash; present*, Sun Yat-sen University, HCP Lab, Visiting Student  
-  - Research focus: multimodal large models, reinforcement learning, and embodied instruction following.
-
 <span class='anchor' id='-news'></span>
 
 # News
