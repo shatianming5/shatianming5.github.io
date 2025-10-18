@@ -1,3 +1,4 @@
+﻿
 <h1 align="center">
 AcadHomepage
 </h1>
@@ -11,7 +12,8 @@ AcadHomepage
 
 </div>
 
-<p align="center">一个现代、响应式的学术个人主页模板</p>
+<p align="center">Σ╕ÇΣ╕¬τÄ░Σ╗úπÇüσôìσ║öσ╝ÅτÜäΣ╕¬Σ║║σ¡ªµ£»Σ╕╗Θí╡</p>
+
 
 <p align="center">
     <br>
@@ -19,43 +21,47 @@ AcadHomepage
     <br>
 </p>
 
-示例：
-- [演示页面](https://rayeren.github.io/acad-homepage.github.io/)
-- [作者主页](https://rayeren.github.io/)
+Σ╕ÇΣ║¢Σ╛ïσ¡É∩╝Ü
+- [µá╖Σ╛ïΘí╡Θ¥ó](https://rayeren.github.io/acad-homepage.github.io/)
+- [Σ╜£ΦÇàτÜäΣ╕¬Σ║║Σ╕╗Θí╡](https://rayeren.github.io/)
 
-## 主要特性
-- **Google Scholar 引用数自动更新**：通过 Google Scholar 爬虫与 GitHub Action 定时更新引用统计。
-- **支持 Google Analytics**：只需在 `_config.yml` 中配置即可接入访问统计。
-- **高度响应式**：在桌面与移动端都拥有良好展示效果。
-- **设计简洁**：默认样式适合学术主页，可轻松替换为自己的信息。
-- **良好 SEO**：内置搜索引擎优化配置，帮助搜索引擎收录并排名。
+## Σ╕╗Φªüτë╣τé╣
+- **Φç¬σè¿µ¢┤µû░Φ░╖µ¡îσ¡ªµ£»σ╝òτö¿**: σÇƒσè⌐Φ░╖µ¡îσ¡ªµ£»τê¼ΦÖ½σÆîgithub actionσèƒΦâ╜∩╝îµ£¼Σ╗ôσ║ôσÅ»Σ╗ÑΦç¬σè¿µ¢┤µû░Σ╜£ΦÇàτÜäσ╝òτö¿µò░σÆîΦ«║µûçσ╝òτö¿µò░πÇé
+- **µö»µîüΦ░╖µ¡îAnalytics**: Σ╜áσÅ»Σ╗ÑΘÇÜΦ┐çτ«ÇσìòτÜäΘàìτ╜«µ¥Ñσ«₧τÄ░Σ╜┐τö¿Φ░╖µ¡îAnalyticsΦ╖ƒΦ╕¬τ╜æΘí╡τÜäµ╡üΘçÅπÇé
+- **σôìσ║öσ╝ÅτÜä**: µ¡ñΣ╕╗Θí╡Σ╝ÜΘÆêσ»╣Σ╕ìσÉîτÜäσ▒Åσ╣òσ░║σ»╕Φç¬σè¿Φ░âµò┤σ╕âσ▒ÇπÇé
+- **τ╛ÄΦºéΦÇîτ«Çτ║ª**: µ¡ñΣ╕╗Θí╡τ╛ÄΦºéΦÇîτ«Çτ║ª∩╝îΘÇéσÉêΣ╕¬Σ║║σ¡ªµ£»Σ╕╗Θí╡τÜäµÉ¡σ╗║πÇé
+- **µÉ£τ┤óσ╝òµôÄΣ╝ÿσîû**: µÉ£τ┤óσ╝òµôÄΣ╝ÿσîû (SEO) σ╕«σè⌐µÉ£τ┤óσ╝òµôÄΦ╜╗µ¥╛µë╛σê░µé¿σ£¿Σ╕╗Θí╡Σ╕èσÅæσ╕âτÜäΣ┐íµü»∩╝îτä╢σÉÄσ░åσà╢Σ╕Äτ▒╗Σ╝╝τ╜æτ½ÖΦ┐¢ΦíîµÄÆσÉì∩╝îσ╣╢ΦÄ╖σ╛ùµÄÆσÉìΣ╝ÿσè┐πÇé
 
-## 快速开始
-1. Fork 本仓库并改名为 `USERNAME.github.io`，其中 `USERNAME` 为你的 GitHub 用户名。
-2. 配置 Google Scholar 引用数自动更新：
-   1. 在浏览器中打开你的 Google Scholar 主页，复制 URL 中的 `user` 参数，例如 `https://scholar.google.com/citations?user=SCHOLAR_ID`。
-   2. 在 GitHub 仓库的 `Settings -> Secrets -> Actions` 中新建 `GOOGLE_SCHOLAR_ID`，值为上一步复制的 `SCHOLAR_ID`。
-   3. 打开仓库的 `Actions` 页面，启用工作流。此工作流会在提交更新或每天 08:00 UTC 自动生成 `gs_data.json` 并写入 `google-scholar-stats` 分支。
-3. 使用 [favicon-generator](https://redketchup.io/favicon-generator) 生成站点图标，并替换 `images/` 目录下的 favicon 文件。
-4. 编辑 `_config.yml`：
-   - `title`：网站标题（通常为个人姓名）。
-   - `description`：网站描述或一句话简介。
-   - `repository`：仓库路径，例如 `USERNAME/USERNAME.github.io`。
-   - `google_analytics_id`：可选，Google Analytics 统计 ID。
-   - `author`：作者信息（头像、邮箱、GitHub、学校/城市等）。
-   - `google_scholar_stats_use_cdn`：若访问 GitHub Raw 较慢，可改为 `true` 使用 CDN。
-5. 根据需要编辑 `_pages/about.md`，支持 Markdown 和 HTML 混写。
-6. 推送至 `main` 分支后，GitHub Pages 会自动构建发布。
+## σ┐½ΘÇƒσ╝Çσºï
 
-## 本地调试
-1. 克隆仓库：`git clone https://github.com/USERNAME/USERNAME.github.io.git`。
-2. 按 [Jekyll 官方文档](https://jekyllrb.com/docs/installation/) 安装 Ruby、Bundler、GCC、Make 等依赖。
-3. 安装依赖：`bundle install`。
-4. 启动本地服务：`bash run_server.sh`（或 `bundle exec jekyll serve --livereload`）。
-5. 访问 [http://127.0.0.1:4000](http://127.0.0.1:4000)，修改文件后浏览器会自动刷新。
+1. Forkµ£¼Σ╗ôσ║ôσê░`USERNAME/USERNAME.github.io`∩╝îσà╢Σ╕¡`USERNAME`µÿ»Σ╜áτÜägithubτö¿µê╖σÉìπÇé
+1. Θàìτ╜«Φ░╖µ¡îσ¡ªµ£»σ╝òτö¿τê¼ΦÖ½∩╝Ü
+    1. σ£¿Σ╜áτÜäΦ░╖µ¡îσ¡ªµ£»σ╝òτö¿Θí╡Θ¥óτÜäurlΘçîµë╛σê░Σ╜áτÜäΦ░╖µ¡îσ¡ªµ£»ID∩╝ÜΣ╛ïσªé∩╝îσ£¿url https://scholar.google.com/citations?user=SCHOLAR_ID Σ╕¡∩╝î`SCHOLAR_ID`Θâ¿σêåσì│Σ╕║Σ╜áτÜäΦ░╖µ¡îσ¡ªµ£»IDπÇé
+    1. σ£¿githubµ£¼Σ╗ôσ║ôΘí╡Θ¥óτÜä`Settings -> Secrets -> Actions -> New repository secret`Σ╕¡∩╝îµ╖╗σèá`GOOGLE_SCHOLAR_ID`σÅÿΘçÅ∩╝Ü`name=GOOGLE_SCHOLAR_ID`πÇü`value=SCHOLAR_ID`πÇé
+    1. σ£¿githubµ£¼Σ╗ôσ║ôΘí╡Θ¥óτÜä`Action`Σ╕¡∩╝îτé╣σç╗*"I understand my workflows, go ahead and enable them"*σÉ»τö¿workflows by clicking *"πÇéµ£¼actionσ░åΣ╝ÜΦ░╖µ¡îσ¡ªµ£»σ╝òτö¿τÜäτ╗ƒΦ«íΘçÅµò░µì«`gs_data.json`σê░µ£¼Σ╗ôσ║ôτÜä`google-scholar-stats`σêåµö»Σ╕¡πÇéµ»Åµ¼íΣ┐«µö╣mainσêåµö»τÜäσåàσ«╣Σ╝ÜΦºªσÅæΦ»ÑactionπÇéµ£¼actionΣ╣ƒΣ╝Üσ£¿µ»Åσñ⌐08:00 UTCσ«Üµù╢ΦºªσÅæπÇé
+1. Σ╜┐τö¿ [favicon-generator](https://redketchup.io/favicon-generator)τöƒµêÉfavicon∩╝êτ╜æΘí╡iconµûçΣ╗╢∩╝ë∩╝îσ╣╢Σ╕ïΦ╜╜µëÇµ£ëµûçΣ╗╢σê░`REPO/images`πÇé
+1. Σ┐«µö╣Σ╕╗Θí╡Θàìτ╜«µûçΣ╗╢[_config.yml](../_config.yml):
+    1. `title`: Σ╕╗Θí╡µáçΘóÿ
+    1. `description`: Σ╕╗Θí╡τÜäµÅÅΦ┐░
+    1. `repository`: USER_NAME/REPO_NAME  
+    1. `google_analytics_id` (σÅ»ΘÇëτÜä): Φ░╖µ¡îAnalytics ID
+    1. SEOτ¢╕σà│τÜäΘö«σÇ╝ (σÅ»ΘÇëτÜä): Σ╗ÄµÉ£τ┤óσ╝òµôÄτÜäµÄºσê╢σÅ░ΘçîΦÄ╖σ╛ùσ»╣σ║öτÜäID (Σ╛ïσªé∩╝ÜGoogle, Bing and Baidu)∩╝îτä╢σÉÄτ▓ÿΦ┤┤σê░Φ┐ÖΘçîπÇé
+    1. `author`: Σ╕╗Θí╡Σ╜£ΦÇàΣ┐íµü»∩╝îσîàµï¼σà╢Σ╗ûτ╜æΘí╡πÇüEmailπÇüµëÇσ£¿σƒÄσ╕éπÇüσñºσ¡ªτ¡ëπÇé
+    1. `google_scholar_stats_use_cdn`: Σ╜┐τö¿CDNΦ»╗σÅûσ¡ÿσé¿Σ║Ä`https://raw.githubusercontent.com/`τÜägoogle scholarσ╝òτö¿τ╗ƒΦ«íµò░µì«∩╝îΘÿ▓µ¡óΣ╕¡σ¢╜σñºΘÖåσ£░σî║Φó½σóÖµùáµ│òΦ«┐Θù«τÜäµâàσå╡πÇéΣ╜åµÿ»CDNµ£ëτ╝ôσ¡ÿ∩╝îσ¢áµ¡ñ`google_scholar_stats_use_cdn : True`µù╢∩╝îσ╝òτö¿µò░µì«µ¢┤µû░Σ╝Üµ£ëσ╗╢Φ┐ƒπÇé
+    1. µ¢┤σñÜτÜäΘàìτ╜«Σ┐íµü»σ£¿µ│¿ΘçèΣ╕¡µ£ëΦ»ªτ╗åµÅÅΦ┐░πÇé
+1. σ░åΣ╜áτÜäΣ╕╗Θí╡σåàσ«╣µ╖╗σèáσê░ [_pages/about.md](../_pages/about.md).
+1. Σ╜áτÜäΣ╕╗Θí╡σ░åΣ╝ÜΦó½Θâ¿τ╜▓σê░`https://USERNAME.github.io`.
 
-## 致谢
-- [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io)
-- [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes)
-- [academicpages](https://github.com/academicpages/academicpages.github.io)
-- [Font Awesome](https://fontawesome.com)
+## µ£¼σ£░Φ░âΦ»ò
+
+1. Σ╜┐τö¿`git clone`σ░åµ£¼Θí╣τ¢«σàïΘÜåσê░µ£¼σ£░πÇé
+1. σ«ëΦúàJekyllτÜäµ₧äσ╗║τÄ»σóâ∩╝îσîàµï¼`Ruby`πÇü`RubyGems`πÇü`GCC`σÆî`Make`πÇéσÅ»σÅéΦÇâ[Φ»ÑµòÖτ¿ï](https://jekyllrb.com/docs/installation/#requirements)πÇé
+1. Φ┐ÉΦíî `bash run_server.sh` µ¥ÑσÉ»σè¿Jekyllσ«₧µù╢ΘçìΦ╜╜µ£ìσèíσÖ¿πÇé
+1. σ£¿µ╡ÅΦºêσÖ¿Θçîµëôσ╝Ç [http://127.0.0.1:4000](http://127.0.0.1:4000)πÇéσªéµ₧£Σ╜áΣ┐«µö╣Σ║åτ╜æΘí╡τÜäµ║Éτáü∩╝îµ£ìσèíσÖ¿Σ╝ÜΦç¬σè¿Θçìµû░τ╝ûΦ»æσ╣╢σê╖µû░Θí╡Θ¥óπÇé
+1. σ╜ôΣ╜áΣ┐«µö╣σ«îµ»òΣ╜áτÜäΘí╡Θ¥óΣ╗ÑσÉÄ, Σ╜┐τö¿`git`σæ╜Σ╗ñ∩╝î`commit`Σ╜áτÜäµö╣σè¿σ╣╢`push`σê░Σ╜áτÜägithubΣ╗ôσ║ôΣ╕¡πÇé
+
+# Acknowledges
+
+- AcadHomepage incorporates Font Awesome, which is distributed under the terms of the SIL OFL 1.1 and MIT License.
+- AcadHomepage is influenced by the github repo [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), which is distributed under the MIT License.
+- AcadHomepage is influenced by the github repo [academicpages/academicpages.github.io](https://github.com/academicpages/academicpages.github.io), which is distributed under the MIT License.
