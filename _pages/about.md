@@ -21,7 +21,7 @@ Mechanistic and symbolic **interpretability**; **OOD robustness** and subgroup f
 <span class='anchor' id='education'></span>
 
 # Education
-- **Sun Yat-sen University**, Guangzhou, China -- *B.S., Secret Management; GPA 3.8/4.0* (Sep 2023 - Aug 2025)
+- **Sun Yat-sen University**, Guangzhou, China -- *B.S., 计算机科学（英文）; GPA 3.4/4.0* (Sep 2023 - Aug 2025)
 - **Stony Brook University**, Stony Brook, NY -- *B.S., Applied Mathematics and Statistics (AMS); GPA 4.0/4.0* (Aug 2025 - Present)
 
 <span class='anchor' id='publications'></span>
