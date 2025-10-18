@@ -59,7 +59,7 @@
 % =========================================================
 
 % ---------- Personal info ----------
-\def\firstname{Tianming (Tommy)}
+\def\firstname{Tianming}
 \def\lastname{Sha}
 \def\email{Tianming.Sha@stonybrook.edu}
 \def\jasphone{+1 626-262-3288}
