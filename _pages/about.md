@@ -28,6 +28,7 @@ Mission-driven researcher focused on **AI safety and reliability**: fairness und
 - Zhai, H., Chen, X., Zhang, C., **Sha, T.**, Li, R. *Mitigating Cache Noise in Test-Time Adaptation for Large Vision-Language Models.* **ICME 2025** and ICLR 2025 Workshop.
 - Liao, J., **Sha, T.**, Wang, Q., Zhong, Z., Lin, H. *Orthogonal Filtering Alignment Network for Ship Detection in SAR Images Under Frequency Shift Interference.* **IGARSS 2025** (Poster).
 - Cheng, Z., Shen, B., **Sha, T.**, Gao, Y., Dong, Y. *ATOM: A Framework of Detecting Query-Based Model Extraction Attacks for Graph Neural Networks.* **KDD 2025**.
+- Cheng, Z., Xu, H., **Sha, T.**, Zhao, Y., Li, M., Dong, Y. *TRIDENT: An Efficient Data-Free Model Extraction Attack for Graph Neural Networks.* Submitted to **ICLR 2026** (under review).
 
 <span class='anchor' id='skills'></span>
 
