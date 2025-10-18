@@ -29,7 +29,6 @@ Mechanistic and symbolic **interpretability**; **OOD robustness** and subgroup f
 # Publications
 - **Sha, T.**, Wang, H., Wu, H. *FAST-CAD: Fairness-Aware Self-Supervised Framework for Automated Non-Contact Stroke Diagnosis.* Submitted to **Neural Networks** (under review).
 - Chen, Z., **Sha, T.**, Chen, Y., Xu, B., Zheng, Y., Cheng, Z., Liu, J., Wang, K. *DIAL-G^2: Graph-Guided Dialectical Agent for Advanced ESG Reasoning.* Submitted to **AAAI 2026** (under review).
-- Chen, Z., **Sha, T.**, Zhai, H., Wang, K. *Frame-Aware Sparse Attention Design for Scalable Long Video Comprehension in LMMs.* Submitted to **ICLR 2025** (under review).
 - Chen, Z., **Sha, T.**, Tang, Z., Wang, K. *TsKAN: A Transparent Architecture for Improving the Interpretability of Multivariate Time Series Forecasting.* ICLR 2025 Workshop (Poster).
 - Zhai, H., Chen, X., Zhang, C., **Sha, T.**, Li, R. *Mitigating Cache Noise in Test-Time Adaptation for Large Vision-Language Models.* **ICME 2025** and ICLR 2025 Workshop.
 - Liao, J., **Sha, T.**, Wang, Q., Zhong, Z., Lin, H. *Orthogonal Filtering Alignment Network for Ship Detection in SAR Images Under Frequency Shift Interference.* **IGARSS 2025** (Poster).
