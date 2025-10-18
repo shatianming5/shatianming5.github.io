@@ -22,7 +22,7 @@ Mission-driven researcher focused on **AI safety and reliability**: fairness und
 <span class='anchor' id='publications'></span>
 
 # Publications
-- **Sha, T.**, Wang, H., Wu, H. *FAST-CAD: Fairness-Aware Self-Supervised Framework for Automated Non-Contact Stroke Diagnosis.* Submitted to **Neural Networks** (under review).
+- **Sha, T.**, Wang, H., Wu, H. *FAST-CAD: Fairness-Aware Self-Supervised Framework for Automated Non-Contact Stroke Diagnosis.* Submitted to **AAAI 2026** (under review).
 - Chen, Z., **Sha, T.**, Chen, Y., Xu, B., Zheng, Y., Cheng, Z., Liu, J., Wang, K. *DIAL-G^2: Graph-Guided Dialectical Agent for Advanced ESG Reasoning.* Submitted to **AAAI 2026** (under review).
 - Chen, Z., **Sha, T.**, Tang, Z., Wang, K. *TsKAN: A Transparent Architecture for Improving the Interpretability of Multivariate Time Series Forecasting.* ICLR 2025 Workshop (Poster).
 - Zhai, H., Chen, X., Zhang, C., **Sha, T.**, Li, R. *Mitigating Cache Noise in Test-Time Adaptation for Large Vision-Language Models.* **ICME 2025** and ICLR 2025 Workshop.
