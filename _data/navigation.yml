@@ -1,6 +1,6 @@
-﻿# main links links
+# main links links
 main:
-  - title: "Summary"
+  - title: "About Me"
     url: "/#summary"
 
   - title: "Publications"
@@ -14,3 +14,4 @@ main:
 
   - title: "Education"
     url: "/#education"
+

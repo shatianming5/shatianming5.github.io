@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-<span class='anchor' id='summary'></span>
+<span class='anchor' id='about-me'></span>
 
-# Summary
+# About Me
 Mission-driven undergraduate student researcher at Stony Brook University, motivated to pursue challenging, high-impact problems across a rich spectrum of AI topics. I am grateful to be currently advised by Dr. Chenyu You, whose mentorship fuels this journey, and to have been previously guided by Drs. Keze Wang and Hejun Wu during two formative years at Sun Yat-sen University’s HCP Lab—a foundation that keeps me exploring widely and actively seeking new collaborations.
 
 <span class='anchor' id='education'></span>
@@ -44,5 +44,6 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 - **China National Olympiad in Informatics (NOI) Winter Camp 2022** -- Silver Medal (roughly comparable to USACO Platinum, informal).
 - **NOIP 2021** -- Provincial First Prize (Guangdong) (roughly comparable to USACO Gold, informal).
 - **National College Student Mathematical Modeling Competition 2024** -- Team Leader/Member, Provincial First Prize.
+
 
 
