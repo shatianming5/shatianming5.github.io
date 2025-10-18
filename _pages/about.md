@@ -3,102 +3,73 @@ permalink: /
 title: ""
 excerpt: ""
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
+<span class='anchor' id='summary'></span>
 
-<span class='anchor' id='about-me'></span>
+# Summary
+Mission-driven researcher focused on **AI safety and reliability**: fairness under distribution shift, interpretable modeling, safety evaluations for *agentic* systems, and governance-aligned ML. End-to-end experience shipping ML in high-stakes and regulated settings; care deeply about auditability, robustness, and reproducibility.
 
-I am currently an undergraduate student in computer science at the [University of Minnesota Twin Cities](https://twin-cities.umn.edu/). I am also a student researcher at the [HCP Laboratory of Sun Yat-sen University](https://www.sysu-hcp.net/).
+<span class='anchor' id='research-interests'></span>
 
-Previously, my research interests were in learning with noisy labels, semi-supervised learning, and test-time adaptation. My current research interests include Multimodal Large Models, Reinforcement Learning, Embodied Instruction Following and Prompt Learning.
+# Research Interests
+Mechanistic and symbolic **interpretability**; **OOD robustness** and subgroup fairness; **safety evaluations** for agentic LLM systems; governance and compliance-aware ML; reproducible pipelines and evaluations.
 
-# 💻 Experience 
-- *2024.12 - present*, Sun Yat-sen University, HCP Lab, Visiting Student.  
-  - Research Focus: Multimodal Large Models, Reinforcement Learning, Embodied Instruction Following
+<span class='anchor' id='education'></span>
 
+# Education
+- **Sun Yat-sen University**, Guangzhou, China -- *B.S., Secret Management; GPA 3.8/4.0* (Sep 2023 - Aug 2025)
+- **Stony Brook University**, Stony Brook, NY -- *B.S., Applied Mathematics and Statistics (AMS); GPA 4.0/4.0* (Aug 2025 - Present)
 
-# 🔥 News
+<span class='anchor' id='selected-research-and-experience'></span>
 
-- *2025.10*: &nbsp; ✈️ Attended ICCV 2025.
-- *2025.08*: &nbsp; 📝 Submitted one paper on healthcare to AAAI 2026.
-- *2025.06*: &nbsp; 🎉 One paper accepted at ICCV 2025 on test-time adaptation.
-- *2025.05*: &nbsp; 📝 Submitted one paper about video understanding to NeurIPS 2025.
-- *2025.03*: &nbsp; 🎉 One paper accepted at ICME 2025 on test-time adaptation.
-- *2025.03*: &nbsp; 📝 Submitted one paper on test-time adaptation to ICCV 2025.
-- *2025.03*: &nbsp; 🎉 One paper accepted at ICLR 2025 FM-Wild Workshop on test-time adaptation.
-- *2024.12*: &nbsp; 📝 Submitted two papers to ICME 2025, one on test-time adaptation, the other on video understanding of action.
+# Selected Research & Experience
+**FAST-CAD: Fairness-Aware Self-Supervised Non-Contact Stroke Screening** -- Research Lead, Independent Project (Jan 2024 - May 2025)  
+- Proposed **FAST-CAD**, combining **Group-DRO** and **Domain-Adversarial Training** with a projected-invariance subspace; fused *SeCo* video and *HuBERT* audio via an alternating dual-stream Transformer to resist real-world noise and device/posture shifts.  
+- Built a **243-subject** multimodal dataset across **12** demographic subgroups. Achieved **91.2% AUC**, sensitivity **89.1%**, specificity **92.3%**; worst-subgroup AUC within **1.7%** of the mean; generalized to an **86-subject** external cohort.  
+- Released a **reproducible evaluation suite** (subgroup and posture stratification) to quantify robustness and bias under label scarcity and domain shift.
 
-# 📝 Publications (* Equal Contribution)
+**TsKAN: Transparent Multivariate Time-Series Forecasting** -- Research Leader (Jul 2024 - Sep 2024)  
+- Designed **TsKAN**, a KAN-based forecaster with **Multi-Scale Patching** for short- and long-range dependencies; applied **symbolic regression** to convert parameters into human-readable basis functions.  
+- Reached state-of-the-art results on six datasets with up to **14%** improvements (MSE/MAE) over strong baselines; ablations show MSP improves cross-variable coupling and temporal pattern extraction.  
+- Provided **auditable** decomposition of model behavior aligned with domain priors, reducing over-parameterization and opacity.
 
-<div class='paper-box'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge">ICCV 2025 (Poster)</div>
-      <img src='images/MCP.png' alt="Paper Thumbnail" width="100%">
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
+**Luhui Zhiti -- ESG Compliance and Analytics Platform** -- Early-Stage Product Development Lead (May 2024 - Jan 2025)  
+- Built an integrated ESG foundation-model platform: *data acquisition* -> cleaning -> indicator extraction -> enterprise/policy knowledge base -> **RAG with provenance** -> compliance auditing -> reporting/dashboards.  
+- Designed a **multi-agent** pipeline (crawling, extraction, verification, drafting, review, visualization) and a **policy-aligned scoring** framework for the China market; standardized weights, thresholds, and validation rules to reduce reporting variance.  
+- Drove 0->1 MVP planning/delivery and reusable components; platform later secured *seed financing*.
 
-[Multi-Cache enhanced Prototype Learning for Test-Time Generalization of Vision-Language Models](https://arxiv.org/abs/2508.01225)
+**AlphaAgent -- Agentic Factor Mining and Production Pipeline** -- Factor Research and Mining Lead (Nov 2024 - Present)  
+- Productionized an **evaluation-driven** multi-agent loop (idea -> factor -> code -> evaluation) with **AST-level validation**, originality checks, and **complexity regularizers** to curb fragile or duplicative factors.  
+- Integrated CI monitoring (IC/IR, turnover, crowding) and safe rollout procedures; reduced LLM-to-code breakage via **schema checks** and static analysis across the factor library.  
+- Coordinated with brokerage partners on **compliance reviews**, risk controls, and reproducible research-to-production handoff.
 
-<a href="https://zhaihaotian.github.io/MCP-ICCV25/" style="color: purple; text-decoration: none;">Project Page</a>
+<span class='anchor' id='publications'></span>
 
+# Publications
+- **Sha, T.**, Wang, H., Wu, H. *FAST-CAD: Fairness-Aware Self-Supervised Framework for Automated Non-Contact Stroke Diagnosis.* Submitted to **Neural Networks** (under review).
+- Chen, Z., **Sha, T.**, Chen, Y., Xu, B., Zheng, Y., Cheng, Z., Liu, J., Wang, K. *DIAL-G^2: Graph-Guided Dialectical Agent for Advanced ESG Reasoning.* Submitted to **AAAI 2026** (under review).
+- Chen, Z., **Sha, T.**, Zhai, H., Wang, K. *Frame-Aware Sparse Attention Design for Scalable Long Video Comprehension in LMMs.* Submitted to **ICLR 2025** (under review).
+- Chen, Z., **Sha, T.**, Tang, Z., Wang, K. *TsKAN: A Transparent Architecture for Improving the Interpretability of Multivariate Time Series Forecasting.* ICLR 2025 Workshop (Poster).
+- Zhai, H., Chen, X., Zhang, C., **Sha, T.**, Li, R. *Mitigating Cache Noise in Test-Time Adaptation for Large Vision-Language Models.* **ICME 2025** and ICLR 2025 Workshop.
+- Liao, J., **Sha, T.**, Wang, Q., Zhong, Z., Lin, H. *Orthogonal Filtering Alignment Network for Ship Detection in SAR Images Under Frequency Shift Interference.* **IGARSS 2025** (Poster).
+- Cheng, Z., Shen, B., **Sha, T.**, Gao, Y., Dong, Y. *ATOM: A Framework of Detecting Query-Based Model Extraction Attacks for Graph Neural Networks.* **KDD 2025**.
 
-*We observed that cache-based test-time adaptation performance is positively correlated with intra-class compactness. To address the unreliability of low-entropy samples under distribution shifts, we propose MCP, which uses an entropy cache for prototype initialization, an align cache to fuse visual and textual information and tighten intra-class distributions, and a negative cache to calibrate high-entropy predictions. We further extend this into the MCP++ framework by introducing cross-modal prototype alignment and residual learning, achieving state-of-the-art generalization on 15 downstream tasks.*
+<span class='anchor' id='skills'></span>
 
-<!-- **Haotian Zhai<sup>*</sup> _et al._ (co-first author)** -->
+# Skills
+- **ML:** PyTorch/JAX, Lightning, DDP/mixed precision, Hydra; data and model cards; Weights & Biases/Weave.
+- **Safety/Evaluations:** subgroup fairness (SPD/EOD/Delta AUC), OOD and shift testing, adversarial/red-team prompting, **AST/static analysis** for LLM-to-code, unit and CI pipelines.
+- **Interpretability:** TransformerLens/attribution, sparse autoencoders (SAEs), **symbolic regression**.
+- **Governance/Data:** provenance tracking, PII scrubbing, policy-aligned labeling and QA, reproducible experiment management.
 
-</div>
-</div>
+<span class='anchor' id='awards-and-honors'></span>
 
-<div class='paper-box'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge">ICME 2025 (Oral)</div>
-      <img src='images/mitigating-cache-noise.png' alt="Paper Thumbnail" width="100%">
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-[Mitigating Cache Noise in Test-Time Adaptation for Large Vision-Language Models](https://arxiv.org/abs/2503.18334)
-
-<span style="color:green">Also accepted at ICLR 2025 FM-Wild Workshop</span>
-
-*We analyzed the root causes of the performance gap between zero-shot and few-shot TTA, identifying noisy cache labels as a critical bottleneck. We then propose the CRG framework, which maintains positive and negative visual prototypes alongside text prototypes, employs learnable residuals to align modalities, and leverages Gaussian Discriminant Analysis to dynamically model class distributions and suppress noisy samples. Finally, by jointly minimizing prediction entropy and maximizing inter-prototype distances, CRG achieves superior robustness and generalization across 13 benchmarks..*
-
-<!-- **Haotian Zhai<sup>*</sup> _et al._ (co-first author)** -->
-
-
-</div>
-</div>
-
-# 🔨 Working Project
-- **One Paper about Embodied Instruction Following and LLM Planning** — 
-  TBA
-
-# 📨 Submissions
-- **ActionLMM: A Large Multimodal Model for Detailed Action Description in Long Videos** — 
-  *Introduces a dual-branch Q-Former that jointly learns from raw video frames and 3-D pose sequences, supported by video- and motion-memory banks, and trained on the new 30 k-video ActionCap-30k dataset. ActionLMM delivers fine-grained action captions and surpasses Video-LLaMA and other baselines on VQA, video captioning, and action captioning benchmarks.*   
-
-- **FASMM: Frame-Aware Sparse Multimodal Model for Scalable Long-Video Comprehension** — 
-  *Proposes Frame-Aware Sparse Attention (FASA) with an importance-driven block selector, cutting KV-cache memory by ≈ 8.8 × while retaining fidelity. FASMM processes tens-of-thousands-frame videos end-to-end and achieves state-of-the-art results on multiple long-video understanding tasks.*  
-
-# 🎖 Honors and Awards
-- *2025.05*: &nbsp; 🎉🎉🎉 Selected for the Spring 2025 Dean's List, University of Minnesota.
-
-- *2023.10*: &nbsp; 🎉🎉🎉 Achieved a silver (🥈) and a bronze (🥉) medal at the ICPC Asia Regional Contest.
-
-# 📖 Educations
-- *present - 2027.6 (expected)*, Bachelor of Arts in Computer Science, University of Minnesota Twin Cities
-
-<!-- - *2023.09 - 2024.10*, Bachelor of Engineering in Computer Science, Beijing University of Chemical Technology -->
+# Awards and Honors
+- **China National Olympiad in Informatics (NOI) Winter Camp 2022** -- Silver Medal (roughly comparable to USACO Platinum, informal).
+- **NOIP 2021** -- Provincial First Prize (Guangdong) (roughly comparable to USACO Gold, informal).
+- **National College Student Mathematical Modeling Competition 2024** -- Team Leader/Member, Provincial First Prize.
 
