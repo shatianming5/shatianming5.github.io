@@ -13,11 +13,6 @@ redirect_from:
 # Summary
 Mission-driven researcher focused on **AI safety and reliability**: fairness under distribution shift, interpretable modeling, safety evaluations for *agentic* systems, and governance-aligned ML. End-to-end experience shipping ML in high-stakes and regulated settings; care deeply about auditability, robustness, and reproducibility.
 
-<span class='anchor' id='research-interests'></span>
-
-# Research Interests
-Mechanistic and symbolic **interpretability**; **OOD robustness** and subgroup fairness; **safety evaluations** for agentic LLM systems; governance and compliance-aware ML; reproducible pipelines and evaluations.
-
 <span class='anchor' id='education'></span>
 
 # Education

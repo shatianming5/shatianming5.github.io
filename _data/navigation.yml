@@ -3,9 +3,6 @@ main:
   - title: "Summary"
     url: "/#summary"
 
-  - title: "Research Interests"
-    url: "/#research-interests"
-
   - title: "Publications"
     url: "/#publications"
 
