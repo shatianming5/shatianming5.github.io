@@ -11,7 +11,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 # About Me
-Mission-driven undergraduate student researcher at Stony Brook University, motivated to pursue challenging, high-impact problems across a rich spectrum of AI topics. I am grateful to be currently advised by [Dr. Chenyu You](http://chenyuyou.me/), whose mentorship fuels this journey, and to have been previously guided by [Dr. Keze Wang](https://kezewang.com/) and [Dr. Hejun Wu](https://cse.sysu.edu.cn/teacher/WuHejun) during two formative years at Sun Yat-sen University’s HCP Lab—a foundation that keeps me exploring widely and actively seeking new collaborations.
+Mission-driven undergraduate student researcher at Stony Brook University, motivated to pursue challenging, high-impact problems across a rich spectrum of AI topics. I have been previously guided by [Dr. Keze Wang](https://kezewang.com/) and [Dr. Hejun Wu](https://cse.sysu.edu.cn/teacher/WuHejun) during two formative years at Sun Yat-sen University’s HCP Lab—a foundation that keeps me exploring widely and actively seeking new collaborations.
 
 <span class='anchor' id='education'></span>
 
