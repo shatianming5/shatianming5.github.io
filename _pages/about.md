@@ -16,21 +16,25 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 <span class='anchor' id='education'></span>
 
 # Education
-- **Stony Brook University**, Stony Brook, NY -- *B.S., Applied Mathematics and Statistics (AMS); GPA 4.0/4.0* (Aug 2025 - Present)
-- **Sun Yat-sen University**, Guangzhou, China -- *B.S., Computer Science; GPA 3.4/4.0* (Sep 2023 - Aug 2025)
+- **Stony Brook University**, Stony Brook, NY — *B.S., Applied Mathematics and Statistics (AMS); GPA 4.0/4.0* (Aug 2025 – Present)
+- **Sun Yat-sen University**, Guangzhou, China — *B.S., Computer Science; GPA 3.4/4.0* (Sep 2023 – Aug 2025)
 
 <span class='anchor' id='publications'></span>
 
 # Publications
-- Cheng, Z., Xu, H., **Sha, T.**, Zhao, Y., Li, M., Dong, Y. *TRIDENT: An Efficient Data-Free Model Extraction Attack for Graph Neural Networks.* Submitted to **ICLR 2026** (under review).
-- **Sha, T.**, Wang, H., Wu, H. *FAST-CAD: Fairness-Aware Self-Supervised Framework for Automated Non-Contact Stroke Diagnosis.* **AAAI 2026 (Oral).**
-- Chen, Z., **Sha, T.**, Chen, Y., Xu, B., Zheng, Y., Cheng, Z., Liu, J., Wang, K. *DIAL-G^2: Graph-Guided Dialectical Agent for Advanced ESG Reasoning.* Submitted to **AAAI 2026** (under review).
-- Zhai, H., Chen, X., Zhang, C., **Sha, T.**, Li, R. *Mitigating Cache Noise in Test-Time Adaptation for Large Vision-Language Models.* **ICME 2025 (Oral)** and ICLR 2025 Workshop.
-- Chen, Z., **Sha, T.**, Tang, Z., Wang, K. *TsKAN: A Transparent Architecture for Improving the Interpretability of Multivariate Time Series Forecasting.* ICLR 2025 Workshop (Poster).
+
+## Under Review / Submitted
+- Cheng, Z., Xu, H., **Sha, T.**, Zhao, Y., Li, M., Dong, Y. *TRIDENT: An Efficient Data-Free Model Extraction Attack for Graph Neural Networks.* Submitted to **ICLR 2026** *(under review)*.
+- Chen, Z., **Sha, T.**, Chen, Y., Xu, B., Zheng, Y., Cheng, Z., Liu, J., Wang, K. *DIAL-G^2: Graph-Guided Dialectical Agent for Advanced ESG Reasoning.* Submitted to **AAAI 2026** *(under review)*.
+
+## Accepted & Published
+- **Sha, T.**, Wang, H., Wu, H. *FAST-CAD: Fairness-Aware Self-Supervised Framework for Automated Non-Contact Stroke Diagnosis.* **AAAI 2026 (Oral)**.
 - Cheng, Z., Shen, B., **Sha, T.**, Gao, Y., Dong, Y. *ATOM: A Framework of Detecting Query-Based Model Extraction Attacks for Graph Neural Networks.* **KDD 2025**.
-- Liao, J., **Sha, T.**, Wang, Q., Zhong, Z., Lin, H. *Orthogonal Filtering Alignment Network for Ship Detection in SAR Images Under Frequency Shift Interference.* **IGARSS 2025** (Poster).
+- Zhai, H., Chen, X., Zhang, C., **Sha, T.**, Li, R. *Mitigating Cache Noise in Test-Time Adaptation for Large Vision-Language Models.* **ICME 2025 (Oral)**; **ICLR 2025 Workshop**.
+- Chen, Z., **Sha, T.**, Tang, Z., Wang, K. *TsKAN: A Transparent Architecture for Improving the Interpretability of Multivariate Time Series Forecasting.* **ICLR 2025 Workshop (Poster)**.
+- Liao, J., **Sha, T.**, Wang, Q., Zhong, Z., Lin, H. *Orthogonal Filtering Alignment Network for Ship Detection in SAR Images Under Frequency Shift Interference.* **IGARSS 2025 (Poster)**.
 
 # Awards and Honors
-- **China National Olympiad in Informatics (NOI) Winter Camp 2022** -- Silver Medal (roughly comparable to USACO Platinum, informal).
-- **NOIP 2021** -- Provincial First Prize (Guangdong) (roughly comparable to USACO Gold, informal).
-- **National College Student Mathematical Modeling Competition 2024** -- Team Leader/Member, Provincial First Prize.
+- **China National Olympiad in Informatics (NOI) Winter Camp 2022** — Silver Medal (roughly comparable to USACO Platinum, informal).
+- **NOIP 2021** — Provincial First Prize (Guangdong) (roughly comparable to USACO Gold, informal).
+- **National College Student Mathematical Modeling Competition 2024** — Team Leader/Member, Provincial First Prize.
