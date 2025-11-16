@@ -28,7 +28,7 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 - Chen, Z., **Sha, T.**, Chen, Y., Xu, B., Zheng, Y., Cheng, Z., Liu, J., Wang, K. *DIAL-G^2: Graph-Guided Dialectical Agent for Advanced ESG Reasoning.* Submitted to **AAAI 2026** *(under review)*.
 
 ## Accepted & Published
-- **Sha, T.**, Wang, H., Wu, H. *FAST-CAD: Fairness-Aware Self-Supervised Framework for Automated Non-Contact Stroke Diagnosis.* **AAAI 2026 (Oral)**.
+- **Sha, T.**, Cheng, Z., Zhai, H., Ding, X., Chen, Z., Wang, K. *FAST-CAD: Fairness-Aware Self-Supervised Framework for Automated Non-Contact Stroke Diagnosis.* **AAAI 2026 (Oral)**.
 - Cheng, Z., Shen, B., **Sha, T.**, Gao, Y., Dong, Y. *ATOM: A Framework of Detecting Query-Based Model Extraction Attacks for Graph Neural Networks.* **KDD 2025**.
 - Zhai, H., Chen, X., Zhang, C., **Sha, T.**, Li, R. *Mitigating Cache Noise in Test-Time Adaptation for Large Vision-Language Models.* **ICME 2025 (Oral)**; **ICLR 2025 Workshop**.
 - Chen, Z., **Sha, T.**, Tang, Z., Wang, K. *TsKAN: A Transparent Architecture for Improving the Interpretability of Multivariate Time Series Forecasting.* **ICLR 2025 Workshop (Poster)**.
