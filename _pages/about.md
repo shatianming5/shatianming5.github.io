@@ -38,3 +38,12 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 - **China National Olympiad in Informatics (NOI) Winter Camp 2022** — Silver Medal (roughly comparable to USACO Platinum, informal).
 - **NOIP 2021** — Provincial First Prize (Guangdong) (roughly comparable to USACO Gold, informal).
 - **National College Student Mathematical Modeling Competition 2024** — Team Leader/Member, Provincial First Prize.
+
+# Service
+- **Conference Reviewer**: AAAI 2026, ICLR 2025, ICML 2025, KDD 2025, CVPR 2026.
+- **Journal Reviewer**: IEEE Transactions on Neural Networks and Learning Systems (TNNLS); Neural Networks.
+
+<span class='anchor' id='media'></span>
+
+# Media & Interviews
+- *Interview* on FAST-CAD and fairness-aware non-contact stroke diagnosis (in Chinese). [WeChat feature](https://mp.weixin.qq.com/s/3udnS0W33Bc28qX9DCCVZw).
