@@ -41,7 +41,7 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 - **National College Student Mathematical Modeling Competition 2024** — Team Leader/Member, Provincial First Prize.
 
 # Service
-- **Conference Reviewer**: AAAI 2026, ICLR 2025, ICML 2025, KDD 2025, CVPR 2026.
+- **Conference Reviewer**: AAAI 2026, ICLR 2025, ICML 2025, KDD 2025, CVPR 2026, ICME 2026.
 - **Journal Reviewer**: IEEE Transactions on Neural Networks and Learning Systems (TNNLS); Neural Networks.
 
 <span class='anchor' id='media'></span>
