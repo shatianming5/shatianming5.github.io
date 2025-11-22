@@ -35,6 +35,7 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 - Liao, J., **Sha, T.**, Wang, Q., Zhong, Z., Lin, H. *Orthogonal Filtering Alignment Network for Ship Detection in SAR Images Under Frequency Shift Interference.* **IGARSS 2025 (Poster)**.
 
 # Awards and Honors
+- **AAAI-26 Student Scholarship & Volunteer Program** — Travel scholarship (up to \$1500 USD) and selected student volunteer (AAAI 2026, 1-day service requirement).
 - **China National Olympiad in Informatics (NOI) Winter Camp 2022** — Silver Medal (roughly comparable to USACO Platinum, informal).
 - **NOIP 2021** — Provincial First Prize (Guangdong) (roughly comparable to USACO Gold, informal).
 - **National College Student Mathematical Modeling Competition 2024** — Team Leader/Member, Provincial First Prize.
