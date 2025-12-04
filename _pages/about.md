@@ -11,13 +11,12 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 # About Me
-Mission-driven undergraduate student researcher at Stony Brook University, motivated to pursue challenging, high-impact problems across a rich spectrum of AI topics. I have been previously guided by [Dr. Keze Wang](https://kezewang.com/) and [Dr. Hejun Wu](https://cse.sysu.edu.cn/teacher/WuHejun) during two formative years at Sun Yat-sen University’s HCP Lab—a foundation that keeps me exploring widely and actively seeking new collaborations.
+Mission-driven undergraduate student researcher at Stony Brook University, motivated to pursue challenging, high-impact problems across a rich spectrum of AI topics. I have been previously guided by [Dr. Keze Wang](https://kezewang.com/) during two formative years at Sun Yat-sen University’s HCP Lab—a foundation that keeps me exploring widely and actively seeking new collaborations.
 
 <span class='anchor' id='education'></span>
 
 # Education
 - **Stony Brook University**, Stony Brook, NY — *B.S., Applied Mathematics and Statistics (AMS); GPA 4.0/4.0* (Aug 2025 – Present)
-- **Sun Yat-sen University**, Guangzhou, China — *B.S., Computer Science; GPA 3.4/4.0* (Sep 2023 – Aug 2025)
 
 <span class='anchor' id='publications'></span>
 
