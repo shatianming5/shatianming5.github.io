@@ -44,6 +44,3 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 - **Journal Reviewer**: IEEE Transactions on Neural Networks and Learning Systems (TNNLS); Neural Networks.
 
 <span class='anchor' id='media'></span>
-
-# Media & Interviews
-- *Interview* on FAST-CAD and fairness-aware non-contact stroke diagnosis (in Chinese). [WeChat feature](https://mp.weixin.qq.com/s/3udnS0W33Bc28qX9DCCVZw).
