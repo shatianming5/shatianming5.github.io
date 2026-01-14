@@ -44,3 +44,18 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 - **Journal Reviewer**: IEEE Transactions on Neural Networks and Learning Systems (TNNLS); Neural Networks.
 
 <span class='anchor' id='media'></span>
+
+<span class='anchor' id='photos'></span>
+
+# Photos
+
+<div class="photo-strip" aria-label="Photo gallery">
+  {% assign photos = "3X8A2240.jpg,3X8A2243.jpg,3X8A2247.jpg,3X8A2249.jpg,3X8A2251.jpg,3X8A2266.jpg" | split: "," %}
+  {% for p in photos %}
+    <a class="photo-strip__item" href="{{ '/' | append: p | relative_url }}">
+      <img src="{{ '/' | append: p | relative_url }}" alt="Photo {{ forloop.index }}" loading="lazy" decoding="async">
+    </a>
+  {% endfor %}
+</div>
+
+<p class="small">Click a photo to enlarge.</p>

@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Photos
+   ========================================================================== */
+
+.photo-strip {
+  display: flex;
+  gap: 0.75rem;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0 0.5rem;
+  margin: 1rem 0 0.25rem;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+}
+
+.photo-strip__item {
+  flex: 0 0 auto;
+  display: block;
+  overflow: hidden;
+  border-radius: $border-radius * 2;
+  background: $background-color;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  scroll-snap-align: start;
+  transform: translateZ(0);
+
+  &:focus {
+    @extend %tab-focus;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.photo-strip__item img {
+  display: block;
+  height: clamp(140px, 18vw, 220px);
+  width: auto;
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+  -webkit-transition: $global-transition;
+  transition: $global-transition;
+}
+
+.photo-strip__item:hover img {
+  transform: scale(1.02);
+  box-shadow: none;
+}
+
+.photo-strip__item:active {
+  transform: translateY(0);
+}
+
+@include breakpoint(max-width $small) {
+  .photo-strip {
+    gap: 0.5rem;
+  }
+
+  .photo-strip__item img {
+    height: 160px;
+  }
+}
