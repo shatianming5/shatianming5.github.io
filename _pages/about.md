@@ -16,7 +16,7 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 <span class='anchor' id='education'></span>
 
 # Education
-- **Stony Brook University**, Stony Brook, NY — *B.S., Applied Mathematics and Statistics (AMS); GPA 4.0/4.0
+- **Stony Brook University**, Stony Brook, NY — *B.S., Applied Mathematics and Statistics (AMS);
 
 <span class='anchor' id='publications'></span>
 
