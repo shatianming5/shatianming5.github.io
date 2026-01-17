@@ -23,8 +23,9 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 # Publications
 
 ## Under Review / Submitted
+- Cheng, Z., Li, J., Gao, Y., **Sha, T.**, Tang, Y., Chang, L.-L., Dong, Y. WeatherBench-R: A Text-Only Benchmark for Evaluating Large Language Models over U.S. Weather Events. Submitted to **ACL ARR 2026** (under review).
 - Cheng, Z., Xu, H., **Sha, T.**, Zhao, Y., Li, M., Dong, Y. *TRIDENT: An Efficient Data-Free Model Extraction Attack for Graph Neural Networks.* Submitted to **ICLR 2026** *(under review)*.
-- Chen, Z., **Sha, T.**, Chen, Y., Xu, B., Zheng, Y., Cheng, Z., Liu, J., Wang, K. *DIAL-G^2: Graph-Guided Dialectical Agent for Advanced ESG Reasoning.* Submitted to **AAAI 2026** *(under review)*.
+- Chen, Z., **Sha, T.**, Chen, Y., Xu, B., Zheng, Y., Cheng, Z., Liu, J., Wang, K. *DIAL-G^2: Graph-Guided Dialectical Agent for Advanced ESG Reasoning.* Submitted to **ICLR 2026** *(under review)*.
 
 ## Accepted & Published
 - **Sha, T.**, Cheng, Z., Zhai, H., Ding, X., Chen, Z., Wang, K. *FAST-CAD: Fairness-Aware Self-Supervised Framework for Automated Non-Contact Stroke Diagnosis.* **AAAI 2026 (Oral)**.
