@@ -16,7 +16,7 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 <span class='anchor' id='education'></span>
 
 # Education
-- **Stony Brook University**, Stony Brook, NY — *B.S., Applied Mathematics and Statistics (AMS);
+- **Stony Brook University**, Stony Brook, NY — *B.S., Applied Mathematics and Statistics (AMS); Computer Science AOI*
 
 <span class='anchor' id='publications'></span>
 
@@ -31,6 +31,7 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 - **Sha, T.**, Cheng, Z., Zhai, H., Ding, X., Chen, Z., Wang, K. *FAST-CAD: Fairness-Aware Self-Supervised Framework for Automated Non-Contact Stroke Diagnosis.* **AAAI 2026 (Oral)**.
 - Cheng, Z., Shen, B., **Sha, T.**, Gao, Y., Dong, Y. *ATOM: A Framework of Detecting Query-Based Model Extraction Attacks for Graph Neural Networks.* **KDD 2025**.
 - Zhai, H., Chen, X., Zhang, C., **Sha, T.**, Li, R. *Mitigating Cache Noise in Test-Time Adaptation for Large Vision-Language Models.* **ICME 2025 (Oral)**; **ICLR 2025 Workshop**.
+- Chen, Z., **Sha, T.**, Chen, Y., Xu, B., Zheng, Y., Cheng, Z., Liu, J., Wang, K. *DIAL-G^2: Graph-Guided Dialectical Agent for Advanced ESG Reasoning.* Submitted to **ICLR 2026** *(under review)*.
 - Chen, Z., **Sha, T.**, Tang, Z., Wang, K. *TsKAN: A Transparent Architecture for Improving the Interpretability of Multivariate Time Series Forecasting.* **ICLR 2025 Workshop (Poster)**.
 - Liao, J., **Sha, T.**, Wang, Q., Zhong, Z., Lin, H. *Orthogonal Filtering Alignment Network for Ship Detection in SAR Images Under Frequency Shift Interference.* **IGARSS 2025 (Poster)**.
 
@@ -45,6 +46,11 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 - **Journal Reviewer**: IEEE Transactions on Neural Networks and Learning Systems (TNNLS); Neural Networks.
 
 <span class='anchor' id='media'></span>
+
+<span class='anchor' id='interview'></span>
+
+# Interview
+- **MIT Technology Review China** — *(Developing a non-contact AI tool to predict stroke with >91% accuracy)* — [Read more](https://www.mittrchina.com/news/detail/15485) (Nov 15, 2025)
 
 <span class='anchor' id='photos'></span>
 
