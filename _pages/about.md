@@ -18,6 +18,17 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 # Education
 - **Stony Brook University**, Stony Brook, NY — *B.S., Applied Mathematics and Statistics (AMS); Computer Science AOI*
 
+<span class='anchor' id='experience'></span>
+
+# Experience
+- **Microsoft Research Asia (MSRA)**, Beijing, China — *Research Intern*
+  - Working on [**RD-Agent**](https://github.com/microsoft/RD-Agent) <img src="https://img.shields.io/github/stars/microsoft/RD-Agent?style=social" alt="GitHub stars" style="display:inline; margin:0 0 -3px 4px;"/> — an open-source AI-driven framework that automates data-driven R&D processes, enabling AI to drive data-driven AI.
+
+<span class='anchor' id='projects'></span>
+
+# Projects
+- [**LangSkills**](https://github.com/LabRAI/LangSkills) <img src="https://img.shields.io/github/stars/LabRAI/LangSkills?style=social" alt="GitHub stars" style="display:inline; margin:0 0 -3px 4px;"/> — An evidence-backed skills library with 101,000+ curated skills across 21 domains, extracted from academic papers (PMC, arXiv, eLife) and technical sources (GitHub, StackOverflow). Features full-text search over offline SQLite bundles and an automated LLM-powered generation pipeline with source traceability.
+
 <span class='anchor' id='publications'></span>
 
 # Publications
@@ -45,11 +56,7 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 - **Conference Reviewer**: AAAI 2026, ICLR 2025, ICML 2025, KDD 2025, CVPR 2026, ICME 2026.
 - **Journal Reviewer**: IEEE Transactions on Neural Networks and Learning Systems (TNNLS); Neural Networks.
 
-<span class='anchor' id='media'></span>
-
 <span class='anchor' id='interview'></span>
 
 # Interview
 - **MIT Technology Review China** — *(Developing a non-contact AI tool to predict stroke with >91% accuracy)* — [Read more](https://www.mittrchina.com/news/detail/15485) (Nov 15, 2025)
-
-<p class="small">Click a photo to enlarge.</p>
