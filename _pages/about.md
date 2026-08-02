@@ -70,6 +70,8 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
   <li>Liao, J., <strong>Sha, T.</strong>, Wang, Q., Zhong, Z., Lin, H. <em>Orthogonal Filtering Alignment Network for Ship Detection in SAR Images Under Frequency Shift Interference.</em> <span class="venue workshop">IGARSS 2025</span></li>
 </ul>
 
+<span class='anchor' id='awards'></span>
+
 # <span class="section-icon"><i class="fas fa-trophy"></i></span> Awards and Honors
 
 <ul class="award-list">
@@ -78,6 +80,8 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
   <li><strong>NOIP 2021</strong> — Provincial First Prize (Guangdong) (roughly comparable to USACO Gold).</li>
   <li><strong>National College Student Mathematical Modeling Competition 2024</strong> — Team Leader/Member, Provincial First Prize.</li>
 </ul>
+
+<span class='anchor' id='service'></span>
 
 # <span class="section-icon"><i class="fas fa-hands-helping"></i></span> Service
 

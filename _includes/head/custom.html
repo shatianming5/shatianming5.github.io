@@ -20,166 +20,247 @@
 </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
-<!-- Google Fonts: Inter -->
+<!-- Google Fonts: Inter (UI/body) + Source Serif 4 (display/headings) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 
 <style>
-/* ========== Global Typography ========== */
+/* =====================================================================
+   Refined academic theme — deep navy / slate palette.
+   All colours are declared as custom properties so the dark-mode block
+   at the bottom of this file only has to re-declare the tokens.
+   ===================================================================== */
+:root {
+  --ink:         #16202c;   /* headings                */
+  --body:        #3d4a5a;   /* body copy               */
+  --muted:       #6b7787;   /* secondary / meta text   */
+  --accent:      #1f4e79;   /* deep academic blue      */
+  --accent-2:    #2d6ca8;   /* links, brighter accent  */
+  --accent-soft: #eaf0f7;   /* tinted fills            */
+  --accent-line: #cfdcea;
+  --rule:        #e4e9ef;   /* hairlines               */
+  --surface:     #ffffff;
+  --surface-2:   #f7f9fb;
+  --gold:        #b0812e;
+  --shadow-sm: 0 1px 2px rgba(22,32,44,.04), 0 1px 3px rgba(22,32,44,.05);
+  --shadow-md: 0 4px 6px -2px rgba(22,32,44,.06), 0 12px 28px -10px rgba(22,32,44,.16);
+  --radius: 10px;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--surface);
 }
 
 .page__content {
   font-size: 0.95em;
   line-height: 1.75;
-  color: #2c3e50;
+  color: var(--body);
 }
+
+/* NOTE: scroll offset for the sticky masthead is already handled by the theme
+   via `h1:before, .anchor:before { height: $scroll_offset; margin-top: -$scroll_offset }`
+   in assets/css/main.scss. Do NOT add display/height/scroll-margin overrides on
+   .anchor here -- they stack with that spacer and drag headings off-screen. */
 
 /* ========== Section Headers ========== */
 .page__content h1 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 1.5em;
-  color: #1a1a2e;
-  border-bottom: 2.5px solid #2563eb;
-  padding-bottom: 0.4em;
-  margin-top: 1.6em;
-  margin-bottom: 0.8em;
-  display: flex;
-  align-items: center;
-  gap: 0.4em;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 1.6em;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.42em;
+  margin-top: 1.5em;
+  margin-bottom: 0.9em;
+  position: relative;
 }
 
+/* Short accent segment riding on top of the full-width hairline. */
+.page__content h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 2.6em;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.page__content h1:first-of-type { margin-top: 0.6em; }
+
+/* Icon rendered as a soft tinted chip rather than a bare glyph.
+   inline-flex (not a flex child) so the heading stays display:block and the
+   theme's h1:before scroll spacer keeps behaving like a block spacer. */
 .page__content h1 .section-icon {
-  font-size: 0.85em;
-  color: #2563eb;
-  width: 1.2em;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.65em;
+  height: 1.65em;
+  font-size: 0.6em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  border-radius: 7px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  margin-right: 0.55em;
+  position: relative;
+  top: -0.08em;
 }
 
 .page__content h2 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 1.15em;
-  color: #374151;
+  font-size: 0.82em;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
   border-bottom: none;
-  margin-top: 1.2em;
-}
-
-/* ========== About Me Section ========== */
-.about-text {
-  font-size: 1.02em;
-  line-height: 1.85;
-  color: #374151;
-  padding: 0.8em 0;
-}
-
-/* ========== Cards for Experience / Projects ========== */
-.card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-left: 4px solid #2563eb;
-  border-radius: 8px;
-  padding: 1em 1.2em;
-  margin-bottom: 0.8em;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.card:hover {
-  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
-  transform: translateY(-1px);
-}
-
-.card-title {
-  font-weight: 600;
-  font-size: 1.02em;
-  color: #1e293b;
-  margin-bottom: 0.25em;
-}
-
-.card-subtitle {
-  font-size: 0.88em;
-  color: #64748b;
+  margin-top: 1.7em;
   margin-bottom: 0.5em;
 }
 
+/* ========== About ========== */
+.about-text {
+  font-size: 1.03em;
+  line-height: 1.85;
+  color: var(--body);
+  padding: 0.2em 0 0.6em;
+}
+
+/* ========== Education ========== */
+.edu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  padding: 0.85em 1.1em;
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.edu-item .edu-icon {
+  color: var(--accent);
+  font-size: 1.05em;
+  flex-shrink: 0;
+}
+
+/* ========== Cards (Experience / Projects) ========== */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1.15em 1.35em;
+  margin-bottom: 0.85em;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--accent-line);
+}
+
+.card-title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.12em;
+  color: var(--ink);
+  margin-bottom: 0.3em;
+  letter-spacing: -0.01em;
+}
+
+.card-subtitle {
+  font-size: 0.85em;
+  color: var(--muted);
+  margin-bottom: 0.6em;
+}
+
+.card-subtitle i { color: var(--accent-2); margin-right: 0.15em; }
+
 .card-desc {
-  font-size: 0.92em;
-  color: #475569;
-  line-height: 1.65;
+  font-size: 0.93em;
+  color: var(--body);
+  line-height: 1.7;
   margin: 0;
 }
 
-.card-desc a {
-  color: #2563eb;
-  font-weight: 600;
-}
+.card-desc a, .card-title a { color: var(--accent-2); font-weight: 600; }
 
-/* ========== Publication Venue Tags ========== */
-.venue {
-  display: inline-block;
-  background: #2563eb;
-  color: #fff;
-  font-size: 0.75em;
-  font-weight: 600;
-  padding: 0.15em 0.55em;
-  border-radius: 4px;
-  margin-left: 0.2em;
-  vertical-align: middle;
-  letter-spacing: 0.02em;
-}
-
-.venue.oral {
-  background: #dc2626;
-}
-
-.venue.workshop {
-  background: #7c3aed;
-}
-
-.venue.review {
-  background: #d97706;
-}
-
-/* ========== Publication List ========== */
-.pub-list {
-  list-style: none;
-  padding-left: 0;
-}
+/* ========== Publications ========== */
+.pub-list { list-style: none; padding-left: 0; margin-bottom: 0.4em; }
 
 .pub-list li {
   position: relative;
-  padding: 0.7em 0 0.7em 1.2em;
-  border-bottom: 1px solid #f1f5f9;
-  line-height: 1.65;
+  padding: 0.85em 0.9em 0.85em 1.5em;
+  border-bottom: 1px solid var(--rule);
+  line-height: 1.7;
+  border-radius: 8px;
+  transition: background-color .2s ease;
 }
 
-.pub-list li:last-child {
-  border-bottom: none;
-}
+.pub-list li:last-child { border-bottom: none; }
+.pub-list li:hover { background: var(--surface-2); }
 
+/* Slim accent rule instead of a bullet dot. */
 .pub-list li::before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 1.1em;
-  width: 6px;
-  height: 6px;
-  background: #2563eb;
-  border-radius: 50%;
+  left: 0.35em;
+  top: 1.35em;
+  width: 3px;
+  height: 1.05em;
+  background: var(--accent-line);
+  border-radius: 2px;
+  transition: background-color .2s ease;
 }
 
-/* ========== Award List ========== */
-.award-list {
-  list-style: none;
-  padding-left: 0;
+.pub-list li:hover::before { background: var(--accent); }
+
+/* The author's own name, bolded in the markup. */
+.pub-list li strong { color: var(--accent); }
+
+/* ========== Venue Tags ========== */
+.venue {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent-line);
+  font-size: 0.72em;
+  font-weight: 600;
+  padding: 0.18em 0.6em;
+  border-radius: 5px;
+  margin-left: 0.25em;
+  vertical-align: middle;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
+
+.venue.oral     { background:#fbf0ed; color:#9c3d2c; border-color:#f0d5cd; }
+.venue.workshop { background:#f1eff9; color:#54459b; border-color:#ddd6f0; }
+.venue.review   { background:#fbf4e6; color:#8a6414; border-color:#eee0c2; }
+
+/* ========== Awards ========== */
+.award-list { list-style: none; padding-left: 0; }
 
 .award-list li {
-  padding: 0.45em 0 0.45em 1.6em;
+  padding: 0.5em 0 0.5em 1.9em;
   position: relative;
+  border-bottom: 1px solid transparent;
 }
 
 .award-list li::before {
@@ -188,100 +269,150 @@ body {
   font-weight: 900;
   position: absolute;
   left: 0;
-  color: #f59e0b;
-  font-size: 0.9em;
+  top: 0.5em;
+  color: var(--gold);
+  font-size: 0.88em;
 }
 
+.award-list li strong { color: var(--ink); }
+
 /* ========== Service Tags ========== */
-.service-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4em;
-  margin-top: 0.3em;
-}
+.service-tags { display: flex; flex-wrap: wrap; gap: 0.45em; margin-top: 0.4em; }
 
 .service-tag {
   display: inline-block;
-  background: #eff6ff;
-  color: #1d4ed8;
-  font-size: 0.82em;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.8em;
   font-weight: 500;
-  padding: 0.25em 0.65em;
+  padding: 0.28em 0.8em;
   border-radius: 20px;
-  border: 1px solid #bfdbfe;
+  border: 1px solid var(--accent-line);
+  transition: transform .18s ease, box-shadow .18s ease;
 }
 
-.service-tag.journal {
-  background: #f0fdf4;
-  color: #15803d;
-  border-color: #bbf7d0;
+.service-tag:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+.service-tag.journal { background:#eef5f0; color:#2c6344; border-color:#cfe3d8; }
+
+/* Bare "Conference Reviewer" / "Journal Reviewer" labels. */
+.page__content p > strong:only-child {
+  display: inline-block;
+  font-size: 0.9em;
+  color: var(--muted);
+  font-weight: 600;
+  margin-top: 0.7em;
 }
 
-/* ========== Interview Card ========== */
+/* ========== Interview ========== */
 .interview-card {
   display: flex;
   align-items: flex-start;
-  gap: 1em;
-  background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
-  border: 1px solid #dbeafe;
-  border-radius: 8px;
-  padding: 1em 1.2em;
+  gap: 1.1em;
+  background: linear-gradient(135deg, var(--accent-soft) 0%, var(--surface-2) 100%);
+  border: 1px solid var(--accent-line);
+  border-radius: var(--radius);
+  padding: 1.15em 1.35em;
+  box-shadow: var(--shadow-sm);
 }
 
-.interview-card .interview-icon {
-  font-size: 1.8em;
-  color: #2563eb;
-  flex-shrink: 0;
+.interview-card .interview-icon { font-size: 1.7em; color: var(--accent); flex-shrink: 0; line-height: 1.2; }
+.interview-card .interview-text { font-size: 0.93em; line-height: 1.7; color: var(--body); }
+.interview-card .interview-text strong { color: var(--ink); }
+
+/* ========== Sidebar / author profile ========== */
+.author__avatar img {
+  border: 1px solid var(--rule);
+  box-shadow: 0 0 0 4px var(--surface), 0 6px 20px -6px rgba(22,32,44,.28);
+  transition: transform .3s ease;
+}
+.author__avatar img:hover { transform: scale(1.03); }
+
+.author__name {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
 }
 
-.interview-card .interview-text {
-  font-size: 0.92em;
-  line-height: 1.65;
-  color: #334155;
+.author__urls.social-icons li {
+  padding: 0.32em 0;
+  font-size: 0.88em;
+  color: var(--muted);
 }
 
-/* ========== Education ========== */
-.edu-item {
-  display: flex;
-  align-items: center;
-  gap: 0.6em;
-  padding: 0.5em 0;
-}
+.author__urls.social-icons li a { color: var(--body); transition: color .2s ease; }
+.author__urls.social-icons li a:hover { color: var(--accent-2); }
+.author__urls.social-icons i { color: var(--accent-2); }
 
-.edu-item .edu-icon {
-  color: #2563eb;
-  font-size: 1.1em;
-  flex-shrink: 0;
-}
+/* ========== Masthead ========== */
+.masthead { border-bottom: 1px solid var(--rule); background: rgba(255,255,255,.86); backdrop-filter: saturate(180%) blur(12px); }
+.greedy-nav { background: transparent; }
+.greedy-nav a { font-size: 0.86em; font-weight: 500; color: var(--body); }
+.greedy-nav a:hover { color: var(--accent); }
+.greedy-nav .visible-links a::before { background: var(--accent); height: 2px; }
 
 /* ========== Links ========== */
 .page__content a {
-  color: #2563eb;
+  color: var(--accent-2);
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
+  transition: border-color .2s, color .2s;
 }
+.page__content a:hover { color: var(--accent); border-bottom-color: var(--accent); text-decoration: none; }
 
-.page__content a:hover {
-  border-bottom-color: #2563eb;
-  text-decoration: none;
-}
+/* GitHub star shields sit on the text baseline. */
+.stars-badge { display: inline; margin: 0 0 -3px 4px; }
 
-/* ========== Stars Badge Inline ========== */
-.stars-badge {
-  display: inline;
-  margin: 0 0 -3px 4px;
-}
+/* ========== Entrance animation ========== */
+@keyframes riseIn { from { opacity:0; transform: translateY(10px); } to { opacity:1; transform:none; } }
 
-/* ========== Responsive Adjustments ========== */
+.page__content > h1,
+.page__content > p,
+.page__content > ul,
+.page__content > .card,
+.page__content > .edu-item,
+.page__content > .interview-card,
+.page__content > .service-tags { animation: riseIn .5s ease both; }
+
+/* ========== Responsive ========== */
 @media (max-width: 768px) {
-  .card {
-    padding: 0.8em 1em;
+  .page__content h1 { font-size: 1.38em; }
+  .card, .interview-card { padding: 0.95em 1.05em; }
+  .interview-card { flex-direction: column; gap: 0.6em; }
+  .pub-list li { padding-right: 0; }
+}
+
+/* ========== Dark mode ========== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink:         #e8edf3;
+    --body:        #b7c2ce;
+    --muted:       #8a97a5;
+    --accent:      #7fb0e0;
+    --accent-2:    #9cc6ee;
+    --accent-soft: #17222f;
+    --accent-line: #2a3a4d;
+    --rule:        #232f3d;
+    --surface:     #0e151d;
+    --surface-2:   #131c26;
+    --gold:        #d6a94e;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+    --shadow-md: 0 4px 6px -2px rgba(0,0,0,.45), 0 12px 28px -10px rgba(0,0,0,.6);
   }
-  .interview-card {
-    flex-direction: column;
-    gap: 0.5em;
-  }
+  body, .page, .page__content { background: var(--surface); color: var(--body); }
+  .masthead { background: rgba(14,21,29,.86); }
+  .venue.oral     { background:#2a1a17; color:#e8a596; border-color:#4a2c25; }
+  .venue.workshop { background:#1e1a2e; color:#b6a8e8; border-color:#332c52; }
+  .venue.review   { background:#2a2418; color:#e0c284; border-color:#4a3f24; }
+  .service-tag.journal { background:#14241b; color:#8fcfa8; border-color:#27442f; }
+  .author__avatar img { box-shadow: 0 0 0 4px var(--surface), 0 6px 20px -6px rgba(0,0,0,.7); }
+}
+
+/* ========== Print ========== */
+@media print {
+  .card, .interview-card, .edu-item { box-shadow: none; border: 1px solid #ccc; }
+  .page__content h1 { page-break-after: avoid; }
+  .pub-list li { page-break-inside: avoid; }
 }
 </style>
 

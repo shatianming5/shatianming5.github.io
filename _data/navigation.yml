@@ -1,19 +1,24 @@
-# main links links
+# main links
+# NOTE: every url below must match an explicit `<span class="anchor" id="...">`
+# in _pages/about.md. Do NOT point at Kramdown's auto-generated heading ids --
+# the icon <span> inside each heading makes them render as "-about-me", "-service"
+# etc. (leading hyphen), which is why the old #summary/#skills/#photos links were
+# silently dead.
 main:
-  - title: "About Me"
-    url: "/#summary"
+  - title: "About"
+    url: "/#about-me"
+
+  - title: "Experience"
+    url: "/#experience"
+
+  - title: "Projects"
+    url: "/#projects"
 
   - title: "Publications"
     url: "/#publications"
 
-  - title: "Skills"
-    url: "/#skills"
+  - title: "Awards"
+    url: "/#awards"
 
-  - title: "Awards & Honors"
-    url: "/#awards-and-honors"
-
-  - title: "Education"
-    url: "/#education"
-
-  - title: "Photos"
-    url: "/#photos"
+  - title: "Service"
+    url: "/#service"

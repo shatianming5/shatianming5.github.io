@@ -37,7 +37,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : # e.g., "github username"
+  github           : "shatianming5"
   google_plus      :
   keybase          :
   instagram        :
@@ -91,6 +91,8 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - run_server.sh
+  - .ruby-version
 keep_files:
   - .git
   - .svn
