@@ -52,14 +52,6 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 
 # <span class="section-icon"><i class="fas fa-file-alt"></i></span> Publications
 
-## Under Review / Submitted
-
-<ul class="pub-list">
-  <li>Cheng, Z., Li, J., Gao, Y., <strong>Sha, T.</strong>, Tang, Y., Chang, L.-L., Dong, Y. <em>WeatherBench-R: A Text-Only Benchmark for Evaluating Large Language Models over U.S. Weather Events.</em> <span class="venue review">ACL ARR 2026</span></li>
-  <li>Cheng, Z., Xu, H., <strong>Sha, T.</strong>, Zhao, Y., Li, M., Dong, Y. <em>TRIDENT: An Efficient Data-Free Model Extraction Attack for Graph Neural Networks.</em> <span class="venue review">ICLR 2026</span></li>
-  <li>Chen, Z., <strong>Sha, T.</strong>, Chen, Y., Xu, B., Zheng, Y., Cheng, Z., Liu, J., Wang, K. <em>DIAL-G²: Graph-Guided Dialectical Agent for Advanced ESG Reasoning.</em> <span class="venue review">ICLR 2026</span></li>
-</ul>
-
 ## Accepted & Published
 
 <ul class="pub-list">
