@@ -23,5 +23,12 @@ group :jekyll_plugins do
   # gem "jekyll-archives"
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
-  gem 'hawkins'
+  # Silences octokit's "install faraday-retry" warning and enables retries
+  # on the GitHub API calls made by jekyll-github-metadata.
+  gem 'faraday-retry'
 end
+
+# NOTE: 'hawkins' (which provided `jekyll liveserve`) was removed: it is
+# unmaintained since 2019 and its servlet subclass crashes on Jekyll >= 3.10
+# with "undefined method `key?' for nil". Jekyll has built-in live reload,
+# so use `jekyll serve --livereload` instead (see run_server.sh).

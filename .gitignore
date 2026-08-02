@@ -1,3 +1,9 @@
 _site/
 push.sh
 .DS_Store
+
+# Local Jekyll toolchain (see run_server.sh)
+.bundle/
+vendor/
+.jekyll-cache/
+.jekyll-metadata
