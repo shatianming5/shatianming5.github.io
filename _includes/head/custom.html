@@ -6,7 +6,7 @@
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="images/mstile-144x144.png?v=M44lzPylqQ">
 <meta name="msapplication-config" content="images/browserconfig.xml?v=M44lzPylqQ">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#fdfcf9">
 <link rel="stylesheet" href="assets/css/academicons.css"/>
 
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
@@ -32,20 +32,33 @@
    at the bottom of this file only has to re-declare the tokens.
    ===================================================================== */
 :root {
-  --ink:         #16202c;   /* headings                */
-  --body:        #3d4a5a;   /* body copy               */
-  --muted:       #6b7787;   /* secondary / meta text   */
-  --accent:      #1f4e79;   /* deep academic blue      */
-  --accent-2:    #2d6ca8;   /* links, brighter accent  */
-  --accent-soft: #eaf0f7;   /* tinted fills            */
-  --accent-line: #cfdcea;
-  --rule:        #e4e9ef;   /* hairlines               */
-  --surface:     #ffffff;
-  --surface-2:   #f7f9fb;
-  --gold:        #b0812e;
-  --shadow-sm: 0 1px 2px rgba(22,32,44,.04), 0 1px 3px rgba(22,32,44,.05);
-  --shadow-md: 0 4px 6px -2px rgba(22,32,44,.06), 0 12px 28px -10px rgba(22,32,44,.16);
-  --radius: 10px;
+  /* Pin the page to the light theme. Without this, a visitor whose OS is in
+     dark mode still gets browser-auto-darkened scrollbars/form controls, and
+     some browsers apply forced dark mode to the whole document. */
+  color-scheme: light;
+
+  /* Warm paper palette. Pure #fff + saturated blue reads like a product
+     landing page; journals and research groups use an off-white stock with
+     warm ink and a single low-saturation accent. */
+  --ink:         #1c1a17;   /* headings — warm near-black    */
+  --body:        #38342e;   /* body copy                     */
+  --muted:       #746d63;   /* secondary / meta text         */
+  --accent:      #8a3324;   /* muted oxblood                 */
+  --accent-2:    #a44530;   /* links                         */
+  --accent-soft: #f7f0ec;   /* tinted fills                  */
+  --accent-line: #e7d6ce;
+  --rule:        #e8e2d9;   /* hairlines                     */
+  --surface:     #fdfcf9;   /* paper                         */
+  --surface-2:   #f7f4ed;
+  --gold:        #9a7628;
+  --stone-soft:  #f2efe8;   /* neutral chip fill  */
+  --stone-line:  #e3ddd2;
+  --stone-text:  #5c554b;
+  --shadow-sm: 0 1px 2px rgba(28,26,23,.04), 0 1px 3px rgba(28,26,23,.05);
+  --shadow-md: 0 4px 6px -2px rgba(28,26,23,.06), 0 12px 28px -10px rgba(28,26,23,.14);
+  --radius: 8px;
+  --font-read: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -54,18 +67,35 @@ html { scroll-behavior: smooth; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html, body {
   background: var(--surface);
 }
 
-.page__content {
-  font-size: 0.95em;
-  line-height: 1.75;
+body {
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: var(--body);
 }
+
+/* Serif body copy at a comfortable size and leading. This is the single
+   biggest lever on "does this look like something worth reading" -- the
+   previous 0.95em sans at 1.75 was cramped and screen-like. */
+.page__content {
+  font-family: var(--font-read);
+  font-size: 1.06em;
+  line-height: 1.82;
+  color: var(--body);
+  letter-spacing: 0.003em;
+}
+
+/* Metadata, tags and controls stay in the UI sans so they read as chrome
+   rather than as prose. */
+.page__content .card-subtitle,
+.page__content .venue,
+.page__content .service-tag,
+.page__content h2,
+.masthead, .greedy-nav, .author__urls { font-family: var(--font-ui); }
 
 /* NOTE: scroll offset for the sticky masthead is already handled by the theme
    via `h1:before, .anchor:before { height: $scroll_offset; margin-top: -$scroll_offset }`
@@ -74,9 +104,9 @@ body {
 
 /* ========== Section Headers ========== */
 .page__content h1 {
-  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  font-family: var(--font-read);
   font-weight: 600;
-  font-size: 1.6em;
+  font-size: 1.55em;
   letter-spacing: -0.015em;
   color: var(--ink);
   border-bottom: 1px solid var(--rule);
@@ -111,9 +141,9 @@ body {
   height: 1.65em;
   font-size: 0.6em;
   color: var(--accent);
-  background: var(--accent-soft);
-  border: 1px solid var(--accent-line);
-  border-radius: 7px;
+  background: var(--stone-soft);
+  border: 1px solid var(--stone-line);
+  border-radius: 6px;
   flex-shrink: 0;
   vertical-align: middle;
   margin-right: 0.55em;
@@ -122,9 +152,8 @@ body {
 }
 
 .page__content h2 {
-  font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 0.82em;
+  font-size: 0.78em;
   text-transform: uppercase;
   letter-spacing: 0.09em;
   color: var(--muted);
@@ -135,8 +164,8 @@ body {
 
 /* ========== About ========== */
 .about-text {
-  font-size: 1.03em;
-  line-height: 1.85;
+  font-size: 1.1em;
+  line-height: 1.88;
   color: var(--body);
   padding: 0.2em 0 0.6em;
 }
@@ -176,9 +205,9 @@ body {
 }
 
 .card-title {
-  font-family: 'Source Serif 4', Georgia, serif;
+  font-family: var(--font-read);
   font-weight: 600;
-  font-size: 1.12em;
+  font-size: 1.1em;
   color: var(--ink);
   margin-bottom: 0.3em;
   letter-spacing: -0.01em;
@@ -237,9 +266,9 @@ body {
 /* ========== Venue Tags ========== */
 .venue {
   display: inline-block;
-  background: var(--accent-soft);
-  color: var(--accent);
-  border: 1px solid var(--accent-line);
+  background: var(--stone-soft);
+  color: var(--stone-text);
+  border: 1px solid var(--stone-line);
   font-size: 0.72em;
   font-weight: 600;
   padding: 0.18em 0.6em;
@@ -250,9 +279,9 @@ body {
   white-space: nowrap;
 }
 
-.venue.oral     { background:#fbf0ed; color:#9c3d2c; border-color:#f0d5cd; }
-.venue.workshop { background:#f1eff9; color:#54459b; border-color:#ddd6f0; }
-.venue.review   { background:#fbf4e6; color:#8a6414; border-color:#eee0c2; }
+.venue.oral     { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-line); font-weight:700; }
+.venue.workshop { background:#eef0f3; color:#5a6472; border-color:#dee2e8; }
+.venue.review   { background:#f7f1e4; color:#7d6522; border-color:#e9dec4; }
 
 /* ========== Awards ========== */
 .award-list { list-style: none; padding-left: 0; }
@@ -281,18 +310,18 @@ body {
 
 .service-tag {
   display: inline-block;
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--stone-soft);
+  color: var(--stone-text);
   font-size: 0.8em;
   font-weight: 500;
   padding: 0.28em 0.8em;
   border-radius: 20px;
-  border: 1px solid var(--accent-line);
+  border: 1px solid var(--stone-line);
   transition: transform .18s ease, box-shadow .18s ease;
 }
 
 .service-tag:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
-.service-tag.journal { background:#eef5f0; color:#2c6344; border-color:#cfe3d8; }
+.service-tag.journal { background:#edf1e8; color:#4c5c3b; border-color:#dbe2d0; }
 
 /* Bare "Conference Reviewer" / "Journal Reviewer" labels. */
 .page__content p > strong:only-child {
@@ -328,7 +357,7 @@ body {
 .author__avatar img:hover { transform: scale(1.03); }
 
 .author__name {
-  font-family: 'Source Serif 4', Georgia, serif;
+  font-family: var(--font-read);
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -345,7 +374,7 @@ body {
 .author__urls.social-icons i { color: var(--accent-2); }
 
 /* ========== Masthead ========== */
-.masthead { border-bottom: 1px solid var(--rule); background: rgba(255,255,255,.86); backdrop-filter: saturate(180%) blur(12px); }
+.masthead { border-bottom: 1px solid var(--rule); background: color-mix(in srgb, var(--surface) 88%, transparent); backdrop-filter: saturate(180%) blur(12px); }
 .greedy-nav { background: transparent; }
 .greedy-nav a { font-size: 0.86em; font-weight: 500; color: var(--body); }
 .greedy-nav a:hover { color: var(--accent); }
@@ -380,32 +409,6 @@ body {
   .card, .interview-card { padding: 0.95em 1.05em; }
   .interview-card { flex-direction: column; gap: 0.6em; }
   .pub-list li { padding-right: 0; }
-}
-
-/* ========== Dark mode ========== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink:         #e8edf3;
-    --body:        #b7c2ce;
-    --muted:       #8a97a5;
-    --accent:      #7fb0e0;
-    --accent-2:    #9cc6ee;
-    --accent-soft: #17222f;
-    --accent-line: #2a3a4d;
-    --rule:        #232f3d;
-    --surface:     #0e151d;
-    --surface-2:   #131c26;
-    --gold:        #d6a94e;
-    --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
-    --shadow-md: 0 4px 6px -2px rgba(0,0,0,.45), 0 12px 28px -10px rgba(0,0,0,.6);
-  }
-  body, .page, .page__content { background: var(--surface); color: var(--body); }
-  .masthead { background: rgba(14,21,29,.86); }
-  .venue.oral     { background:#2a1a17; color:#e8a596; border-color:#4a2c25; }
-  .venue.workshop { background:#1e1a2e; color:#b6a8e8; border-color:#332c52; }
-  .venue.review   { background:#2a2418; color:#e0c284; border-color:#4a3f24; }
-  .service-tag.journal { background:#14241b; color:#8fcfa8; border-color:#27442f; }
-  .author__avatar img { box-shadow: 0 0 0 4px var(--surface), 0 6px 20px -6px rgba(0,0,0,.7); }
 }
 
 /* ========== Print ========== */
