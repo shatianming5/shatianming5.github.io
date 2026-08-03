@@ -248,12 +248,13 @@ body {
 .pub-list li:last-child { border-bottom: none; }
 .pub-list li:hover { background: var(--surface-2); }
 
-/* Slim accent rule instead of a bullet dot. */
+/* Slim accent rule instead of a bullet dot. Aligned to the centre of the
+   title's first line, so it stays put when a title wraps to two lines. */
 .pub-list li::before {
   content: '';
   position: absolute;
   left: 0.35em;
-  top: 1.35em;
+  top: 1.07em;
   width: 3px;
   height: 1.05em;
   background: var(--accent-line);
@@ -265,6 +266,25 @@ body {
 
 /* The author's own name, bolded in the markup. */
 .pub-list li strong { color: var(--accent); }
+
+/* Title-first layout: a reader scans titles, not author strings, so the
+   title leads and the byline drops to metadata size beneath it. */
+.pub-title {
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.pub-authors {
+  font-family: var(--font-ui);
+  font-size: 0.82em;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-top: 0.3em;
+}
+
+.pub-tags { margin-top: 0.5em; }
+.pub-tags .venue:first-child { margin-left: 0; }
 
 /* ========== Venue Tags ========== */
 .venue {

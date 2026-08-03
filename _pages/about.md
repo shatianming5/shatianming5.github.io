@@ -93,15 +93,51 @@ I am an undergraduate at Stony Brook University. Before that, two years at Sun Y
 # <span class="section-icon"><i class="fas fa-file-alt"></i></span> Publications
 
 <ul class="pub-list">
-  <li>XYZ Agentic Team. <em>AI4AI at Scale: A Full-Pipeline System for Enhancing LLM Agentic Capabilities.</em> <a class="venue preprint" href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf">Tech Report 2026</a> <a class="venue" href="https://huggingface.co/XYZAILab">&#129303; Weights</a></li>
-  <li><strong>Sha, T.</strong>, Zhao, Y., Sun, L., Dong, Y. <em>SkillCenter: A Large-Scale Source-Grounded Skill Library for Autonomous AI Agents.</em> <a class="venue preprint" href="https://arxiv.org/abs/2607.07676">arXiv:2607.07676</a> <a class="venue" href="https://github.com/LabRAI/LangSkills">Code</a></li>
-  <li>Chen, W.<sup>*</sup>, Yang, X.<sup>*</sup>, Yang, X.<sup>*</sup>, <strong>Sha, T.</strong><sup>*</sup>, Li, Q., Wang, Z., Xian, B., Kong, F., Liu, W., et al. <em>Agent² RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?</em> <a class="venue preprint" href="https://arxiv.org/abs/2604.10547">arXiv:2604.10547</a></li>
-  <li><strong>Sha, T.</strong>, Zhao, S. <em>BenchScope: How Many Independent Signals Does Your Benchmark Provide?</em> <a class="venue preprint" href="https://arxiv.org/abs/2603.29357">arXiv:2603.29357</a></li>
-  <li><strong>Sha, T.</strong>, Cheng, Z., Zhai, H., Ding, X., Chen, Z., Wang, K. <em>FAST-CAD: Fairness-Aware Self-Supervised Framework for Automated Non-Contact Stroke Diagnosis.</em> <span class="venue oral">AAAI 2026 Oral</span></li>
-  <li>Cheng, Z., Shen, B., <strong>Sha, T.</strong>, Gao, Y., Dong, Y. <em>ATOM: A Framework of Detecting Query-Based Model Extraction Attacks for Graph Neural Networks.</em> <span class="venue">KDD 2025</span></li>
-  <li>Zhai, H., Chen, X., Zhang, C., <strong>Sha, T.</strong>, Li, R. <em>Mitigating Cache Noise in Test-Time Adaptation for Large Vision-Language Models.</em> <span class="venue oral">ICME 2025 Oral</span> <span class="venue workshop">ICLR 2025 Workshop</span></li>
-  <li>Chen, Z., <strong>Sha, T.</strong>, Tang, Z., Wang, K. <em>TsKAN: A Transparent Architecture for Improving the Interpretability of Multivariate Time Series Forecasting.</em> <span class="venue workshop">ICLR 2025 Workshop</span></li>
-  <li>Liao, J., <strong>Sha, T.</strong>, Wang, Q., Zhong, Z., Lin, H. <em>Orthogonal Filtering Alignment Network for Ship Detection in SAR Images Under Frequency Shift Interference.</em> <span class="venue workshop">IGARSS 2025</span></li>
+  <li>
+    <div class="pub-title">AI4AI at Scale: A Full-Pipeline System for Enhancing LLM Agentic Capabilities</div>
+    <div class="pub-authors">XYZ Agentic Team</div>
+    <div class="pub-tags"><a class="venue preprint" href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf">Tech Report 2026</a> <a class="venue" href="https://huggingface.co/XYZAILab">&#129303; Weights</a></div>
+  </li>
+  <li>
+    <div class="pub-title">SkillCenter: A Large-Scale Source-Grounded Skill Library for Autonomous AI Agents</div>
+    <div class="pub-authors"><strong>Sha, T.</strong>, Zhao, Y., Sun, L., Dong, Y.</div>
+    <div class="pub-tags"><a class="venue preprint" href="https://arxiv.org/abs/2607.07676">arXiv:2607.07676</a> <a class="venue" href="https://github.com/LabRAI/LangSkills">Code</a></div>
+  </li>
+  <li>
+    <div class="pub-title">Agent² RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?</div>
+    <div class="pub-authors">Chen, W.<sup>*</sup>, Yang, X.<sup>*</sup>, Yang, X.<sup>*</sup>, <strong>Sha, T.</strong><sup>*</sup>, Li, Q., Wang, Z., Xian, B., Kong, F., Liu, W., et al.</div>
+    <div class="pub-tags"><a class="venue preprint" href="https://arxiv.org/abs/2604.10547">arXiv:2604.10547</a></div>
+  </li>
+  <li>
+    <div class="pub-title">BenchScope: How Many Independent Signals Does Your Benchmark Provide?</div>
+    <div class="pub-authors"><strong>Sha, T.</strong>, Zhao, S.</div>
+    <div class="pub-tags"><a class="venue preprint" href="https://arxiv.org/abs/2603.29357">arXiv:2603.29357</a></div>
+  </li>
+  <li>
+    <div class="pub-title">FAST-CAD: Fairness-Aware Self-Supervised Framework for Automated Non-Contact Stroke Diagnosis</div>
+    <div class="pub-authors"><strong>Sha, T.</strong>, Cheng, Z., Zhai, H., Ding, X., Chen, Z., Wang, K.</div>
+    <div class="pub-tags"><span class="venue oral">AAAI 2026 Oral</span></div>
+  </li>
+  <li>
+    <div class="pub-title">ATOM: A Framework of Detecting Query-Based Model Extraction Attacks for Graph Neural Networks</div>
+    <div class="pub-authors">Cheng, Z., Shen, B., <strong>Sha, T.</strong>, Gao, Y., Dong, Y.</div>
+    <div class="pub-tags"><span class="venue">KDD 2025</span></div>
+  </li>
+  <li>
+    <div class="pub-title">Mitigating Cache Noise in Test-Time Adaptation for Large Vision-Language Models</div>
+    <div class="pub-authors">Zhai, H., Chen, X., Zhang, C., <strong>Sha, T.</strong>, Li, R.</div>
+    <div class="pub-tags"><span class="venue oral">ICME 2025 Oral</span> <span class="venue workshop">ICLR 2025 Workshop</span></div>
+  </li>
+  <li>
+    <div class="pub-title">TsKAN: A Transparent Architecture for Improving the Interpretability of Multivariate Time Series Forecasting</div>
+    <div class="pub-authors">Chen, Z., <strong>Sha, T.</strong>, Tang, Z., Wang, K.</div>
+    <div class="pub-tags"><span class="venue workshop">ICLR 2025 Workshop</span></div>
+  </li>
+  <li>
+    <div class="pub-title">Orthogonal Filtering Alignment Network for Ship Detection in SAR Images Under Frequency Shift Interference</div>
+    <div class="pub-authors">Liao, J., <strong>Sha, T.</strong>, Wang, Q., Zhong, Z., Lin, H.</div>
+    <div class="pub-tags"><span class="venue workshop">IGARSS 2025</span></div>
+  </li>
 </ul>
 
 <p class="pub-note"><sup>*</sup> Equal contribution.</p>
