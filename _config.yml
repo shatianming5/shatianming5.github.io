@@ -23,9 +23,9 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Tianming Sha"
   avatar           : "images/avatar.png"
-  bio              : ""
+  bio              : "Building AI systems that automate research itself."
   location         : "Stony Brook, NY, United States"
-  employer         : "Student Researcher"
+  employer         : "Applying for PhD, Fall 2027"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=FQNrxf0AAAAJ&hl=zh-CN"
   email            : "Tianming.sha@stonybrook.edu"
