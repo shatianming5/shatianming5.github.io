@@ -67,7 +67,8 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 <div class="card">
   <div class="card-title"><a href="https://github.com/LabRAI/LangSkills">LangSkills</a> <img src="https://img.shields.io/github/stars/LabRAI/LangSkills?style=social" alt="GitHub stars" class="stars-badge"/></div>
   <p class="card-desc">
-    An evidence-backed skills library with 101,000+ curated skills across 21 domains, extracted from academic papers (PMC, arXiv, eLife) and technical sources (GitHub, StackOverflow). Features full-text search over offline SQLite bundles and an automated LLM-powered generation pipeline with source traceability.
+    An evidence-backed skills library with 101,000+ curated skills across 21 domains, extracted from academic papers (PMC, arXiv, eLife) and technical sources (GitHub, StackOverflow). Features full-text search over offline SQLite bundles and an automated LLM-powered generation pipeline with source traceability. Described in the SkillCenter preprint.
+    <a class="venue preprint" href="https://arxiv.org/abs/2607.07676">arXiv:2607.07676</a>
   </p>
 </div>
 
@@ -78,7 +79,7 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 ## Preprints
 
 <ul class="pub-list">
-  <li><strong>Sha, T.</strong>, Zhao, Y., Sun, L., Dong, Y. <em>SkillCenter: A Large-Scale Source-Grounded Skill Library for Autonomous AI Agents.</em> <a class="venue preprint" href="https://arxiv.org/abs/2607.07676">arXiv:2607.07676</a></li>
+  <li><strong>Sha, T.</strong>, Zhao, Y., Sun, L., Dong, Y. <em>SkillCenter: A Large-Scale Source-Grounded Skill Library for Autonomous AI Agents.</em> <a class="venue preprint" href="https://arxiv.org/abs/2607.07676">arXiv:2607.07676</a> <a class="venue" href="https://github.com/LabRAI/LangSkills">Code</a></li>
   <li>Chen, W.<sup>*</sup>, Yang, X.<sup>*</sup>, Yang, X.<sup>*</sup>, <strong>Sha, T.</strong><sup>*</sup>, Li, Q., Wang, Z., Xian, B., Kong, F., Liu, W., et al. <em>Agent² RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?</em> <a class="venue preprint" href="https://arxiv.org/abs/2604.10547">arXiv:2604.10547</a></li>
   <li><strong>Sha, T.</strong>, Zhao, S. <em>BenchScope: How Many Independent Signals Does Your Benchmark Provide?</em> <a class="venue preprint" href="https://arxiv.org/abs/2603.29357">arXiv:2603.29357</a></li>
 </ul>
