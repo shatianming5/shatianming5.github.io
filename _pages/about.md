@@ -22,7 +22,7 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 
 <div class="edu-item">
   <span class="edu-icon"><i class="fas fa-university"></i></span>
-  <span><strong>Stony Brook University</strong>, Stony Brook, NY — <em>B.S., Applied Mathematics and Statistics (AMS); Computer Science AOI</em></span>
+  <span><strong>Stony Brook University</strong>, Stony Brook, NY — <em>B.S., AMS &amp; CS</em></span>
 </div>
 
 <span class='anchor' id='experience'></span>
@@ -52,14 +52,6 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 # <span class="section-icon"><i class="fas fa-code-branch"></i></span> Projects
 
 <div class="card">
-  <div class="card-title"><a href="https://github.com/shatianming5/PaperFarm">PaperFarm</a> <img src="https://img.shields.io/github/stars/shatianming5/PaperFarm?style=social" alt="GitHub stars" class="stars-badge"/></div>
-  <p class="card-desc">
-    An autonomous research runtime that points at any repository and runs the full loop while you sleep — a single <em>Scout → Manager → Critic → Experiment</em> cycle that sows ideas, runs them, and keeps only what improves the metric. Every experiment is an isolated git commit that auto-rolls back on failure, parallel workers run in separate git worktrees across GPUs, and a live TUI dashboard tracks the frontier. Driven by whichever coding agent is installed — Claude Code, Codex CLI, Aider, OpenCode, Kimi CLI, or Gemini CLI.
-    <a class="venue" href="https://pypi.org/project/PaperFarm/">PyPI</a>
-  </p>
-</div>
-
-<div class="card">
   <div class="card-title"><a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/">XYZ-Aquila &nbsp;&middot;&nbsp; AI4AI at Scale</a></div>
   <p class="card-desc">
     A full-pipeline system for enhancing LLM agentic capabilities, instantiated in XYZ-Aquila — two open-weight Deep Search agents built on Qwen3.6-35B-A3B and Qwen3.5-397B-A17B. Humans fix a versioned optimization contract — target capability, private benchmark, admissible interventions, and resource bounds — while AI agents diagnose failures and develop scoped changes across data, learning, runtime, tools, and infrastructure, with an isolated evaluator gating every acceptance. XYZ-Aquila-mini leads every benchmark column in the reported &lt;40B open-weight table. Weights and the SFT dataset are released openly.
@@ -67,6 +59,15 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
     <a class="venue" href="https://huggingface.co/XYZAILab">&#129303; Weights &amp; Data</a>
   </p>
 </div>
+
+<div class="card">
+  <div class="card-title"><a href="https://github.com/shatianming5/PaperFarm">PaperFarm</a> <img src="https://img.shields.io/github/stars/shatianming5/PaperFarm?style=social" alt="GitHub stars" class="stars-badge"/></div>
+  <p class="card-desc">
+    An autonomous research runtime that points at any repository and runs the full loop while you sleep — a single <em>Scout → Manager → Critic → Experiment</em> cycle that sows ideas, runs them, and keeps only what improves the metric. Every experiment is an isolated git commit that auto-rolls back on failure, parallel workers run in separate git worktrees across GPUs, and a live TUI dashboard tracks the frontier. Driven by whichever coding agent is installed — Claude Code, Codex CLI, Aider, OpenCode, Kimi CLI, or Gemini CLI.
+    <a class="venue" href="https://pypi.org/project/PaperFarm/">PyPI</a>
+  </p>
+</div>
+
 
 <div class="card">
   <div class="card-title"><a href="https://github.com/microsoft/RD-Agent">RD-Agent</a> <img src="https://img.shields.io/github/stars/microsoft/RD-Agent?style=social" alt="GitHub stars" class="stars-badge"/></div>
@@ -88,7 +89,7 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 # <span class="section-icon"><i class="fas fa-file-alt"></i></span> Publications
 
 <ul class="pub-list">
-  <li>XYZ Agentic Team (incl. <strong>Sha, T.</strong>). <em>AI4AI at Scale: A Full-Pipeline System for Enhancing LLM Agentic Capabilities.</em> <a class="venue preprint" href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf">Tech Report 2026</a> <a class="venue" href="https://huggingface.co/XYZAILab">&#129303; Weights</a></li>
+  <li>XYZ Agentic Team. <em>AI4AI at Scale: A Full-Pipeline System for Enhancing LLM Agentic Capabilities.</em> <a class="venue preprint" href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf">Tech Report 2026</a> <a class="venue" href="https://huggingface.co/XYZAILab">&#129303; Weights</a></li>
   <li><strong>Sha, T.</strong>, Zhao, Y., Sun, L., Dong, Y. <em>SkillCenter: A Large-Scale Source-Grounded Skill Library for Autonomous AI Agents.</em> <a class="venue preprint" href="https://arxiv.org/abs/2607.07676">arXiv:2607.07676</a> <a class="venue" href="https://github.com/LabRAI/LangSkills">Code</a></li>
   <li>Chen, W.<sup>*</sup>, Yang, X.<sup>*</sup>, Yang, X.<sup>*</sup>, <strong>Sha, T.</strong><sup>*</sup>, Li, Q., Wang, Z., Xian, B., Kong, F., Liu, W., et al. <em>Agent² RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?</em> <a class="venue preprint" href="https://arxiv.org/abs/2604.10547">arXiv:2604.10547</a></li>
   <li><strong>Sha, T.</strong>, Zhao, S. <em>BenchScope: How Many Independent Signals Does Your Benchmark Provide?</em> <a class="venue preprint" href="https://arxiv.org/abs/2603.29357">arXiv:2603.29357</a></li>
@@ -99,7 +100,7 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
   <li>Liao, J., <strong>Sha, T.</strong>, Wang, Q., Zhong, Z., Lin, H. <em>Orthogonal Filtering Alignment Network for Ship Detection in SAR Images Under Frequency Shift Interference.</em> <span class="venue workshop">IGARSS 2025</span></li>
 </ul>
 
-<p class="pub-note"><sup>*</sup> Equal contribution. &nbsp;·&nbsp; Authors of the AI4AI at Scale report are listed alphabetically.</p>
+<p class="pub-note"><sup>*</sup> Equal contribution.</p>
 
 <span class='anchor' id='awards'></span>
 
