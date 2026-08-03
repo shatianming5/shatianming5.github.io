@@ -13,7 +13,11 @@ redirect_from:
 # <span class="section-icon"><i class="fas fa-user"></i></span> About Me
 
 <p class="about-text">
-Mission-driven undergraduate student researcher at Stony Brook University, motivated to pursue challenging, high-impact problems across a rich spectrum of AI topics. I have been previously guided by <a href="https://kezewang.com/">Dr. Keze Wang</a> during two formative years at Sun Yat-sen University's HCP Lab—a foundation that keeps me exploring widely and actively seeking new collaborations.
+I work on AI systems that automate research itself — agents that diagnose what is failing, scope a change, run the experiment, and keep only what survives evaluation. That thread runs through the bounded <a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/">AI4AI</a> post-training loop at XYZ AI Lab, <a href="https://github.com/microsoft/RD-Agent">RD-Agent</a> at MSRA, and <a href="https://github.com/shatianming5/PaperFarm">PaperFarm</a> — and through the benchmarks that ask whether such systems actually work, <a href="https://arxiv.org/abs/2604.10547">Agent² RL-Bench</a> and <a href="https://arxiv.org/abs/2603.29357">BenchScope</a>.
+</p>
+
+<p class="about-text">
+I am an undergraduate at Stony Brook University. Before that, two years at Sun Yat-sen University's HCP Lab under <a href="https://kezewang.com/">Dr. Keze Wang</a> taught me how to run a research problem end to end. Always glad to hear about new collaborations.
 </p>
 
 <span class='anchor' id='education'></span>
@@ -113,6 +117,17 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
   <li><strong>National College Student Mathematical Modeling Competition 2024</strong> — Team Leader/Member, Provincial First Prize.</li>
 </ul>
 
+<span class='anchor' id='interview'></span>
+
+# <span class="section-icon"><i class="fas fa-newspaper"></i></span> Interview
+
+<div class="interview-card">
+  <span class="interview-icon"><i class="fas fa-microphone-alt"></i></span>
+  <div class="interview-text">
+    <strong>MIT Technology Review China</strong> — <em>Developing a non-contact AI tool to predict stroke with >91% accuracy</em> — <a href="https://www.mittrchina.com/news/detail/15485">Read more</a> (Nov 15, 2025)
+  </div>
+</div>
+
 <span class='anchor' id='service'></span>
 
 # <span class="section-icon"><i class="fas fa-hands-helping"></i></span> Service
@@ -131,15 +146,4 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 <div class="service-tags" style="margin-top: 0.4em;">
   <span class="service-tag journal">IEEE TNNLS</span>
   <span class="service-tag journal">Neural Networks</span>
-</div>
-
-<span class='anchor' id='interview'></span>
-
-# <span class="section-icon"><i class="fas fa-newspaper"></i></span> Interview
-
-<div class="interview-card">
-  <span class="interview-icon"><i class="fas fa-microphone-alt"></i></span>
-  <div class="interview-text">
-    <strong>MIT Technology Review China</strong> — <em>Developing a non-contact AI tool to predict stroke with >91% accuracy</em> — <a href="https://www.mittrchina.com/news/detail/15485">Read more</a> (Nov 15, 2025)
-  </div>
 </div>
