@@ -11,6 +11,17 @@
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    {%- comment -%}
+      Below $large the theme hides .author__urls entirely and the button that
+      would reveal it is commented out, so location/employer are unreachable on
+      phones. Repeat them here; CSS hides this copy on desktop.
+    {%- endcomment -%}
+    {% if author.employer or author.location %}
+      <p class="author__meta">
+        {% if author.employer %}<span><i class="fas fa-fw fa-user-graduate" aria-hidden="true"></i> {{ author.employer }}</span>{% endif %}
+        {% if author.location %}<span><i class="fas fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</span>{% endif %}
+      </p>
+    {% endif %}
   </div>
 
   <div class="author__urls-wrapper">
