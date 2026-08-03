@@ -30,6 +30,14 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 # <span class="section-icon"><i class="fas fa-briefcase"></i></span> Experience
 
 <div class="card">
+  <div class="card-title"><a href="https://xyz-lab.ai/">XYZ AI Lab</a></div>
+  <div class="card-subtitle"><i class="fas fa-user-tie"></i> Research Intern</div>
+  <p class="card-desc">
+    Work on <strong>XYZ-Aquila</strong>, a family of open-weight Deep Search agents, inside the lab's bounded <strong>AI4AI</strong> post-training loop, where AI agents diagnose failures and develop scoped changes while every step stays budgeted, auditable, and replayable. Co-author of the <a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf"><em>AI4AI at Scale</em></a> technical report.
+  </p>
+</div>
+
+<div class="card">
   <div class="card-title">Microsoft Research Asia (MSRA)</div>
   <div class="card-subtitle"><i class="fas fa-map-marker-alt"></i> Beijing, China &nbsp;·&nbsp; <i class="fas fa-user-tie"></i> Research Intern</div>
   <p class="card-desc">
@@ -40,6 +48,14 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 <span class='anchor' id='projects'></span>
 
 # <span class="section-icon"><i class="fas fa-code-branch"></i></span> Projects
+
+<div class="card">
+  <div class="card-title"><a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/">XYZ-Aquila &nbsp;&middot;&nbsp; AI4AI at Scale</a></div>
+  <p class="card-desc">
+    A full-pipeline system for enhancing LLM agentic capabilities, instantiated in XYZ-Aquila — two open-weight Deep Search agents built on Qwen3.6-35B-A3B and Qwen3.5-397B-A17B. Humans fix a versioned optimization contract — target capability, private benchmark, admissible interventions, and resource bounds — while AI agents diagnose failures and develop scoped changes across data, learning, runtime, tools, and infrastructure, with an isolated evaluator gating every acceptance. XYZ-Aquila-mini leads every benchmark column in the reported &lt;40B open-weight table.
+    <a class="venue" href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf">Technical Report (PDF)</a>
+  </p>
+</div>
 
 <div class="card">
   <div class="card-title"><a href="https://github.com/microsoft/RD-Agent">RD-Agent</a> <img src="https://img.shields.io/github/stars/microsoft/RD-Agent?style=social" alt="GitHub stars" class="stars-badge"/></div>
