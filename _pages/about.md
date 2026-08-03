@@ -120,7 +120,7 @@ I am an undergraduate at Stony Brook University. Before that, two years at Sun Y
   </li>
   <li>
     <div class="pub-title">ATOM: A Framework of Detecting Query-Based Model Extraction Attacks for Graph Neural Networks</div>
-    <div class="pub-authors">Cheng, Z., Shen, B., <strong>Sha, T.</strong>, Gao, Y., Dong, Y.</div>
+    <div class="pub-authors">Cheng, Z.<sup>*</sup>, Shen, B.<sup>*</sup>, <strong>Sha, T.</strong><sup>*</sup>, Gao, Y., Dong, Y.</div>
     <div class="pub-tags"><span class="venue">KDD 2025</span></div>
   </li>
   <li>
@@ -130,12 +130,12 @@ I am an undergraduate at Stony Brook University. Before that, two years at Sun Y
   </li>
   <li>
     <div class="pub-title">TsKAN: A Transparent Architecture for Improving the Interpretability of Multivariate Time Series Forecasting</div>
-    <div class="pub-authors">Chen, Z., <strong>Sha, T.</strong>, Tang, Z., Wang, K.</div>
+    <div class="pub-authors">Chen, Z.<sup>*</sup>, <strong>Sha, T.</strong><sup>*</sup>, Tang, Z., Wang, K.</div>
     <div class="pub-tags"><span class="venue workshop">ICLR 2025 Workshop</span></div>
   </li>
   <li>
     <div class="pub-title">Orthogonal Filtering Alignment Network for Ship Detection in SAR Images Under Frequency Shift Interference</div>
-    <div class="pub-authors">Liao, J., <strong>Sha, T.</strong>, Wang, Q., Zhong, Z., Lin, H.</div>
+    <div class="pub-authors">Liao, J.<sup>*</sup>, <strong>Sha, T.</strong><sup>*</sup>, Wang, Q., Zhong, Z., Lin, H.</div>
     <div class="pub-tags"><span class="venue workshop">IGARSS 2025</span></div>
   </li>
 </ul>
