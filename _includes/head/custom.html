@@ -283,6 +283,26 @@ body {
 .venue.workshop { background:#eef0f3; color:#5a6472; border-color:#dee2e8; }
 .venue.review   { background:#f7f1e4; color:#7d6522; border-color:#e9dec4; }
 
+/* Preprint tags double as the link to arXiv. The a.venue selector is needed
+   to out-specify `.page__content a`, which would otherwise recolour them. */
+.venue.preprint { font-variant-numeric: tabular-nums; }
+.page__content a.venue { color: var(--stone-text); border-bottom: none; }
+.page__content a.venue:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+  border-bottom: none;
+}
+
+/* Equal-contribution markers. */
+.pub-list sup, .pub-note sup { color: var(--accent); font-weight: 700; }
+.pub-note {
+  font-family: var(--font-ui);
+  font-size: 0.8em;
+  color: var(--muted);
+  margin: 0.6em 0 0;
+}
+
 /* ========== Awards ========== */
 .award-list { list-style: none; padding-left: 0; }
 

@@ -33,13 +33,20 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
   <div class="card-title">Microsoft Research Asia (MSRA)</div>
   <div class="card-subtitle"><i class="fas fa-map-marker-alt"></i> Beijing, China &nbsp;·&nbsp; <i class="fas fa-user-tie"></i> Research Intern</div>
   <p class="card-desc">
-    Working on <a href="https://github.com/microsoft/RD-Agent"><strong>RD-Agent</strong></a> <img src="https://img.shields.io/github/stars/microsoft/RD-Agent?style=social" alt="GitHub stars" class="stars-badge"/> — an open-source AI-driven framework that automates data-driven R&D processes, enabling AI to drive data-driven AI.
+    Research on <a href="https://github.com/microsoft/RD-Agent"><strong>RD-Agent</strong></a>, Microsoft's open-source framework for automating the data-driven R&D loop.
   </p>
 </div>
 
 <span class='anchor' id='projects'></span>
 
 # <span class="section-icon"><i class="fas fa-code-branch"></i></span> Projects
+
+<div class="card">
+  <div class="card-title"><a href="https://github.com/microsoft/RD-Agent">RD-Agent</a> <img src="https://img.shields.io/github/stars/microsoft/RD-Agent?style=social" alt="GitHub stars" class="stars-badge"/></div>
+  <p class="card-desc">
+    Microsoft's open-source AI-driven framework that automates data-driven R&D — proposing hypotheses, implementing them as code, and running the resulting experiments, so that AI can drive data-driven AI. Contributed as a research intern at MSRA.
+  </p>
+</div>
 
 <div class="card">
   <div class="card-title"><a href="https://github.com/LabRAI/LangSkills">LangSkills</a> <img src="https://img.shields.io/github/stars/LabRAI/LangSkills?style=social" alt="GitHub stars" class="stars-badge"/></div>
@@ -51,6 +58,16 @@ Mission-driven undergraduate student researcher at Stony Brook University, motiv
 <span class='anchor' id='publications'></span>
 
 # <span class="section-icon"><i class="fas fa-file-alt"></i></span> Publications
+
+## Preprints
+
+<ul class="pub-list">
+  <li><strong>Sha, T.</strong>, Zhao, Y., Sun, L., Dong, Y. <em>SkillCenter: A Large-Scale Source-Grounded Skill Library for Autonomous AI Agents.</em> <a class="venue preprint" href="https://arxiv.org/abs/2607.07676">arXiv:2607.07676</a></li>
+  <li>Chen, W.<sup>*</sup>, Yang, X.<sup>*</sup>, Yang, X.<sup>*</sup>, <strong>Sha, T.</strong><sup>*</sup>, Li, Q., Wang, Z., Xian, B., Kong, F., Liu, W., et al. <em>Agent² RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?</em> <a class="venue preprint" href="https://arxiv.org/abs/2604.10547">arXiv:2604.10547</a></li>
+  <li><strong>Sha, T.</strong>, Zhao, S. <em>BenchScope: How Many Independent Signals Does Your Benchmark Provide?</em> <a class="venue preprint" href="https://arxiv.org/abs/2603.29357">arXiv:2603.29357</a></li>
+</ul>
+
+<p class="pub-note"><sup>*</sup> Equal contribution.</p>
 
 ## Accepted & Published
 
