@@ -87,7 +87,7 @@ body {
 .page__content {
   font-family: var(--font-read);
   font-size: 1.06em;
-  line-height: 1.82;
+  line-height: 1.72;
   color: var(--body);
   letter-spacing: 0.003em;
 }
@@ -166,12 +166,15 @@ body {
 }
 
 /* ========== About ========== */
-.about-text {
+/* Scoped under .page__content: the theme's `.page__content p` (0,1,1) outranks
+   a bare `.about-text` (0,1,0) and silently resets the paragraph margin. */
+.page__content .about-text {
   font-size: 1.1em;
-  line-height: 1.88;
   color: var(--body);
-  padding: 0.2em 0 0.6em;
+  padding: 0.1em 0 0.15em;
+  margin-bottom: 0.9em;
 }
+.page__content .about-text:last-of-type { margin-bottom: 0; }
 
 /* ========== Education ========== */
 .edu-item {
@@ -227,7 +230,7 @@ body {
 .card-desc {
   font-size: 0.93em;
   color: var(--body);
-  line-height: 1.7;
+  line-height: 1.72;
   margin: 0;
 }
 
@@ -240,7 +243,7 @@ body {
   position: relative;
   padding: 0.85em 0.9em 0.85em 1.5em;
   border-bottom: 1px solid var(--rule);
-  line-height: 1.7;
+  line-height: 1.72;
   border-radius: 8px;
   transition: background-color .2s ease;
 }
@@ -389,7 +392,7 @@ body {
 }
 
 .interview-card .interview-icon { font-size: 1.7em; color: var(--accent); flex-shrink: 0; line-height: 1.2; }
-.interview-card .interview-text { font-size: 0.93em; line-height: 1.7; color: var(--body); }
+.interview-card .interview-text { font-size: 0.93em; line-height: 1.72; color: var(--body); }
 .interview-card .interview-text strong { color: var(--ink); }
 
 /* ========== Sidebar / author profile ========== */

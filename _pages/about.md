@@ -13,11 +13,11 @@ redirect_from:
 # <span class="section-icon"><i class="fas fa-user"></i></span> About Me
 
 <p class="about-text">
-I work on AI systems that automate research itself — agents that diagnose what is failing, scope a change, run the experiment, and keep only what survives evaluation. That thread runs through the bounded <a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/">AI4AI</a> post-training loop at XYZ AI Lab, <a href="https://github.com/microsoft/RD-Agent">RD-Agent</a> at MSRA, and <a href="https://github.com/shatianming5/PaperFarm">PaperFarm</a> — and through the benchmarks that ask whether such systems actually work, <a href="https://arxiv.org/abs/2604.10547">Agent² RL-Bench</a> and <a href="https://arxiv.org/abs/2603.29357">BenchScope</a>.
+I work on systems that let AI agents run the research loop: locating what is failing, proposing a change, running the experiment, and keeping the change only when a held-out metric improves. I have worked on this in the bounded <a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/">AI4AI</a> post-training loop at XYZ AI Lab, on <a href="https://github.com/microsoft/RD-Agent">RD-Agent</a> at MSRA, and on my own project <a href="https://github.com/shatianming5/PaperFarm">PaperFarm</a>. I also work on the measurement side, where <a href="https://arxiv.org/abs/2603.29357">BenchScope</a> quantifies how many independent signals a benchmark provides and <a href="https://arxiv.org/abs/2604.10547">Agent² RL-Bench</a> tests whether LLM agents can carry out RL post-training themselves.
 </p>
 
 <p class="about-text">
-I am an undergraduate at Stony Brook University. Before that, two years at Sun Yat-sen University's HCP Lab under <a href="https://kezewang.com/">Dr. Keze Wang</a> taught me how to run a research problem end to end. Always glad to hear about new collaborations.
+I am an undergraduate at Stony Brook University. Before that I spent two years at Sun Yat-sen University's HCP Lab under <a href="https://kezewang.com/">Dr. Keze Wang</a>, where I learned to run a research problem end to end. I am always glad to hear about new collaborations.
 </p>
 
 <span class='anchor' id='education'></span>
@@ -37,7 +37,7 @@ I am an undergraduate at Stony Brook University. Before that, two years at Sun Y
   <div class="card-title"><a href="https://xyz-lab.ai/">XYZ AI Lab</a></div>
   <div class="card-subtitle"><i class="fas fa-user-tie"></i> Research Intern</div>
   <p class="card-desc">
-    Work on <strong>XYZ-Aquila</strong>, a family of open-weight Deep Search agents, inside the lab's bounded <strong>AI4AI</strong> post-training loop, where AI agents diagnose failures and develop scoped changes while every step stays budgeted, auditable, and replayable. Co-author of the <a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf"><em>AI4AI at Scale</em></a> technical report.
+    Work on <strong>XYZ-Aquila</strong>, a family of open-weight Deep Search agents, within the lab's <strong>AI4AI</strong> post-training loop, where agents diagnose failures and implement scoped changes under a fixed resource budget, with every step logged so it can be replayed. Contributor to the <a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf"><em>AI4AI at Scale</em></a> technical report.
     <a class="venue" href="https://www.linkedin.com/company/xyz-ai-lab/"><i class="fab fa-linkedin"></i>LinkedIn</a>
     <a class="venue" href="https://huggingface.co/XYZAILab">&#129303; Hugging Face</a>
   </p>
@@ -58,7 +58,7 @@ I am an undergraduate at Stony Brook University. Before that, two years at Sun Y
 <div class="card">
   <div class="card-title"><a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/">XYZ-Aquila &nbsp;&middot;&nbsp; AI4AI at Scale</a></div>
   <p class="card-desc">
-    A full-pipeline system for enhancing LLM agentic capabilities, instantiated in XYZ-Aquila — two open-weight Deep Search agents built on Qwen3.6-35B-A3B and Qwen3.5-397B-A17B. Humans fix a versioned optimization contract — target capability, private benchmark, admissible interventions, and resource bounds — while AI agents diagnose failures and develop scoped changes across data, learning, runtime, tools, and infrastructure, with an isolated evaluator gating every acceptance. XYZ-Aquila-mini leads every benchmark column in the reported &lt;40B open-weight table. Weights and the SFT dataset are released openly.
+    A full-pipeline system for improving the agentic capabilities of LLMs, built out in XYZ-Aquila, two open-weight Deep Search agents based on Qwen3.6-35B-A3B and Qwen3.5-397B-A17B. Humans fix the optimization contract: target capability, private benchmark, allowed interventions, and resource budget. Agents then diagnose failures and implement scoped changes across data, learning, runtime, tools, and infrastructure, and a separate held-out evaluator decides what is kept. XYZ-Aquila-mini leads every benchmark column in the reported &lt;40B open-weight table, and the weights and SFT dataset are released openly.
     <a class="venue" href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf">Technical Report (PDF)</a>
     <a class="venue" href="https://huggingface.co/XYZAILab">&#129303; Weights &amp; Data</a>
   </p>
@@ -67,7 +67,7 @@ I am an undergraduate at Stony Brook University. Before that, two years at Sun Y
 <div class="card">
   <div class="card-title"><a href="https://github.com/shatianming5/PaperFarm">PaperFarm</a> <img src="https://img.shields.io/github/stars/shatianming5/PaperFarm?style=social" alt="GitHub stars" class="stars-badge"/></div>
   <p class="card-desc">
-    An autonomous research runtime that points at any repository and runs the full loop while you sleep — a single <em>Scout → Manager → Critic → Experiment</em> cycle that sows ideas, runs them, and keeps only what improves the metric. Every experiment is an isolated git commit that auto-rolls back on failure, parallel workers run in separate git worktrees across GPUs, and a live TUI dashboard tracks the frontier. Driven by whichever coding agent is installed — Claude Code, Codex CLI, Aider, OpenCode, Kimi CLI, or Gemini CLI.
+    Runs an unattended research loop on an existing repository through a <em>Scout → Manager → Critic → Experiment</em> cycle: it proposes changes, runs them, and keeps those that improve the target metric. Each experiment is an isolated git commit that rolls back automatically on failure, parallel workers run in separate git worktrees across GPUs, and a terminal dashboard tracks progress. Works with whichever coding agent is installed: Claude Code, Codex CLI, Aider, OpenCode, Kimi CLI, or Gemini CLI.
     <a class="venue" href="https://pypi.org/project/PaperFarm/">PyPI</a>
   </p>
 </div>
@@ -76,14 +76,14 @@ I am an undergraduate at Stony Brook University. Before that, two years at Sun Y
 <div class="card">
   <div class="card-title"><a href="https://github.com/microsoft/RD-Agent">RD-Agent</a> <img src="https://img.shields.io/github/stars/microsoft/RD-Agent?style=social" alt="GitHub stars" class="stars-badge"/></div>
   <p class="card-desc">
-    Microsoft's open-source AI-driven framework that automates data-driven R&D — proposing hypotheses, implementing them as code, and running the resulting experiments, so that AI can drive data-driven AI. Contributed as a research intern at MSRA.
+    Microsoft's open-source framework for automating the data-driven R&amp;D loop, which proposes hypotheses, implements them as code, and runs the resulting experiments. Contributed as a research intern at MSRA.
   </p>
 </div>
 
 <div class="card">
   <div class="card-title"><a href="https://github.com/LabRAI/LangSkills">LangSkills</a> <img src="https://img.shields.io/github/stars/LabRAI/LangSkills?style=social" alt="GitHub stars" class="stars-badge"/></div>
   <p class="card-desc">
-    An evidence-backed skills library with 101,000+ curated skills across 21 domains, extracted from academic papers (PMC, arXiv, eLife) and technical sources (GitHub, StackOverflow). Features full-text search over offline SQLite bundles and an automated LLM-powered generation pipeline with source traceability. Described in the SkillCenter preprint.
+    101,000+ skills across 21 domains, extracted from academic papers (PMC, arXiv, eLife) and technical sources (GitHub, StackOverflow). Provides full-text search over offline SQLite bundles, and every skill links back to the source it was derived from. Described in the SkillCenter preprint.
     <a class="venue preprint" href="https://arxiv.org/abs/2607.07676">arXiv:2607.07676</a>
   </p>
 </div>
@@ -150,7 +150,7 @@ I am an undergraduate at Stony Brook University. Before that, two years at Sun Y
   <li><strong>AAAI-26 Student Scholarship & Volunteer Program</strong> — Travel scholarship and selected student volunteer.</li>
   <li><strong>China National Olympiad in Informatics (NOI) Winter Camp 2022</strong> — Silver Medal (roughly comparable to USACO Platinum).</li>
   <li><strong>NOIP 2021</strong> — Provincial First Prize (Guangdong) (roughly comparable to USACO Gold).</li>
-  <li><strong>National College Student Mathematical Modeling Competition 2024</strong> — Team Leader/Member, Provincial First Prize.</li>
+  <li><strong>National College Student Mathematical Modeling Competition 2024</strong> — Provincial First Prize.</li>
 </ul>
 
 <span class='anchor' id='interview'></span>
