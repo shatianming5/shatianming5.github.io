@@ -166,6 +166,35 @@ body {
 }
 
 /* ========== About ========== */
+.job-callout {
+  font-family: var(--font-ui);
+  font-size: 0.92em;
+  line-height: 1.62;
+  color: var(--ink);
+  background: linear-gradient(135deg, var(--accent-soft) 0%, var(--surface-2) 100%);
+  border: 1px solid var(--accent-line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.9em 1.15em;
+  margin-bottom: 1.05em;
+  box-shadow: var(--shadow-sm);
+}
+
+.job-callout .job-highlight {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.job-callout a {
+  color: var(--accent);
+  font-weight: 600;
+  border-bottom: 1px solid var(--accent-line);
+}
+
+.job-callout a:hover {
+  border-bottom-color: var(--accent);
+}
+
 /* Scoped under .page__content: the theme's `.page__content p` (0,1,1) outranks
    a bare `.about-text` (0,1,0) and silently resets the paragraph margin. */
 .page__content .about-text {

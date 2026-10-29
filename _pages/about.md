@@ -12,6 +12,10 @@ redirect_from:
 
 # <span class="section-icon"><i class="fas fa-user"></i></span> About Me
 
+<div class="job-callout">
+  🚀🚀🚀 <span class="job-highlight">I'm on the job market</span> for full-time <strong>Research Scientist / Engineer</strong> or related positions in <strong>Large Language Models</strong> (Post-Training &amp; Agentic RL)! Please <a href="mailto:Tianming.Sha@stonybrook.edu">reach out to me</a> if you are interested in my research!
+</div>
+
 <p class="about-text">
 I build <strong>post-training recipes, agent runtimes, and verifiable environments</strong> that let language agents execute long-horizon reasoning and research loops reliably. Currently, I lead <strong>Octopus</strong>, an RL–systems co-design project where a single model forks parallel reasoning branches that share prefix KV without copying and read one another by mounting KV pages directly into attention layers.
 </p>
