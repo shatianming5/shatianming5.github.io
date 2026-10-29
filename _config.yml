@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Tianming Sha"
+title                    : "Tianming (Tommy) Sha"
 description              : ""
 repository               : "shatianming5/shatianming5.github.io"
 google_scholar_stats_use_cdn : false 
@@ -21,13 +21,13 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Tianming Sha"
+  name             : "Tianming (Tommy) Sha"
   avatar           : "images/avatar.png"
-  bio              : "Building AI systems that automate research itself."
+  bio              : "LLM Post-Training & Agentic RL — building AI systems that automate research itself."
   location         : "Stony Brook, NY, United States"
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=FQNrxf0AAAAJ&hl=zh-CN"
-  email            : "Tianming.sha@stonybrook.edu"
+  googlescholar    : "https://scholar.google.com/citations?user=FQNrxf0AAAAJ"
+  email            : "Tianming.Sha@stonybrook.edu"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :

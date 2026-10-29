@@ -179,17 +179,37 @@ body {
 /* ========== Education ========== */
 .edu-item {
   display: flex;
-  align-items: center;
-  gap: 0.7em;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1em;
   padding: 0.85em 1.1em;
   background: var(--surface-2);
   border: 1px solid var(--rule);
   border-radius: var(--radius);
 }
 
+.edu-item + .edu-item {
+  margin-top: 0.6em;
+}
+
+.edu-main {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7em;
+}
+
 .edu-item .edu-icon {
   color: var(--accent);
-  font-size: 1.05em;
+  font-size: 1.02em;
+  flex-shrink: 0;
+}
+
+.edu-date {
+  font-family: var(--font-ui);
+  font-size: 0.82em;
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
   flex-shrink: 0;
 }
 
@@ -210,19 +230,40 @@ body {
   border-color: var(--accent-line);
 }
 
+.card-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75em;
+  flex-wrap: wrap;
+  margin-bottom: 0.25em;
+}
+
 .card-title {
   font-family: var(--font-read);
   font-weight: 600;
   font-size: 1.1em;
   color: var(--ink);
-  margin-bottom: 0.3em;
+  margin-bottom: 0.25em;
   letter-spacing: -0.01em;
 }
 
-.card-subtitle {
-  font-size: 0.85em;
+.card-header .card-title {
+  margin-bottom: 0;
+}
+
+.card-date {
+  font-family: var(--font-ui);
+  font-size: 0.82em;
+  font-weight: 500;
   color: var(--muted);
-  margin-bottom: 0.6em;
+  white-space: nowrap;
+}
+
+.card-subtitle {
+  font-size: 0.84em;
+  color: var(--muted);
+  margin-bottom: 0.55em;
 }
 
 .card-subtitle i { color: var(--accent-2); margin-right: 0.15em; }
@@ -234,7 +275,44 @@ body {
   margin: 0;
 }
 
-.card-desc a, .card-title a { color: var(--accent-2); font-weight: 600; }
+.card-bullets {
+  margin: 0.35em 0 0;
+  padding-left: 1.25em;
+  font-size: 0.92em;
+  color: var(--body);
+  line-height: 1.68;
+}
+
+.card-bullets li + li {
+  margin-top: 0.35em;
+}
+
+.card-tags {
+  margin-top: 0.65em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+}
+
+.card-tags .venue {
+  margin-left: 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85em;
+  margin-bottom: 0.4em;
+}
+
+.projects-grid .card {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-desc a, .card-title a, .card-bullets a { color: var(--accent-2); font-weight: 600; }
 
 /* ========== Publications ========== */
 .pub-list { list-style: none; padding-left: 0; margin-bottom: 0.4em; }
@@ -306,8 +384,49 @@ body {
 }
 
 .venue.oral     { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-line); font-weight:700; }
+.venue.neurips  { background:#eef4fb; color:#1d4b8f; border-color:#cdddf2; font-weight:700; }
 .venue.workshop { background:#eef0f3; color:#5a6472; border-color:#dee2e8; }
 .venue.review   { background:#f7f1e4; color:#7d6522; border-color:#e9dec4; }
+
+.pub-filter-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin: -0.35em 0 0.55em;
+  font-family: var(--font-ui);
+}
+
+.pub-filter-group {
+  display: inline-flex;
+  background: var(--stone-soft);
+  border: 1px solid var(--stone-line);
+  border-radius: 7px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.pub-filter-btn {
+  border: none;
+  background: transparent;
+  color: var(--stone-text);
+  font-family: var(--font-ui);
+  font-size: 0.76em;
+  font-weight: 500;
+  padding: 0.28em 0.75em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.pub-filter-btn.is-active {
+  background: var(--surface);
+  color: var(--accent);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.pub-list li.is-hidden {
+  display: none;
+}
 
 /* Preprint tags double as the link to arXiv. The a.venue selector is needed
    to out-specify `.page__content a`, which would otherwise recolour them. */
@@ -518,6 +637,8 @@ body {
   .card, .interview-card { padding: 0.95em 1.05em; }
   .interview-card { flex-direction: column; gap: 0.6em; }
   .pub-list li { padding-right: 0; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .edu-item { flex-direction: column; gap: 0.25em; }
 }
 
 /* ========== Print ========== */
