@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: ""
-excerpt: "Tianming (Tommy) Sha — LLM Post-Training & Agentic RL. Research on forkable agent runtimes (Octopus), state-faithful SFT & verifiable environments (XYZ-Aquila / AxisAgentic), agent evaluation (Agent² RL-Bench, BenchScope), and RLVR (ThinkPrior)."
+excerpt: "Tianming (Tommy) Sha — LLM Post-Training & Agentic RL. Research on latent-KV branching multi-agent RL (Octopus), state-faithful SFT & verifiable environments (XYZ-Aquila / AxisAgentic), agent evaluation (Agent² RL-Bench, BenchScope), and RLVR (ThinkPrior)."
 author_profile: true
 redirect_from:
   - /about/
@@ -17,7 +17,7 @@ redirect_from:
 </div>
 
 <p class="about-text">
-I build <strong>post-training recipes, agent runtimes, and verifiable environments</strong> that let language agents execute long-horizon reasoning and research loops reliably. Currently, I lead <strong>Octopus</strong>, an RL–systems co-design project where a single model forks parallel reasoning branches that share prefix KV without copying and read one another by mounting KV pages directly into attention layers.
+I build <strong>post-training recipes, agent runtimes, and verifiable environments</strong> that let language agents execute long-horizon reasoning and research loops reliably. Currently, I lead <a href="https://github.com/shatianming5/octopus"><strong>Octopus</strong></a> (<a href="files/octopus.pdf"><em>Tech Report</em></a>), a co-designed serving runtime, GPU memory manager, and 1D packed <code>DAG-GRPO</code> trainer that executes episodes as a GPU-resident DAG over zero-copy radix KV cursors and hijack-free cross-branch KV mounts—lifting a <strong>4B</strong> sparse-BM25 agent to <strong>49.6%</strong> on BrowseComp-Plus past dense-retrieval agents up to <strong>250&times;</strong> larger.
 </p>
 
 <p class="about-text">
@@ -54,14 +54,21 @@ I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony B
 
 <div class="card">
   <div class="card-header">
-    <div class="card-title">Octopus <span class="venue">Agent Runtime · RL–Systems Co-design</span></div>
+    <div class="card-title"><a href="https://github.com/shatianming5/octopus">Octopus</a> <span class="venue">Latent-KV Multi-Agent RL · Serving Runtime · GPU Systems</span></div>
     <div class="card-date">Stony Brook, NY &nbsp;·&nbsp; Sep 2026 – Present</div>
   </div>
-  <div class="card-subtitle"><i class="fas fa-user-tie"></i> Project Lead &nbsp;·&nbsp; Independent Research Project (Sole Lead)</div>
+  <div class="card-subtitle"><i class="fas fa-user-tie"></i> Project Lead &amp; First Author &nbsp;·&nbsp; w/ Collaborators at UW–Madison &amp; UMN</div>
   <ul class="card-bullets">
-    <li><strong>One model, many branches:</strong> Designed and lead a runtime and RL recipe in which one model forks its own branches; branches share prefix KV without copying and read each other by mounting KV pages into attention layers only (attention, GDN, and Mamba-2 hybrids).</li>
-    <li><strong>Exact by construction:</strong> KV mounts retrieve at EM <strong>0.627</strong> (0.03 unread) with +3.6 pts hijack vs. 55–58% for text reads; prefix-tree trainer matches SGLang rollouts to $|\Delta \log p| = \mathbf{0.0038}$; GRPO on search and SWE on H200 / GB200.</li>
+    <li><strong>4B frontier &amp; emergent collective scaling:</strong> Trained <strong>Qwen3.5-4B</strong> under sparse BM25 and pure binary 0/1 outcome rewards (zero process shaping) to <strong>49.6%</strong> on BrowseComp-Plus (<strong>+17.5 pts</strong> over 143K single-agent GRPO; <strong>&minus;21.7 pts</strong> if test-time <code>fork</code> is disabled on the same weights) and <strong>51.2%</strong> on OpenResearcher—matching snippet-only <strong>OpenAI o3</strong> (49.3%) and outperforming dense-retrieval agents up to <strong>250&times;</strong> larger (30B Tongyi-DeepResearch 44.5%, 671B DeepSeek-R1 16.4%, 1T Kimi-K2 35.4%, GPT-4.1 36.4%, Claude 4 Opus 36.8%).</li>
+    <li><strong>GPU-resident execution DAG &amp; radix cursors:</strong> Replaced flat append-only transcripts with server-resident immutable radix cursors across five primitives (<code>fork</code>, <code>rewind</code>, <code>read_thread</code>, <code>wait</code>, <code>done</code>) with isolated 32K branch budgets and exact hybrid recurrent checkpoints—reusing <strong>89.6%</strong> of prompt tokens from GPU KV cache across 447,993 H200 prefill batches, cutting wire traffic by <strong>98.3%</strong>, and accelerating 128K prompt assembly by <strong>249&times;</strong> (358.5 &rarr; 1.44 ms).</li>
+    <li><strong>Hijack-free zero-copy KV mounting:</strong> Spliced sibling KV pages exclusively into full-attention layers under rotation-free monotonic position offsets while recurrent layers (GDN / Mamba-2) skip mounted spans—allocating <strong>0 extra KV pages</strong>, retaining <strong>92.2%</strong> answer information, and cutting off-task hijacking by <strong>21&times;</strong> (<strong>57.9% &rarr; 2.7%</strong>); transfers across Qwen3.5 (GDN), Qwen3-4B (dense, 96.9% agreement), and Granite-4.0-H (Mamba-2, 98.5% agreement).</li>
+    <li><strong>1D packed <code>DAG-GRPO</code> &amp; self-organized KV mesh:</strong> Compiled branched prefix trees, recurrent boundary hooks, and live KV mount edges into one unpadded 1D pass on SGLang + AReaL (<strong>8.1&times;</strong> avg / <strong>11.1&times;</strong> peak token scaling to 1.12M tok/step, <strong>32&times;</strong> lower rollout–training KL at $4.45 \times 10^{-4}$), eliciting a Step-15 phase transition into a commander–worker hierarchy (98.0% Turn-1 fork, 23.9 zero-copy mounts/episode, <strong>10&times;</strong> hard multi-hop accuracy).</li>
   </ul>
+  <div class="card-tags">
+    <a class="venue oral" href="files/octopus.pdf">Tech Report (PDF)</a>
+    <a class="venue" href="https://github.com/shatianming5/octopus"><i class="fab fa-github"></i>Code &amp; Runtime</a>
+    <a class="venue" href="https://huggingface.co/datasets/Tommysha/octopus-train">&#129303; Env &amp; BM25 Corpus</a>
+  </div>
 </div>
 
 <div class="card">
@@ -126,14 +133,15 @@ I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony B
 <div class="projects-grid">
   <div class="card">
     <div>
-      <div class="card-title">Octopus Runtime</div>
+      <div class="card-title"><a href="https://github.com/shatianming5/octopus">Octopus</a></div>
       <p class="card-desc">
-        Forkable inference-state runtime and RL recipe for parallel agentic reasoning. Branches share prefix KV zero-copy and read peer branches via attention-only KV page mounts across attention, GDN, and Mamba-2 hybrids.
+        GPU-resident DAG runtime and 1D packed <code>DAG-GRPO</code> trainer (SGLang + AReaL) for latent-KV multi-agent RL: <strong>89.6%</strong> GPU KV hit rate, <strong>21&times;</strong> lower hijack via attention-only KV mounts, lifting <strong>Qwen3.5-4B</strong> to <strong>49.6%</strong> on BrowseComp-Plus (<strong>+17.5 pts</strong>).
       </p>
     </div>
     <div class="card-tags">
-      <span class="venue">SGLang / Megatron</span>
-      <span class="venue">$|\Delta \log p| = 0.0038$</span>
+      <a class="venue oral" href="files/octopus.pdf">Tech Report (PDF)</a>
+      <a class="venue" href="https://github.com/shatianming5/octopus">Code</a>
+      <a class="venue" href="https://huggingface.co/datasets/Tommysha/octopus-train">&#129303; Data &amp; Env</a>
     </div>
   </div>
 
@@ -209,12 +217,17 @@ I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony B
 
 <div class="pub-filter-bar">
   <div class="pub-filter-group" role="tablist" aria-label="Filter publications">
-    <button type="button" id="pubBtnSel" class="pub-filter-btn is-active" onclick="setPubFilter('selected')">Selected (7)</button>
-    <button type="button" id="pubBtnAll" class="pub-filter-btn" onclick="setPubFilter('all')">Full List (10)</button>
+    <button type="button" id="pubBtnSel" class="pub-filter-btn is-active" onclick="setPubFilter('selected')">Selected (8)</button>
+    <button type="button" id="pubBtnAll" class="pub-filter-btn" onclick="setPubFilter('all')">Full List (11)</button>
   </div>
 </div>
 
 <ul class="pub-list" id="pubList">
+  <li>
+    <div class="pub-title">Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning</div>
+    <div class="pub-authors"><strong>Sha, T.</strong>, Li, J., Zhao, S.</div>
+    <div class="pub-tags"><a class="venue oral" href="files/octopus.pdf">Tech Report 2026 (PDF)</a> <a class="venue" href="https://github.com/shatianming5/octopus">Code &amp; Runtime</a> <a class="venue" href="https://huggingface.co/datasets/Tommysha/octopus-train">&#129303; Env &amp; Corpus</a></div>
+  </li>
   <li>
     <div class="pub-title">AI4AI at Scale: A Full-Pipeline System for Enhancing LLM Agentic Capabilities</div>
     <div class="pub-authors">XYZ Agentic Team (incl. <strong>Sha, T.</strong>)</div>
