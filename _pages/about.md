@@ -17,7 +17,7 @@ redirect_from:
 </div>
 
 <p class="about-text">
-I build <strong>post-training recipes, agent runtimes, and verifiable environments</strong> that let language agents execute long-horizon reasoning and research loops reliably. Currently, I lead <a href="https://github.com/shatianming5/octopus"><strong>Octopus</strong></a> (<a href="files/octopus.pdf"><em>Tech Report</em></a>), a co-designed serving runtime, GPU memory manager, and 1D packed <code>DAG-GRPO</code> trainer that executes episodes as a GPU-resident DAG over zero-copy radix KV cursors and hijack-free cross-branch KV mounts—lifting a <strong>4B</strong> sparse-BM25 agent to <strong>49.6%</strong> on BrowseComp-Plus past dense-retrieval agents up to <strong>250&times;</strong> larger.
+I build <strong>post-training recipes, agent runtimes, and verifiable environments</strong> that let language agents execute long-horizon reasoning and research loops reliably. Currently, I lead <a href="https://shatianming5.github.io/octopus/"><strong>Octopus</strong></a> (<a href="octopus/assets/Octopus.pdf"><em>Tech Report</em></a> &middot; <a href="https://github.com/shatianming5/octopus"><em>Code</em></a>), a co-designed serving runtime, GPU memory manager, and 1D packed <code>DAG-GRPO</code> trainer that executes episodes as a GPU-resident DAG over zero-copy radix KV cursors and hijack-free cross-branch KV mounts—lifting a <strong>4B</strong> sparse-BM25 agent to <strong>49.6%</strong> on BrowseComp-Plus past dense-retrieval agents up to <strong>250&times;</strong> larger.
 </p>
 
 <p class="about-text">
@@ -54,7 +54,7 @@ I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony B
 
 <div class="card">
   <div class="card-header">
-    <div class="card-title"><a href="https://github.com/shatianming5/octopus">Octopus</a> <span class="venue">Latent-KV Multi-Agent RL · Serving Runtime · GPU Systems</span></div>
+    <div class="card-title"><a href="https://shatianming5.github.io/octopus/">Octopus</a> <span class="venue">Latent-KV Multi-Agent RL · Serving Runtime · GPU Systems</span></div>
     <div class="card-date">Stony Brook, NY &nbsp;·&nbsp; Sep 2026 – Present</div>
   </div>
   <div class="card-subtitle"><i class="fas fa-user-tie"></i> Project Lead &amp; First Author &nbsp;·&nbsp; w/ Collaborators at UW–Madison &amp; UMN</div>
@@ -65,7 +65,8 @@ I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony B
     <li><strong>1D packed <code>DAG-GRPO</code> &amp; self-organized KV mesh:</strong> Compiled branched prefix trees, recurrent boundary hooks, and live KV mount edges into one unpadded 1D pass on SGLang + AReaL (<strong>8.1&times;</strong> avg / <strong>11.1&times;</strong> peak token scaling to 1.12M tok/step, <strong>32&times;</strong> lower rollout–training KL at $4.45 \times 10^{-4}$), eliciting a Step-15 phase transition into a commander–worker hierarchy (98.0% Turn-1 fork, 23.9 zero-copy mounts/episode, <strong>10&times;</strong> hard multi-hop accuracy).</li>
   </ul>
   <div class="card-tags">
-    <a class="venue oral" href="files/octopus.pdf">Tech Report (PDF)</a>
+    <a class="venue oral" href="https://shatianming5.github.io/octopus/">Project Page</a>
+    <a class="venue preprint" href="octopus/assets/Octopus.pdf">Tech Report (PDF)</a>
     <a class="venue" href="https://github.com/shatianming5/octopus"><i class="fab fa-github"></i>Code &amp; Runtime</a>
     <a class="venue" href="https://huggingface.co/datasets/Tommysha/octopus-train">&#129303; Env &amp; BM25 Corpus</a>
   </div>
@@ -133,15 +134,16 @@ I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony B
 <div class="projects-grid">
   <div class="card">
     <div>
-      <div class="card-title"><a href="https://github.com/shatianming5/octopus">Octopus</a></div>
+      <div class="card-title"><a href="https://shatianming5.github.io/octopus/">Octopus</a></div>
       <p class="card-desc">
         GPU-resident DAG runtime and 1D packed <code>DAG-GRPO</code> trainer (SGLang + AReaL) for latent-KV multi-agent RL: <strong>89.6%</strong> GPU KV hit rate, <strong>21&times;</strong> lower hijack via attention-only KV mounts, lifting <strong>Qwen3.5-4B</strong> to <strong>49.6%</strong> on BrowseComp-Plus (<strong>+17.5 pts</strong>).
       </p>
     </div>
     <div class="card-tags">
-      <a class="venue oral" href="files/octopus.pdf">Tech Report (PDF)</a>
+      <a class="venue oral" href="https://shatianming5.github.io/octopus/">Project Page</a>
+      <a class="venue preprint" href="octopus/assets/Octopus.pdf">PDF</a>
       <a class="venue" href="https://github.com/shatianming5/octopus">Code</a>
-      <a class="venue" href="https://huggingface.co/datasets/Tommysha/octopus-train">&#129303; Data &amp; Env</a>
+      <a class="venue" href="https://huggingface.co/datasets/Tommysha/octopus-train">&#129303; Data</a>
     </div>
   </div>
 
@@ -226,7 +228,7 @@ I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony B
   <li>
     <div class="pub-title">Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning</div>
     <div class="pub-authors"><strong>Sha, T.</strong>, Li, J., Zhao, S.</div>
-    <div class="pub-tags"><a class="venue oral" href="files/octopus.pdf">Tech Report 2026 (PDF)</a> <a class="venue" href="https://github.com/shatianming5/octopus">Code &amp; Runtime</a> <a class="venue" href="https://huggingface.co/datasets/Tommysha/octopus-train">&#129303; Env &amp; Corpus</a></div>
+    <div class="pub-tags"><span class="venue preprint">Tech Report 2026</span> <a class="venue oral" href="https://shatianming5.github.io/octopus/">Project Page</a> <a class="venue" href="octopus/assets/Octopus.pdf">PDF</a> <a class="venue" href="https://github.com/shatianming5/octopus">Code</a> <a class="venue" href="https://huggingface.co/datasets/Tommysha/octopus-train">&#129303; Data</a></div>
   </li>
   <li>
     <div class="pub-title">AI4AI at Scale: A Full-Pipeline System for Enhancing LLM Agentic Capabilities</div>

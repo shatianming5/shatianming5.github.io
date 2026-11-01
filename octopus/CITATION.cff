@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use Octopus in your research or systems, please cite this technical report."
+title: "Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning"
+type: report
+date-released: "2026-11-01"
+url: "https://shatianming5.github.io/octopus/"
+repository-code: "https://github.com/shatianming5/octopus"
+authors:
+  - family-names: Sha
+    given-names: Tianming
+    affiliation: Stony Brook University
+    email: tianming.sha@stonybrook.edu
+  - family-names: Li
+    given-names: Junnan
+    affiliation: "University of Wisconsin–Madison"
+    email: jli2786@wisc.edu
+  - family-names: Zhao
+    given-names: Siqi
+    affiliation: University of Minnesota
+    email: zhao2052@umn.edu
+keywords:
+  - multi-agent reinforcement learning
+  - agentic RL
+  - KV cache sharing
+  - DAG-GRPO
+  - LLM serving
+  - SGLang
+  - AReaL
+  - hybrid recurrent-attention models
+  - Gated DeltaNet
+  - Mamba-2
+  - BrowseComp-Plus
+  - OpenResearcher

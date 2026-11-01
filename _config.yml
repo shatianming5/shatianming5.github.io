@@ -7,7 +7,8 @@
 
 # Site Settings
 title                    : "Tianming (Tommy) Sha"
-description              : ""
+description              : "Tianming (Tommy) Sha — LLM Post-Training, Agentic RL & Serving Systems. Creator of Octopus (Latent-KV Multi-Agent RL, DAG-GRPO), contributor to XYZ-Aquila & AxisAgentic, Agent² RL-Bench (NeurIPS 2026), BenchScope, LangSkills, PaperFarm, and ThinkPrior."
+url                      : "https://shatianming5.github.io"
 repository               : "shatianming5/shatianming5.github.io"
 google_scholar_stats_use_cdn : false 
 
@@ -63,6 +64,7 @@ include:
   - .htaccess
   - _pages
   - files
+  - octopus
 exclude:
   - docs
   - google_scholar_crawler

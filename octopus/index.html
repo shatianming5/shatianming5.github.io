@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning</title>
+    <meta
+      name="description"
+      content="Octopus is a co-designed serving runtime, GPU memory manager, and 1D packed DAG-GRPO framework that executes multi-agent reasoning as a GPU-resident DAG over zero-copy radix KV cursors and hijack-free attention-only KV mounts, lifting Qwen3.5-4B (BM25) to 49.6% on BrowseComp-Plus."
+    >
+    <meta
+      name="keywords"
+      content="Octopus, Multi-Agent Reinforcement Learning, Agentic RL, DAG-GRPO, KV Cache Sharing, Zero-Copy KV Mount, SGLang, AReaL, Qwen3.5, Gated DeltaNet, Mamba-2, BrowseComp-Plus, OpenResearcher, Deep Search Agents, Tianming Sha, Junnan Li, Siqi Zhao"
+    >
+    <meta name="theme-color" content="#f2eee5">
+    <link rel="canonical" href="https://shatianming5.github.io/octopus/">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Octopus · Latent-KV Multi-Agent RL">
+    <meta
+      property="og:title"
+      content="Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning"
+    >
+    <meta
+      property="og:description"
+      content="GPU-resident execution DAGs (89.6% KV hit rate), hijack-free zero-copy KV mounting (21x lower hijack), and 1D packed DAG-GRPO—lifting Qwen3.5-4B (BM25) to 49.6% on BrowseComp-Plus (+17.5 pts), surpassing dense-retrieval agents up to 250x larger."
+    >
+    <meta property="og:url" content="https://shatianming5.github.io/octopus/">
+    <meta property="og:image" content="https://shatianming5.github.io/octopus/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta
+      property="og:image:alt"
+      content="Octopus project summary card showing 49.6% BrowseComp-Plus accuracy on a 4B model, 89.6% GPU radix KV cache hit rate, 21x lower task hijacking, and 32x lower rollout-training KL divergence."
+    >
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta
+      name="twitter:title"
+      content="Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning"
+    >
+    <meta
+      name="twitter:description"
+      content="GPU-resident execution DAGs, hijack-free zero-copy KV mounting, and 1D packed DAG-GRPO: 4B BM25 reaches 49.6% on BrowseComp-Plus, outperforming dense-retrieval agents up to 250x larger."
+    >
+    <meta name="twitter:image" content="https://shatianming5.github.io/octopus/assets/og-image.png">
+
+    <!-- Google Scholar / Highwire Press Metadata -->
+    <meta
+      name="citation_title"
+      content="Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning"
+    >
+    <meta name="citation_author" content="Sha, Tianming">
+    <meta name="citation_author_institution" content="Stony Brook University">
+    <meta name="citation_author" content="Li, Junnan">
+    <meta name="citation_author_institution" content="University of Wisconsin-Madison">
+    <meta name="citation_author" content="Zhao, Siqi">
+    <meta name="citation_author_institution" content="University of Minnesota">
+    <meta name="citation_publication_date" content="2026/11/01">
+    <meta name="citation_online_date" content="2026/11/01">
+    <meta
+      name="citation_technical_report_institution"
+      content="Stony Brook University; University of Wisconsin-Madison; University of Minnesota"
+    >
+    <meta name="citation_abstract_html_url" content="https://shatianming5.github.io/octopus/">
+    <meta name="citation_pdf_url" content="https://shatianming5.github.io/octopus/assets/Octopus.pdf">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning",
+        "headline": "Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning",
+        "description": "We introduce Octopus, a co-designed serving runtime, GPU memory manager, and RL framework that executes episodes as a GPU-resident DAG over immutable radix cursors (89.6% GPU KV cache hit rate) with hijack-free zero-copy KV mounting and 1D packed DAG-GRPO, lifting Qwen3.5-4B under sparse BM25 to 49.6% on BrowseComp-Plus (+17.5 points) and 51.2% on OpenResearcher.",
+        "datePublished": "2026-11-01",
+        "url": "https://shatianming5.github.io/octopus/",
+        "mainEntityOfPage": "https://shatianming5.github.io/octopus/",
+        "isAccessibleForFree": true,
+        "codeRepository": "https://github.com/shatianming5/octopus",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Tianming Sha",
+            "alternateName": "Tommy Sha",
+            "url": "https://shatianming5.github.io/",
+            "affiliation": {
+              "@type": "CollegeOrUniversity",
+              "name": "Stony Brook University"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Junnan Li",
+            "affiliation": {
+              "@type": "CollegeOrUniversity",
+              "name": "University of Wisconsin-Madison"
+            }
+          },
+          {
+            "@type": "Person",
+            "name": "Siqi Zhao",
+            "affiliation": {
+              "@type": "CollegeOrUniversity",
+              "name": "University of Minnesota"
+            }
+          }
+        ],
+        "keywords": [
+          "Octopus",
+          "multi-agent reinforcement learning",
+          "agentic reinforcement learning",
+          "KV cache sharing",
+          "zero-copy KV mounting",
+          "DAG-GRPO",
+          "SGLang",
+          "AReaL",
+          "Qwen3.5",
+          "Gated DeltaNet",
+          "Mamba-2",
+          "BrowseComp-Plus",
+          "OpenResearcher",
+          "deep search agents"
+        ],
+        "encoding": {
+          "@type": "MediaObject",
+          "contentUrl": "https://shatianming5.github.io/octopus/assets/Octopus.pdf",
+          "encodingFormat": "application/pdf",
+          "name": "Octopus Technical Report (PDF)"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Octopus home">
+        <img src="assets/octo_logo.png" width="360" height="357" alt="Octopus mascot">
+        <span>Octopus</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#method">Method</a>
+        <a href="#evidence">Frontier</a>
+        <a href="#scaling">Scaling</a>
+        <a href="#citation">Citation</a>
+      </nav>
+      <div class="header-links">
+        <a href="https://shatianming5.github.io/">Author Home</a>
+        <a href="https://github.com/shatianming5/octopus">GitHub ↗</a>
+        <a href="assets/Octopus.pdf">Paper PDF ↗</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="paper-title">
+        <div class="hero-kicker">
+          <span>Technical Report · November 2026</span>
+          <span>Latent-KV Multi-Agent RL · SGLang + AReaL</span>
+        </div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Co-Designed Serving Runtime, GPU Memory Manager &amp; 1D Packed Tree RL</p>
+            <h1 id="paper-title">
+              <span class="title-row" style="display:flex;align-items:center;gap:0.25em;max-width:none;margin-top:0;color:var(--ink);font-family:var(--display);font-size:1em;font-weight:600;letter-spacing:-0.055em;line-height:0.9;">
+                <img class="hero-mascot" src="assets/octo_logo.png" width="360" height="357" alt="">
+                Octopus
+              </span>
+              <span>One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning</span>
+            </h1>
+            <p class="deck">
+              Octopus replaces flat append-only agent transcripts and stateless multi-agent chat
+              wrappers with a stateful, GPU-resident execution DAG—coordinating parallel branches
+              through <i>O</i>(1) zero-copy radix KV cursors, hijack-free attention-only KV
+              mounts, and end-to-end differentiable 1D packed <code>DAG-GRPO</code>.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-accent" href="assets/Octopus.pdf">Read Paper (PDF)</a>
+              <a class="button button-primary" href="https://github.com/shatianming5/octopus">Code &amp; Runtime</a>
+              <a class="button button-secondary" href="https://huggingface.co/datasets/Tommysha/octopus-train">🤗 Dataset &amp; Env</a>
+              <a class="button button-secondary" href="#citation">BibTeX</a>
+            </div>
+            <div class="authors-block">
+              <p class="authors">
+                <a href="https://shatianming5.github.io/">Tianming Sha<sup>1</sup></a>
+                <span aria-hidden="true">·</span>
+                <a href="mailto:jli2786@wisc.edu">Junnan Li<sup>2</sup></a>
+                <span aria-hidden="true">·</span>
+                <a href="mailto:zhao2052@umn.edu">Siqi Zhao<sup>3</sup></a>
+              </p>
+              <p class="affiliations">
+                <span><sup>1</sup>Stony Brook University</span>
+                <span><sup>2</sup>University of Wisconsin–Madison</span>
+                <span><sup>3</sup>University of Minnesota</span>
+              </p>
+            </div>
+          </div>
+
+          <aside class="hero-ledger" aria-label="Headline results at a glance">
+            <p class="ledger-label">Key results at a glance</p>
+            <dl>
+              <div>
+                <dt>49.6%</dt>
+                <dd>BrowseComp-Plus accuracy on <strong>Qwen3.5-4B</strong> (BM25), <strong>+17.5 pts</strong> over 143K single-agent GRPO—beating dense-retrieval agents up to <strong>250×</strong> larger</dd>
+              </div>
+              <div>
+                <dt>89.6%</dt>
+                <dd>live GPU radix KV cache hit rate across 447,993 H200 prefill batches (<strong>98.3%</strong> less wire traffic, <strong>249×</strong> faster 128K assembly)</dd>
+              </div>
+              <div>
+                <dt>21×</dt>
+                <dd>reduction in off-task hijacking (<strong>57.9% → 2.7%</strong>) via attention-only KV mounting, retaining <strong>92.2%</strong> answer info with <strong>0</strong> extra KV pages</dd>
+              </div>
+              <div>
+                <dt>32×</dt>
+                <dd>lower rollout–training KL divergence (4.45 × 10<sup>−4</sup> vs. 0.0142) via live mounted KV edges in 1D packed <code>DAG-GRPO</code></dd>
+              </div>
+            </dl>
+            <p class="ledger-note">
+              Trained under pure binary 0/1 outcome rewards with zero process shaping.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="question section-grid" aria-labelledby="question-title">
+        <div class="section-index" aria-hidden="true">01</div>
+        <div>
+          <p class="eyebrow">The flat-context trilemma</p>
+          <h2 id="question-title">
+            Why do long-horizon agents stall inside flat windows and stateless multi-agent chat APIs?
+          </h2>
+        </div>
+        <p class="question-answer">
+          Deep search unfolds as a branching tree, yet modern runtimes force every episode onto a
+          single linear tape: failed 8K-page detours pollute working memory (stalling 143K flat RL
+          at 28.5% window utilization and 32.1% accuracy), mid-context edits break prefix caching
+          and corrupt sequential recurrent states (Gated DeltaNet / Mamba-2), and splicing sibling
+          text or full-layer KV caches hijacks over half of subsequent turns (55.2%–57.9%).
+        </p>
+      </section>
+
+      <section class="definition" aria-labelledby="causal-title">
+        <div class="definition-label">Causal fork knockout</div>
+        <div class="definition-copy">
+          <h2 id="causal-title">Live collective execution, not weight distillation</h2>
+          <p>
+            Trained end-to-end on Qwen3.5-4B, Octopus explores 329.2K tokens across isolated 32K
+            branches while keeping active per-turn prompts at 26.4K. Disabling <code>fork</code> at
+            test time on the <em>exact same Step-45 weights</em> collapses paired BrowseComp-Plus
+            accuracy from 50.8% to 29.1%—proving gains come from live GPU-resident branching and
+            peer KV sharing.
+          </p>
+        </div>
+        <div class="definition-stat">
+          <strong>−21.7 pts</strong>
+          <span>
+            paired BrowseComp-Plus accuracy drop when test-time <code>fork</code> is turned off on
+            identical trained weights (571 paired queries).
+          </span>
+        </div>
+      </section>
+
+      <section class="method" id="method" aria-labelledby="method-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">Architecture &amp; Co-Design</p>
+            <h2 id="method-title">A GPU-resident execution DAG from serving to RL.</h2>
+          </div>
+          <p>
+            Octopus models an episode as a cursor-addressed DAG <i>G</i> = (<i>V</i>, <i>E</i><sub>tree</sub>, <i>E</i><sub>mount</sub>), co-designing serving cursors,
+            layer-selective KV mounting, and 1D packed tree backpropagation across dense, MoE, and
+            hybrid recurrent-attention backbones.
+          </p>
+        </header>
+
+        <figure class="paper-figure wide-figure">
+          <img
+            src="assets/fig1_overview.png"
+            width="3052"
+            height="1268"
+            alt="Comparison between (a) flat long context where failed detours and dead-end documents accumulate in working memory and (b) Octopus context virtualization over a GPU-resident sub-window DAG using fork, rewind, and zero-copy read_thread KV mounts."
+          >
+          <figcaption>
+            <span>Figure 1</span>
+            (a) Stretching a flat context window retains failed detours and dilutes attention. (b)
+            Octopus virtualizes long-horizon reasoning across isolated 32K GPU cursors via
+            <code>fork</code>, <code>rewind</code>, and zero-copy <code>read_thread</code> KV
+            mounts.
+          </figcaption>
+        </figure>
+
+        <ol class="method-steps">
+          <li>
+            <span class="step-number">01 · Runtime</span>
+            <h3>Server-resident radix cursors</h3>
+            <p>
+              Completed turns persist on GPU as immutable radix cursors. Continuation, parallel
+              <code>fork</code>, and exact recurrent-state <code>rewind</code> send only <i>O</i>(|Δ<i>m</i>|)
+              deltas via an automatic startup chat-template slicer (0/18,344 tokenization mismatches
+              across 7 model families), achieving an <strong>89.59%</strong> GPU KV hit rate and
+              <strong>249×</strong> faster 128K prompt assembly (358.5 → 1.44 ms).
+            </p>
+          </li>
+          <li>
+            <span class="step-number">02 · Memory</span>
+            <h3>Hijack-free zero-copy KV mount</h3>
+            <p>
+              In hybrid models, recurrent layers store mutable working memory <b>h</b><sub><i>B</i></sub> while
+              full-attention layers provide passive associative lookup. <code>read_thread</code>
+              splices sibling KV pages exclusively into attention layers under rotation-free
+              monotonic position offsets <i>s</i>(<i>c</i>′<sub><i>B</i></sub>) = max(<i>p</i><sub><i>B</i></sub>, <i>e</i><sub><i>A</i></sub> + 1) while recurrent layers skip
+              mounted spans—allocating <strong>0 new KV pages</strong> and cutting hijacking from
+              <strong>57.9% to 2.7%</strong>.
+            </p>
+          </li>
+          <li>
+            <span class="step-number">03 · Training</span>
+            <h3>1D packed <code>DAG-GRPO</code></h3>
+            <p>
+              Compiles branched trees, recurrent boundary checkpoints, and live KV mount edges into
+              one unpadded 1D forward–backward pass (up to 262K tokens/tree, 1.12M owned
+              tokens/step, 0 OOM). Single-ownership masking deduplicates shared prefixes while
+              rectangular FlashAttention routes reader gradients directly into producer KV LoRA
+              projections.
+            </p>
+          </li>
+        </ol>
+
+        <div class="table-wrap" tabindex="0" aria-label="Five cursor-level execution primitives">
+          <table>
+            <caption>
+              Five GPU-native cursor primitives coordinating orchestrator and worker threads within isolated 32K branch budgets.
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Primitive</th>
+                <th scope="col">Signature</th>
+                <th scope="col">Server-Side Radix KV &amp; Hybrid Recurrent (<b>h</b><sub><i>t</i></sub>) Semantics</th>
+                <th scope="col">Control-Flow &amp; Budget Contract</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><code>fork</code></th>
+                <td><code>fork({id: prompt, ...})</code></td>
+                <td>Shares parent GPU radix KV prefix in <i>O</i>(1) via reference counting (+K); clones recurrent checkpoint <b>h</b><sub>end</sub>(<i>c</i><sub>fork</sub>).</td>
+                <td>Spawns parallel child threads, each granted an isolated <i>B</i><sub>thread</sub> = 32K growth budget.</td>
+              </tr>
+              <tr>
+                <th scope="row"><code>read_thread</code></th>
+                <td><code>read(branch, [a, b])</code></td>
+                <td>Zero-copy mounts sibling KV pages <i>c</i><sub><i>A</i></sub>[<i>s</i><sub><i>A</i></sub>:<i>e</i><sub><i>A</i></sub>) into attention layers <i>L</i><sub>mount</sub> w/ monotonic jump; recurrent layers skip span.</td>
+                <td>Injects a ~15-token metadata stub into reader prompt without copying sibling text or consuming KV pages.</td>
+              </tr>
+              <tr>
+                <th scope="row"><code>rewind</code></th>
+                <td><code>rewind(step=k, note)</code></td>
+                <td>Restores step-<i>k</i> cursor <i>c</i><sub><i>k</i></sub> and exact pre-detour recurrent state <b>h</b><sub><i>k</i></sub>; appends concise diagnostic pivot note.</td>
+                <td>Reclaims dead-end steps <i>k</i> + 1 … <i>t</i> from branch budget while keeping pruned leaves in the RL credit graph.</td>
+              </tr>
+              <tr>
+                <th scope="row"><code>wait</code></th>
+                <td><code>wait(branches=[...])</code></td>
+                <td>Suspends caller cursor at zero active compute while retaining its GPU handle until children complete.</td>
+                <td>Returns compact branch status summaries and step manifests available for <code>read_thread</code>.</td>
+              </tr>
+              <tr>
+                <th scope="row"><code>done</code></th>
+                <td><code>done(answer, evidence)</code></td>
+                <td>Freezes cursor as <code>COMPLETED</code> and pins its physical KV pages in the GPU radix pool for parent/peer mounts.</td>
+                <td>Enforced via a 2K answer reserve and 1-turn untrainable close reminder (<i>m</i><sub>ℓ,<i>t</i></sub> = 0) preventing policy collapse.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="evidence" id="evidence" aria-labelledby="evidence-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">Deep Search Frontier &amp; KV-Mount Benchmarks</p>
+            <h2 id="evidence-title">A 4B sparse-BM25 policy atop the sub-27B frontier.</h2>
+          </div>
+          <p>
+            Trained on 3,040 OpenResearcher queries over a 14.9M-document corpus and evaluated
+            zero-shot on BrowseComp-Plus (830 queries, 100K-document corpus, 0 question overlap).
+          </p>
+        </header>
+
+        <figure class="paper-figure wide-figure">
+          <img
+            src="assets/fig_exp1_pareto.png"
+            width="1729"
+            height="1020"
+            loading="lazy"
+            alt="BrowseComp-Plus test accuracy versus model parameter scale from 4B to 1T and proprietary frontier models. Octopus-4B reaches 49.6% under sparse BM25, dominating larger open-weight and proprietary systems."
+          >
+          <figcaption>
+            <span>Figure 2 · Parameter–Accuracy Frontier</span>
+            BrowseComp-Plus test accuracy (830 queries) across 4B–1T open-weight and proprietary
+            agents. Under sparse BM25, <strong>Octopus (4B)</strong> reaches <strong>49.6%</strong>,
+            surpassing 9B context-editing RL (42.5%), matching snippet-only OpenAI o3 (49.3%), and
+            outperforming dense-retrieval browser agents up to 250× larger.
+          </figcaption>
+        </figure>
+
+        <div class="table-wrap" tabindex="0" aria-label="BrowseComp-Plus and OpenResearcher comparison table">
+          <table>
+            <caption>
+              End-to-end deep search comparison on BrowseComp-Plus (830 test queries) and OpenResearcher Validation (500 queries).
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">System / Agent Policy</th>
+                <th scope="col">Backbone</th>
+                <th scope="col">Retriever &amp; Tools</th>
+                <th scope="col">Context Used / Cap</th>
+                <th scope="col">Gold Open Rec.</th>
+                <th scope="col">OR Val Acc.</th>
+                <th scope="col">BrowseComp-Plus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Single-Agent ReAct (32K)</th>
+                <td>Qwen3.5-4B</td>
+                <td>BM25 (<code>search+open</code>)</td>
+                <td>32.6K / 32K</td>
+                <td>12.2%</td>
+                <td>40.0%</td>
+                <td>26.0%</td>
+              </tr>
+              <tr>
+                <th scope="row">Multi-Agent Fork (0-Shot)</th>
+                <td>Qwen3.5-4B</td>
+                <td>BM25 (<code>search+open+tree</code>)</td>
+                <td>38.1K</td>
+                <td>12.5%</td>
+                <td>41.6%</td>
+                <td>26.3%</td>
+              </tr>
+              <tr>
+                <th scope="row">Single-Agent GRPO (143K Flat)</th>
+                <td>Qwen3.5-4B</td>
+                <td>BM25 (<code>search+open</code>)</td>
+                <td>40.8K / 143K</td>
+                <td>21.1%</td>
+                <td>43.2%</td>
+                <td>32.1%</td>
+              </tr>
+              <tr>
+                <th scope="row">CLM + SCR (In-Place Edit RL)</th>
+                <td>Qwen3.5-9B</td>
+                <td>BM25 (<code>search+open+ret</code>)</td>
+                <td>Multi-edit (≤32K)</td>
+                <td>—</td>
+                <td>—</td>
+                <td>42.5%</td>
+              </tr>
+              <tr>
+                <th scope="row">DeepSeek-R1 / Kimi-K2</th>
+                <td>671B / 1T</td>
+                <td>Dense (<code>Qwen3-Embed-8B</code>)</td>
+                <td>≤128K</td>
+                <td>—</td>
+                <td>—</td>
+                <td>16.4% / 35.4%</td>
+              </tr>
+              <tr>
+                <th scope="row">GPT-4.1 / Claude 4 Opus</th>
+                <td>Proprietary</td>
+                <td>Dense (<code>Qwen3-Embed-8B</code>)</td>
+                <td>≤128K–200K</td>
+                <td>—</td>
+                <td>—</td>
+                <td>36.4% / 36.8%</td>
+              </tr>
+              <tr>
+                <th scope="row">Tongyi-DeepResearch</th>
+                <td>30B-A3B</td>
+                <td>Dense (<code>Qwen3-Embed-8B</code>)</td>
+                <td>≤128K</td>
+                <td>—</td>
+                <td>—</td>
+                <td>44.5%</td>
+              </tr>
+              <tr>
+                <th scope="row">OpenAI o3 (Snippet-Only)</th>
+                <td>Proprietary</td>
+                <td>BM25 (<code>search-only</code>)</td>
+                <td>≤200K</td>
+                <td>—</td>
+                <td>—</td>
+                <td>49.3%</td>
+              </tr>
+              <tr class="highlight-row">
+                <th scope="row">Octopus (<i>D</i><sub>max</sub> = 1, Parallel Team)</th>
+                <td>Qwen3.5-4B</td>
+                <td>BM25 (<code>search+open+tree</code>)</td>
+                <td>143.5K (32K/br)</td>
+                <td>37.7%</td>
+                <td><strong>51.2%</strong> (+8.0)</td>
+                <td><strong>42.6%</strong> (+10.5)</td>
+              </tr>
+              <tr class="highlight-row">
+                <th scope="row">Octopus (<i>D</i><sub>max</sub> = ∞, Recursive DAG)</th>
+                <td>Qwen3.5-4B</td>
+                <td>BM25 (<code>search+open+tree</code>)</td>
+                <td>199.0K net (329K expl.)</td>
+                <td><strong>43.3%</strong> (+22.2)</td>
+                <td>46.6% (Step 20)</td>
+                <td><strong>49.6%</strong> (+17.5)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="paper-figure wide-figure">
+          <img
+            src="assets/fig_exp2_efficiency.png"
+            width="1703"
+            height="775"
+            loading="lazy"
+            alt="Two-panel plot: (a) Evidence conversion across search recall, evidence open recall, gold open recall, and test accuracy; (b) Sibling fact exact match versus off-task hijack rate across 366 live read_thread mounts."
+          >
+          <figcaption>
+            <span>Figure 3 · Context Conversion &amp; Hijack Safety</span>
+            (a) Branch-isolated 32K exploration more than doubles fractional gold-document recall
+            (21.1% → 43.3%, opening ≥1 gold doc on 58.9% of queries). (b) Across 366 live
+            <code>read_thread</code> mounts (947 probes, 52% with longer sibling <i>e</i><sub><i>A</i></sub> &gt; <i>p</i><sub><i>B</i></sub>),
+            Octopus retains 92.2% full-text answer information at 2.7% hijacking with 0 extra KV pages.
+          </figcaption>
+        </figure>
+
+        <div class="table-wrap" tabindex="0" aria-label="Cross-branch KV sharing mechanisms benchmark">
+          <table>
+            <caption>
+              Cross-branch sharing across 366 live <code>read_thread</code> mounts on Qwen3.5-4B (947 exact-match probes; 52% longer sibling <i>e</i><sub><i>A</i></sub> &gt; <i>p</i><sub><i>B</i></sub>).
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Cross-Branch Sharing Mechanism</th>
+                <th scope="col">Extra KV Memory</th>
+                <th scope="col">Full-Text Info Retained</th>
+                <th scope="col">Exact Match (Longer Sib.)</th>
+                <th scope="col">Policy Drift ΔNLL</th>
+                <th scope="col">Off-Task Hijack Rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">No Sibling Read (Control)</th>
+                <td>0 Pages</td>
+                <td>0.0%</td>
+                <td>0.031 (0.032)</td>
+                <td>0.000</td>
+                <td>0.5%</td>
+              </tr>
+              <tr>
+                <th scope="row">Transcript Text Copy (AutoGen)</th>
+                <td>+100% (+<i>L</i><sub>mount</sub>)</td>
+                <td>100%</td>
+                <td>0.760 (0.786)</td>
+                <td>+0.196</td>
+                <td>57.9%</td>
+              </tr>
+              <tr>
+                <th scope="row">Full-Layer KV Splice (CacheBlend)</th>
+                <td>+100% (+<i>L</i><sub>mount</sub>)</td>
+                <td>98.1%</td>
+                <td>0.715 (0.731)</td>
+                <td>+0.195</td>
+                <td>55.2%</td>
+              </tr>
+              <tr>
+                <th scope="row">Unshifted Zero-Copy Attention KV</th>
+                <td>0 Pages (0-Copy)</td>
+                <td>86.1%</td>
+                <td>0.521 (0.449 · RoPE flip)</td>
+                <td>+0.003</td>
+                <td>2.5%</td>
+              </tr>
+              <tr>
+                <th scope="row">RoPE-Relocated KV Copy (KVCOMM)</th>
+                <td>+100% (+<i>L</i><sub>mount</sub>)</td>
+                <td>91.7%</td>
+                <td>0.601 (0.611)</td>
+                <td>+0.015</td>
+                <td>7.1%</td>
+              </tr>
+              <tr class="highlight-row">
+                <th scope="row">Octopus Zero-Copy Mount (Ours)</th>
+                <td><strong>0 Pages (0-Copy)</strong></td>
+                <td><strong>92.2%</strong> (96.5%–97.3% rec.)</td>
+                <td><strong>0.612 (0.613)</strong></td>
+                <td><strong>+0.007</strong> (29× ↓)</td>
+                <td><strong>2.7%</strong> (21× ↓)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="scaling" id="scaling" aria-labelledby="scaling-title">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow">Emergent Collective Scaling</p>
+            <h2 id="scaling-title">Step-15 phase transition into a commander–mesh hierarchy.</h2>
+          </div>
+          <p>
+            Exposing branching primitives without RL yields zero gain over 32K ReAct (26.3% vs.
+            26.0%). Under pure 0/1 outcome <code>DAG-GRPO</code>, Qwen3.5-4B self-organizes
+            recursive division of labor from scratch.
+          </p>
+        </header>
+
+        <figure class="paper-figure wide-figure">
+          <img
+            src="assets/fig_exp3_agent_scaling.png"
+            width="1768"
+            height="1045"
+            loading="lazy"
+            alt="Four-panel figure showing (a) monotonic accuracy scaling with deployed agents per episode and -21.7% causal fork knockout, (b) Step-15 recursive phase transition with sub-critical child ratio mu = 0.68 < 1.0, (c) emergent Turn-1 root fork and peer-to-peer KV mesh, and (d) depth-cascaded worker rewinds."
+          >
+          <figcaption>
+            <span>Figure 4 · Collective Scaling &amp; Phase Transition</span>
+            (a) Held-out accuracy climbs monotonically from 1 to 7.41 deployed agents/episode.
+            (b–d) At Step 15 of unlimited-depth RL (<i>D</i><sub>max</sub> = ∞, <i>W</i><sub>max</sub> = 10), deep trees
+            (<i>d</i> ≥ 5) surge 54× while remaining sub-critical (<i>μ</i> = 0.68 &lt; 1), as roots
+            specialize into clean orchestrators and workers form a lateral peer-to-peer KV mesh.
+          </figcaption>
+        </figure>
+
+        <div class="composition">
+          <div class="composition-copy">
+            <p class="eyebrow">Self-organized division of labor · 0 shaping reward</p>
+            <h3>Clean orchestrator roots, peer KV meshes, and 10× multi-hop accuracy.</h3>
+            <p>
+              Past Step 15, root threads delegate on Turn 1 in 98.0% of episodes (up 38×) while
+              offloading 92.8% of noisy 8K-page opens and 91.5% of dead-end <code>rewind</code>
+              calls to sub-branches. Workers coordinate horizontally through an emergent peer-to-peer
+              <code>read_thread</code> mesh (96.4% lateral worker↔worker mounts).
+            </p>
+            <p class="boundary">
+              Recursive branching rescues 31.8% of queries that hit the 32K single-agent context
+              wall (0% at 0-shot) and lifts accuracy on the hardest third-quartile multi-hop
+              queries by 10× (3.4% → 34.1%).
+            </p>
+          </div>
+          <dl class="composition-ledger">
+            <div>
+              <dt>Turn-1 root delegation</dt>
+              <dd>2.6% → <strong>98.0%</strong> (38×)</dd>
+            </div>
+            <div>
+              <dt>8K page opens offloaded to workers</dt>
+              <dd><strong>92.8%</strong></dd>
+            </div>
+            <div>
+              <dt>Peer-to-peer KV mesh episodes</dt>
+              <dd><strong>85.9%</strong> (23.9 mounts/ep)</dd>
+            </div>
+            <div>
+              <dt>Hard multi-hop (Q3) accuracy</dt>
+              <dd>3.4% → <strong>34.1%</strong> (10×)</dd>
+            </div>
+            <div>
+              <dt>1D prefix-tree token scaling</dt>
+              <dd><strong>8.1×</strong> avg / <strong>11.1×</strong> peak (0 OOM)</dd>
+            </div>
+            <div>
+              <dt>Cross-architecture KV transfer</dt>
+              <dd>Qwen3 <strong>96.9%</strong> · Granite-4.0-H <strong>98.5%</strong></dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="citation" id="citation" aria-labelledby="citation-title">
+        <div class="citation-copy">
+          <p class="eyebrow">Citation &amp; Artifacts</p>
+          <h2 id="citation-title">Cite Octopus.</h2>
+          <p>
+            Code, SGLang 0.5.19 &amp; AReaL cursor/mount overlays, Harbor containerized SWE
+            bundles, and pre-built OpenResearcher / BrowseComp-Plus BM25 indices are publicly
+            available.
+          </p>
+          <div class="citation-links">
+            <a href="assets/Octopus.pdf">Paper PDF</a>
+            <a href="https://github.com/shatianming5/octopus">GitHub Repo</a>
+            <a href="https://huggingface.co/datasets/Tommysha/octopus-train">HuggingFace Data</a>
+            <a href="CITATION.bib">CITATION.bib</a>
+            <a href="CITATION.cff">CITATION.cff</a>
+          </div>
+        </div>
+        <div class="code-card">
+          <div class="code-toolbar">
+            <span>BibTeX</span>
+            <button type="button" id="copy-citation" aria-describedby="copy-status">
+              Copy citation
+            </button>
+            <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
+          </div>
+          <pre><code id="bibtex">@techreport{sha2026octopus,
+  title       = {Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning},
+  author      = {Sha, Tianming and Li, Junnan and Zhao, Siqi},
+  institution = {Stony Brook University and University of Wisconsin--Madison and University of Minnesota},
+  year        = {2026},
+  month       = nov,
+  url         = {https://shatianming5.github.io/octopus/},
+  pdf         = {https://shatianming5.github.io/octopus/assets/Octopus.pdf}
+}</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <img src="assets/octo_logo.png" width="360" height="357" alt="">
+        <p>
+          Octopus · GPU-resident execution DAGs, hijack-free zero-copy KV mounting, and 1D packed
+          DAG-GRPO for multi-agent reinforcement learning.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="https://shatianming5.github.io/">Tianming Sha</a>
+        <a href="https://github.com/shatianming5/octopus">GitHub</a>
+        <a href="https://huggingface.co/datasets/Tommysha/octopus-train">HuggingFace</a>
+        <a href="assets/Octopus.pdf">Technical Report (PDF)</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
