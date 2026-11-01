@@ -289,10 +289,10 @@
           >
           <figcaption>
             <span>Figure 1</span>
-            (a) Stretching a flat context window retains failed detours and dilutes attention. (b)
+            <div>(a) Stretching a flat context window retains failed detours and dilutes attention. (b)
             Octopus virtualizes long-horizon reasoning across isolated 32K GPU cursors via
             <code>fork</code>, <code>rewind</code>, and zero-copy <code>read_thread</code> KV
-            mounts.
+            mounts.</div>
           </figcaption>
         </figure>
 
@@ -399,15 +399,14 @@
             src="assets/fig_exp1_pareto.png"
             width="1729"
             height="1020"
-            loading="lazy"
             alt="BrowseComp-Plus test accuracy versus model parameter scale from 4B to 1T and proprietary frontier models. Octopus-4B reaches 49.6% under sparse BM25, dominating larger open-weight and proprietary systems."
           >
           <figcaption>
             <span>Figure 2 · Parameter–Accuracy Frontier</span>
-            BrowseComp-Plus test accuracy (830 queries) across 4B–1T open-weight and proprietary
+            <div>BrowseComp-Plus test accuracy (830 queries) across 4B–1T open-weight and proprietary
             agents. Under sparse BM25, <strong>Octopus (4B)</strong> reaches <strong>49.6%</strong>,
             surpassing 9B context-editing RL (42.5%), matching snippet-only OpenAI o3 (49.3%), and
-            outperforming dense-retrieval browser agents up to 250× larger.
+            outperforming dense-retrieval browser agents up to 250× larger.</div>
           </figcaption>
         </figure>
 
@@ -527,15 +526,14 @@
             src="assets/fig_exp2_efficiency.png"
             width="1703"
             height="775"
-            loading="lazy"
             alt="Two-panel plot: (a) Evidence conversion across search recall, evidence open recall, gold open recall, and test accuracy; (b) Sibling fact exact match versus off-task hijack rate across 366 live read_thread mounts."
           >
           <figcaption>
             <span>Figure 3 · Context Conversion &amp; Hijack Safety</span>
-            (a) Branch-isolated 32K exploration more than doubles fractional gold-document recall
+            <div>(a) Branch-isolated 32K exploration more than doubles fractional gold-document recall
             (21.1% → 43.3%, opening ≥1 gold doc on 58.9% of queries). (b) Across 366 live
             <code>read_thread</code> mounts (947 probes, 52% with longer sibling <i>e</i><sub><i>A</i></sub> &gt; <i>p</i><sub><i>B</i></sub>),
-            Octopus retains 92.2% full-text answer information at 2.7% hijacking with 0 extra KV pages.
+            Octopus retains 92.2% full-text answer information at 2.7% hijacking with 0 extra KV pages.</div>
           </figcaption>
         </figure>
 
@@ -626,15 +624,14 @@
             src="assets/fig_exp3_agent_scaling.png"
             width="1768"
             height="1045"
-            loading="lazy"
             alt="Four-panel figure showing (a) monotonic accuracy scaling with deployed agents per episode and -21.7% causal fork knockout, (b) Step-15 recursive phase transition with sub-critical child ratio mu = 0.68 < 1.0, (c) emergent Turn-1 root fork and peer-to-peer KV mesh, and (d) depth-cascaded worker rewinds."
           >
           <figcaption>
             <span>Figure 4 · Collective Scaling &amp; Phase Transition</span>
-            (a) Held-out accuracy climbs monotonically from 1 to 7.41 deployed agents/episode.
+            <div>(a) Held-out accuracy climbs monotonically from 1 to 7.41 deployed agents/episode.
             (b–d) At Step 15 of unlimited-depth RL (<i>D</i><sub>max</sub> = ∞, <i>W</i><sub>max</sub> = 10), deep trees
             (<i>d</i> ≥ 5) surge 54× while remaining sub-critical (<i>μ</i> = 0.68 &lt; 1), as roots
-            specialize into clean orchestrators and workers form a lateral peer-to-peer KV mesh.
+            specialize into clean orchestrators and workers form a lateral peer-to-peer KV mesh.</div>
           </figcaption>
         </figure>
 
