@@ -47,7 +47,7 @@
     >
     <meta
       name="twitter:description"
-      content="GPU-resident execution DAGs, hijack-free zero-copy KV mounting, and 1D packed DAG-GRPO: 4B BM25 reaches 49.6% on BrowseComp-Plus, outperforming dense-retrieval agents up to 250x larger."
+      content="GPU-resident execution DAGs, hijack-free zero-copy KV mounting, and prefix-tree packed multi-agent GRPO: 4B BM25 reaches 49.6% on BrowseComp-Plus, outperforming dense-retrieval agents up to 250x larger."
     >
     <meta name="twitter:image" content="https://shatianming5.github.io/octopus/assets/og-image.png">
 
@@ -78,7 +78,7 @@
         "@type": "ScholarlyArticle",
         "name": "Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning",
         "headline": "Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning",
-        "description": "We introduce Octopus, a co-designed serving runtime, GPU memory manager, and RL framework that executes episodes as a GPU-resident DAG over immutable radix cursors (89.6% GPU KV cache hit rate) with hijack-free zero-copy KV mounting and 1D packed DAG-GRPO, lifting Qwen3.5-4B under sparse BM25 to 49.6% on BrowseComp-Plus (+17.5 points) and 51.2% on OpenResearcher.",
+        "description": "We introduce Octopus, a co-designed serving runtime, GPU memory manager, and RL framework that executes episodes as a GPU-resident DAG over immutable radix cursors (89.6% GPU KV cache hit rate) with hijack-free zero-copy KV mounting and prefix-tree packed multi-agent GRPO (DAG-GRPO), lifting Qwen3.5-4B under sparse BM25 to 49.6% on BrowseComp-Plus (+17.5 points) and 51.2% on OpenResearcher.",
         "datePublished": "2026-11-01",
         "url": "https://shatianming5.github.io/octopus/",
         "mainEntityOfPage": "https://shatianming5.github.io/octopus/",
@@ -187,7 +187,7 @@
               Octopus replaces flat append-only agent transcripts and stateless multi-agent chat
               wrappers with a stateful, GPU-resident execution DAG—coordinating parallel branches
               through <i>O</i>(1) zero-copy radix KV cursors, hijack-free attention-only KV
-              mounts, and end-to-end differentiable tree-packed <code>DAG-GRPO</code>.
+              mounts, and end-to-end differentiable prefix-tree packed multi-agent RL (<code>DAG-GRPO</code>).
             </p>
             <div class="hero-actions">
               <a class="button button-accent" href="assets/Octopus.pdf">Read Paper (PDF)</a>
@@ -224,11 +224,11 @@
               </div>
               <div>
                 <dt>21×</dt>
-                <dd>reduction in off-task hijacking (<strong>57.9% → 2.7%</strong>) via attention-only KV mounting, retaining <strong>92.2%</strong> answer info with <strong>0</strong> extra KV pages</dd>
+                <dd>reduction in off-task hijacking (<strong>57.9% → 2.7%</strong>) via attention-only KV mounting, retaining <strong>92.2%</strong> of full-text answer quality with <strong>0</strong> extra KV pages</dd>
               </div>
               <div>
                 <dt>32×</dt>
-                <dd>lower rollout–training KL divergence (4.45 × 10<sup>−4</sup> vs. 0.0142) via live mounted KV edges in 1D packed <code>DAG-GRPO</code></dd>
+                <dd>lower rollout–training KL divergence (4.45 × 10<sup>−4</sup> vs. 0.0142) via live mounted KV edges in prefix-tree packed <code>DAG-GRPO</code></dd>
               </div>
             </dl>
             <p class="ledger-note">
@@ -284,7 +284,7 @@
           </div>
           <p>
             Octopus models an episode as a cursor-addressed DAG <i>G</i> = (<i>V</i>, <i>E</i><sub>tree</sub>, <i>E</i><sub>mount</sub>), co-designing serving cursors,
-            layer-selective KV mounting, and 1D packed tree backpropagation across dense, MoE, and
+            layer-selective KV mounting, and prefix-tree packed backpropagation across dense, MoE, and
             hybrid recurrent-attention backbones.
           </p>
         </header>
@@ -678,7 +678,7 @@
               <dd>3.4% → <strong>34.1%</strong> (10×)</dd>
             </div>
             <div>
-              <dt>1D prefix-tree token scaling</dt>
+              <dt>Prefix-tree packed token scaling</dt>
               <dd><strong>8.1×</strong> avg / <strong>11.1×</strong> peak (0 OOM)</dd>
             </div>
             <div>
@@ -731,8 +731,8 @@
       <div>
         <img src="assets/octo_logo.png" width="360" height="357" alt="">
         <p>
-          Octopus · GPU-resident execution DAGs, hijack-free zero-copy KV mounting, and 1D packed
-          DAG-GRPO for multi-agent reinforcement learning.
+          Octopus · GPU-resident execution DAGs, hijack-free zero-copy KV mounting, and prefix-tree packed
+          multi-agent reinforcement learning.
         </p>
       </div>
       <div class="footer-links">
