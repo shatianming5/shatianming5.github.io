@@ -39,6 +39,7 @@
       {% if author.email %}
         <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
       {% endif %}
+      <li><a href="/files/Tianming_Sha_Resume.pdf"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i> Resume (PDF)</a></li>
       {% if author.keybase %}
         <li><a href="https://keybase.io/{{ author.keybase }}"><i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase</a></li>
       {% endif %}
@@ -46,7 +47,7 @@
         <li><a href="{{ author.researchgate }}"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i> ResearchGate</a></li>
       {% endif %}
       {% if author.twitter %}
-        <li><a href="https://x.com/{{ author.twitter }}" rel="me"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> X (@{{ author.twitter }})</a></li>
+        <li><a href="https://x.com/{{ author.twitter }}" rel="me"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> X / Twitter</a></li>
       {% endif %}
       {% if author.facebook %}
         <li><a href="https://www.facebook.com/{{ author.facebook }}"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
@@ -137,6 +138,7 @@
       {% if author.email %}
         <a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
       {% endif %}
+      <a href="/files/Tianming_Sha_Resume.pdf" title="Resume (PDF)"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i></a>
       {% if author.keybase %}
         <a href="https://keybase.io/{{ author.keybase }}"><i class="fas fa-fw fa-key" aria-hidden="true"></i></a>
       {% endif %}

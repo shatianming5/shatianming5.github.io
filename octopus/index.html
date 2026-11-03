@@ -6,7 +6,7 @@
     <title>Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning</title>
     <meta
       name="description"
-      content="Octopus is a co-designed serving runtime, GPU memory manager, and 1D packed DAG-GRPO framework that executes multi-agent reasoning as a GPU-resident DAG over zero-copy radix KV cursors and hijack-free attention-only KV mounts, lifting Qwen3.5-4B (BM25) to 49.6% on BrowseComp-Plus."
+      content="Octopus is a co-designed serving runtime, GPU memory manager, and tree-packed DAG-GRPO framework that executes multi-agent reasoning as a GPU-resident DAG over zero-copy radix KV cursors and hijack-free attention-only KV mounts, lifting Qwen3.5-4B (BM25) to 49.6% on BrowseComp-Plus."
     >
     <meta
       name="keywords"
@@ -26,7 +26,7 @@
     >
     <meta
       property="og:description"
-      content="GPU-resident execution DAGs (89.6% KV hit rate), hijack-free zero-copy KV mounting (21x lower hijack), and 1D packed DAG-GRPO—lifting Qwen3.5-4B (BM25) to 49.6% on BrowseComp-Plus (+17.5 pts), surpassing dense-retrieval agents up to 250x larger."
+      content="GPU-resident execution DAGs (89.6% KV hit rate), hijack-free zero-copy KV mounting (21x lower hijack), and tree-packed DAG-GRPO—lifting Qwen3.5-4B (BM25) to 49.6% on BrowseComp-Plus (+17.5 pts), surpassing dense-retrieval agents up to 250x larger."
     >
     <meta property="og:url" content="https://shatianming5.github.io/octopus/">
     <meta property="og:image" content="https://shatianming5.github.io/octopus/assets/og-image.png">
@@ -175,7 +175,7 @@
         </div>
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Co-Designed Serving Runtime, GPU Memory Manager &amp; 1D Packed Tree RL</p>
+            <p class="eyebrow">Co-Designed Serving Runtime, GPU Memory Manager &amp; Tree-Packed Multi-Agent RL</p>
             <h1 id="paper-title">
               <span class="title-row" style="display:flex;align-items:center;gap:0.25em;max-width:none;margin-top:0;color:var(--ink);font-family:var(--display);font-size:1em;font-weight:600;letter-spacing:-0.055em;line-height:0.9;">
                 <img class="hero-mascot" src="assets/octo_logo.png" width="360" height="357" alt="">
@@ -187,7 +187,7 @@
               Octopus replaces flat append-only agent transcripts and stateless multi-agent chat
               wrappers with a stateful, GPU-resident execution DAG—coordinating parallel branches
               through <i>O</i>(1) zero-copy radix KV cursors, hijack-free attention-only KV
-              mounts, and end-to-end differentiable 1D packed <code>DAG-GRPO</code>.
+              mounts, and end-to-end differentiable tree-packed <code>DAG-GRPO</code>.
             </p>
             <div class="hero-actions">
               <a class="button button-accent" href="assets/Octopus.pdf">Read Paper (PDF)</a>
@@ -331,10 +331,10 @@
           </li>
           <li>
             <span class="step-number">03 · Training</span>
-            <h3>1D packed <code>DAG-GRPO</code></h3>
+            <h3>Prefix-tree packed <code>DAG-GRPO</code></h3>
             <p>
-              Compiles branched trees, recurrent boundary checkpoints, and live KV mount edges into
-              one unpadded 1D forward–backward pass (up to 262K tokens/tree, 1.12M owned
+              Packs branched trajectory trees, recurrent boundary checkpoints, and live KV mount edges into
+              one unpadded forward–backward pass (up to 262K tokens/tree, 1.12M owned
               tokens/step, 0 OOM). Single-ownership masking deduplicates shared prefixes while
               rectangular FlashAttention routes reader gradients directly into producer KV LoRA
               projections.

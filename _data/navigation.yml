@@ -25,3 +25,6 @@ main:
 
   - title: "Service"
     url: "/#service"
+
+  - title: "Resume (PDF)"
+    url: "/files/Tianming_Sha_Resume.pdf"

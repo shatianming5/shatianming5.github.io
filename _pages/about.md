@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: ""
-excerpt: "Tianming (Tommy) Sha — LLM Post-Training & Agentic RL. Research on latent-KV branching multi-agent RL (Octopus), state-faithful SFT & verifiable environments (XYZ-Aquila / AxisAgentic), agent evaluation (Agent² RL-Bench, BenchScope), and RLVR (ThinkPrior)."
+excerpt: "Tianming (Tommy) Sha — LLM Post-Training & Agentic RL. Research on multi-agent tree RL and KV-cache sharing (Octopus), long-horizon search agents & RL environments (XYZ-Aquila / AxisAgentic), agent evaluation (Agent² RL-Bench, BenchScope), and RLVR (ThinkPrior)."
 author_profile: true
 redirect_from:
   - /about/
@@ -13,19 +13,19 @@ redirect_from:
 # <span class="section-icon"><i class="fas fa-user"></i></span> About Me
 
 <div class="job-callout">
-  🚀🚀🚀 <span class="job-highlight">I'm on the job market</span> for full-time <strong>Research Scientist / Engineer</strong> or related positions in <strong>Large Language Models</strong> (Post-Training &amp; Agentic RL)! Please <a href="mailto:Tianming.Sha@stonybrook.edu">reach out to me</a> if you are interested in my research!
+  🚀🚀🚀 <span class="job-highlight">I'm on the job market</span> for full-time <strong>Research Scientist / Engineer</strong> positions in <strong>Large Language Models</strong> (Post-Training, Agentic RL &amp; Inference Systems)! Please <a href="mailto:Tianming.Sha@stonybrook.edu">reach out via email</a> or view my <a href="/files/Tianming_Sha_Resume.pdf"><strong>1-Page Resume (PDF)</strong></a>.
 </div>
 
 <p class="about-text">
-I build <strong>post-training recipes, agent runtimes, and verifiable environments</strong> that let language agents execute long-horizon reasoning and research loops reliably. Currently, I lead <a href="https://shatianming5.github.io/octopus/"><strong>Octopus</strong></a> (<a href="octopus/assets/Octopus.pdf"><em>Tech Report</em></a> &middot; <a href="https://github.com/shatianming5/octopus"><em>Code</em></a>), a co-designed serving runtime, GPU memory manager, and 1D packed <code>DAG-GRPO</code> trainer that executes episodes as a GPU-resident DAG over zero-copy radix KV cursors and hijack-free cross-branch KV mounts—lifting a <strong>4B</strong> sparse-BM25 agent to <strong>49.6%</strong> on BrowseComp-Plus past dense-retrieval agents up to <strong>250&times;</strong> larger.
+I build <strong>post-training recipes, GPU-native agent runtimes, and verifiable RL environments</strong> for long-horizon reasoning and deep search. Currently, I lead <a href="https://shatianming5.github.io/octopus/"><strong>Octopus</strong></a> (<a href="octopus/assets/Octopus.pdf"><em>Tech Report</em></a> &middot; <a href="https://github.com/shatianming5/octopus"><em>Code</em></a>), a co-designed SGLang serving runtime and multi-agent tree RL framework (<code>DAG-GRPO</code>) that coordinates parallel sub-agents over shared GPU radix KV caches—lifting a <strong>4B</strong> sparse-BM25 model to <strong>49.6%</strong> on BrowseComp-Plus (<strong>+17.5 pts</strong> over flat 143K GRPO), matching OpenAI o3 and outperforming dense-retrieval agents up to <strong>250&times;</strong> larger.
 </p>
 
 <p class="about-text">
-Previously, as a research intern at <a href="https://xyz-lab.ai/">XYZ AI Lab</a>, I contributed to the open-weight <strong>XYZ-Aquila</strong> search agents (<a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/">AI4AI at Scale</a>), co-built the open-source <strong>AxisAgentic</strong> runtime for state-faithful SFT, and scaled repo-to-environment synthesis to 2,000+ rootless container environments across 2,000 H200 GPUs. Before that, at <strong>Microsoft Research Asia (MSRA)</strong>, I built the isolated agent evaluation stack in <a href="https://github.com/microsoft/RD-Agent">RD-Agent</a> and co-led <a href="https://arxiv.org/abs/2604.10547">Agent² RL-Bench</a> (<em>NeurIPS 2026 Evaluations</em>) and <a href="https://arxiv.org/abs/2603.29357">BenchScope</a>.
+Previously, as a Research Intern at <a href="https://xyz-lab.ai/">XYZ AI Lab</a>, I co-developed the open-weight <strong>XYZ-Aquila</strong> search agents (<a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/">AI4AI at Scale</a>), co-built the open-source <strong>AxisAgentic</strong> long-context runtime, and scaled automated repository-to-Docker synthesis to <strong>2,000+ rootless RL environments</strong> across 2,000 H200 GPUs. Before that, at <strong>Microsoft Research Asia (MSRA)</strong>, I built the sandboxed evaluation infrastructure in <a href="https://github.com/microsoft/RD-Agent">RD-Agent</a> (15K+ stars) and co-led <a href="https://arxiv.org/abs/2604.10547">Agent² RL-Bench</a> (<em>NeurIPS 2026</em>) and <a href="https://arxiv.org/abs/2603.29357">BenchScope</a>.
 </p>
 
 <p class="about-text">
-I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony Brook University</strong> (expected May 2027), having transferred from <strong>Sun Yat-sen University</strong> where I worked at HCP Lab under <a href="https://kezewang.com/">Dr. Keze Wang</a> (leading <a href="https://shatianming5.github.io/thinkprior/">ThinkPrior</a> and <em>AAAI 2026 Oral</em> <strong>FAST-CAD</strong>), and collaborated with <a href="https://yushundong.github.io/">Dr. Yushun Dong</a> at FSU RAI Lab on <a href="https://github.com/LabRAI/LangSkills">SkillCenter / LangSkills</a> and <a href="https://github.com/shatianming5/PaperFarm">PaperFarm</a>. I am always glad to connect over new research collaborations.
+I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony Brook University</strong> (expected May 2027), having transferred from <strong>Sun Yat-sen University</strong> where I worked at HCP Lab with <a href="https://kezewang.com/">Dr. Keze Wang</a> (<a href="https://shatianming5.github.io/thinkprior/">ThinkPrior</a>; <em>AAAI 2026 Oral</em> <strong>FAST-CAD</strong>) and collaborated remotely with <a href="https://yushundong.github.io/">Dr. Yushun Dong</a> at FSU RAI Lab (<a href="https://github.com/LabRAI/LangSkills">LangSkills</a>; <a href="https://github.com/shatianming5/PaperFarm">PaperFarm</a>).
 </p>
 
 <span class='anchor' id='education'></span>
@@ -59,10 +59,9 @@ I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony B
   </div>
   <div class="card-subtitle"><i class="fas fa-user-tie"></i> Project Lead &amp; First Author &nbsp;·&nbsp; w/ Collaborators at UW–Madison &amp; UMN</div>
   <ul class="card-bullets">
-    <li><strong>4B frontier &amp; emergent collective scaling:</strong> Trained <strong>Qwen3.5-4B</strong> under sparse BM25 and pure binary 0/1 outcome rewards (zero process shaping) to <strong>49.6%</strong> on BrowseComp-Plus (<strong>+17.5 pts</strong> over 143K single-agent GRPO; <strong>&minus;21.7 pts</strong> if test-time <code>fork</code> is disabled on the same weights) and <strong>51.2%</strong> on OpenResearcher—matching snippet-only <strong>OpenAI o3</strong> (49.3%) and outperforming dense-retrieval agents up to <strong>250&times;</strong> larger (30B Tongyi-DeepResearch 44.5%, 671B DeepSeek-R1 16.4%, 1T Kimi-K2 35.4%, GPT-4.1 36.4%, Claude 4 Opus 36.8%).</li>
-    <li><strong>GPU-resident execution DAG &amp; radix cursors:</strong> Replaced flat append-only transcripts with server-resident immutable radix cursors across five primitives (<code>fork</code>, <code>rewind</code>, <code>read_thread</code>, <code>wait</code>, <code>done</code>) with isolated 32K branch budgets and exact hybrid recurrent checkpoints—reusing <strong>89.6%</strong> of prompt tokens from GPU KV cache across 447,993 H200 prefill batches, cutting wire traffic by <strong>98.3%</strong>, and accelerating 128K prompt assembly by <strong>249&times;</strong> (358.5 &rarr; 1.44 ms).</li>
-    <li><strong>Hijack-free zero-copy KV mounting:</strong> Spliced sibling KV pages exclusively into full-attention layers under rotation-free monotonic position offsets while recurrent layers (GDN / Mamba-2) skip mounted spans—allocating <strong>0 extra KV pages</strong>, retaining <strong>92.2%</strong> answer information, and cutting off-task hijacking by <strong>21&times;</strong> (<strong>57.9% &rarr; 2.7%</strong>); transfers across Qwen3.5 (GDN), Qwen3-4B (dense, 96.9% agreement), and Granite-4.0-H (Mamba-2, 98.5% agreement).</li>
-    <li><strong>1D packed <code>DAG-GRPO</code> &amp; self-organized KV mesh:</strong> Compiled branched prefix trees, recurrent boundary hooks, and live KV mount edges into one unpadded 1D pass on SGLang + AReaL (<strong>8.1&times;</strong> avg / <strong>11.1&times;</strong> peak token scaling to 1.12M tok/step, <strong>32&times;</strong> lower rollout–training KL at $4.45 \times 10^{-4}$), eliciting a Step-15 phase transition into a commander–worker hierarchy (98.0% Turn-1 fork, 23.9 zero-copy mounts/episode, <strong>10&times;</strong> hard multi-hop accuracy).</li>
+    <li><strong>Multi-agent tree RL (<code>DAG-GRPO</code>):</strong> Trained <strong>Qwen3.5-4B</strong> with binary outcome RL to <strong>49.6%</strong> on BrowseComp-Plus (<strong>+17.5 pts</strong> over 143K single-agent GRPO) and <strong>51.2%</strong> on OpenResearcher, matching <strong>OpenAI o3</strong> and beating <strong>250&times; larger</strong> models while scaling token throughput <strong>8.1&times;</strong> at <strong>32&times; lower KL</strong>.</li>
+    <li><strong>Zero-copy cross-agent KV sharing:</strong> Mounted sibling KV caches into full-attention layers with monotonic RoPE offsets while skipping recurrent states, retaining <strong>92.2%</strong> of full-text answer quality at <strong>0</strong> extra KV memory and cutting off-task hijacking by <strong>21&times;</strong> (<strong>57.9% &rarr; 2.7%</strong>).</li>
+    <li><strong>GPU-resident DAG runtime:</strong> Led an SGLang runtime over radix KV cursors (<code>fork</code>, <code>rewind</code>, <code>read_thread</code>, <code>wait</code>, <code>done</code>) with isolated 32K branch budgets and recurrent checkpoints, achieving <strong>89.6%</strong> GPU KV hit rate across 447,993 H200 batches, <strong>98.3%</strong> less wire traffic, and <strong>249&times;</strong> faster 128K prompt assembly.</li>
   </ul>
   <div class="card-tags">
     <a class="venue oral" href="https://shatianming5.github.io/octopus/">Project Page</a>
@@ -79,10 +78,9 @@ I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony B
   </div>
   <div class="card-subtitle"><i class="fas fa-user-tie"></i> Research Intern &nbsp;·&nbsp; Mentors: Xiao Yang, Jiang Bian, Lei Song</div>
   <ul class="card-bullets">
-    <li><strong>XYZ-Aquila search agents:</strong> Contributed to <strong>XYZ-Aquila-mini / pro</strong> (Qwen3.6-35B-A3B / Qwen3.5-397B-A17B), trained with SFT under a fixed search/scrape/python contract and 256K context; released open weights and <strong>7,000</strong> bilingual SFT trajectories (<a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/"><em>AI4AI at Scale</em></a>). Mini tops all 7 sub-40B open-weight columns (BrowseComp <strong>78.8</strong>, GAIA <strong>97.1</strong>); Pro tops all 6 sub-400B columns (BrowseComp <strong>84.8</strong>, BrowseComp-ZH <strong>85.1</strong>, LiveBrowseComp <strong>53.7</strong>, WideSearch <strong>81.2</strong>).</li>
-    <li><strong>Verifiable task synthesis:</strong> Contributed to the evidence-graph pipeline—sampling connected subgraphs, replacing direct anchors with relational clues, and retaining tasks only when reachable with real tools and uniquely answerable.</li>
-    <li><strong>State-faithful SFT &amp; AxisAgentic runtime:</strong> Co-built the open-source <strong>AxisAgentic</strong> runtime (append-only audit log with compaction and rollback events, median 102.7K tokens / 72 calls, longest 749.4K, every step &le;256K; stateful Python sandbox).</li>
-    <li><strong>RL environments at scale:</strong> Built a repo-to-environment pipeline screening ~100k GitHub repos down to <strong>2,000+ rootless udocker environments</strong> and synthesizing <strong>50k+ verified tool-calling tasks</strong>; ran ~100k GPU-hours of multi-node post-training on <strong>2,000 H200s</strong>.</li>
+    <li><strong>Long-horizon search agents (XYZ-Aquila):</strong> Co-developed <strong>XYZ-Aquila-mini / pro</strong> (35B-A3B / 397B-A17B) across 256K context and open-sourced <strong>7,000</strong> bilingual SFT trajectories (<a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/"><em>AI4AI at Scale</em></a>); Mini ranks <strong>#1</strong> among sub-40B open-weight models on BrowseComp (<strong>78.8</strong>) and GAIA (<strong>97.1</strong>), and Pro reaches <strong>84.8</strong> on BrowseComp.</li>
+    <li><strong>RL environments at scale:</strong> Built an automated repo-to-environment pipeline screening ~100K GitHub repositories into <strong>2,000+ rootless udocker environments</strong> and synthesizing <strong>50K+ verified tool-calling tasks</strong>, powering <strong>~100K GPU-hours</strong> of multi-node RL across <strong>2,000 H200 GPUs</strong>.</li>
+    <li><strong>Long-context agent runtime &amp; data synthesis:</strong> Co-built the open-source <strong>AxisAgentic</strong> runtime preserving exact per-turn context across compaction and rollback (<strong>102.7K</strong> median tokens, up to <strong>749.4K</strong> within a 256K cap), and synthesized multi-hop tasks via evidence-graph subgraphs.</li>
   </ul>
   <div class="card-tags">
     <a class="venue oral" href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf">Tech Report (PDF)</a>
@@ -96,22 +94,22 @@ I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony B
     <div class="card-title">Microsoft Research Asia (MSRA) <span class="venue">Agent RL · Evaluation Infrastructure</span></div>
     <div class="card-date">Beijing, China &nbsp;·&nbsp; Jan 2026 – Apr 2026</div>
   </div>
-  <div class="card-subtitle"><i class="fas fa-user-tie"></i> Research Intern &nbsp;·&nbsp; Mentors: Xiao Yang, Weiqing Liu, Jiang Bian</div>
+  <div class="card-subtitle"><i class="fas fa-user-tie"></i> Research Intern, DKI Group &nbsp;·&nbsp; Mentors: Xiao Yang, Weiqing Liu, Jiang Bian</div>
   <ul class="card-bullets">
-    <li><strong>Agent² eval stack:</strong> Built the evaluation stack in <a href="https://github.com/microsoft/RD-Agent">RD-Agent</a> (15k+ stars) with isolated Docker workspaces, grading API, runtime logs, and L1–L3 tasks (GSM8K, HumanEval, AlpacaEval, ALFWorld, WebShop, DeepSearchQA). Co-first author of <strong>Agent² RL-Bench</strong> (<em>NeurIPS 2026 Evaluations</em>; ALFWorld <strong>4.85 &rarr; 93.28</strong> with SFT warm-up and GRPO).</li>
-    <li><strong>BenchScope:</strong> Co-first author; across 22 benchmarks and 8,400+ evaluations, showed the Open LLM Leaderboard's six scores span an effective dimension of <strong>1.7</strong> (BBH vs. MMLU-Pro $\rho = 0.96$).</li>
+    <li><strong>Agentic RL evaluation (Agent² RL-Bench):</strong> Built isolated Docker evaluation sandboxes and automated grading APIs in Microsoft's <a href="https://github.com/microsoft/RD-Agent">RD-Agent</a> (<strong>15K+ GitHub stars</strong>), enabling agents to autonomously configure SFT + GRPO pipelines and lift ALFWorld accuracy from <strong>4.85% &rarr; 93.28%</strong> (<em>NeurIPS 2026</em>).</li>
+    <li><strong>Benchmark redundancy analysis (BenchScope):</strong> Audited <strong>8,400+ evaluations</strong> across <strong>22 LLM benchmarks</strong>, proving that the Open LLM Leaderboard's 6 headline metrics span an effective dimension of only <strong>1.7</strong> ($\rho = 0.96$ between BBH and MMLU-Pro) and enabling subset compression.</li>
   </ul>
 </div>
 
 <div class="card">
   <div class="card-header">
     <div class="card-title">Florida State University (RAI Lab) <span class="venue">Agent Skills · Research Agents</span></div>
-    <div class="card-date">Tallahassee, FL &nbsp;·&nbsp; Aug 2025 – Aug 2026</div>
+    <div class="card-date">Tallahassee, FL (Remote) &nbsp;·&nbsp; Aug 2025 – Aug 2026</div>
   </div>
   <div class="card-subtitle"><i class="fas fa-user-tie"></i> Research Assistant &nbsp;·&nbsp; Advisor: <a href="https://yushundong.github.io/">Dr. Yushun Dong</a></div>
   <ul class="card-bullets">
-    <li><strong>SkillCenter (first author):</strong> Built <a href="https://github.com/LabRAI/LangSkills">LangSkills</a> (110+ stars) so agents retrieve source-grounded procedures instead of inventing them: <strong>119,608</strong> skills packaged in 21 offline SQLite bundles.</li>
-    <li><strong>PaperFarm:</strong> Built <a href="https://github.com/shatianming5/PaperFarm">PaperFarm</a> (350+ stars, PyPI), an unattended <em>Scout–Manager–Critic–Experiment</em> research loop running in parallel Git worktrees with automatic failure rollback.</li>
+    <li><strong>Retrieval-augmented agent skills (SkillCenter):</strong> Built <a href="https://github.com/LabRAI/LangSkills">LangSkills</a> (<strong>110+ stars</strong>), indexing <strong>119,608</strong> source-grounded procedural skills across <strong>21 domains</strong> into offline SQLite bundles so tool-using agents retrieve verified workflows instead of hallucinating steps.</li>
+    <li><strong>Autonomous ML experimentation (PaperFarm):</strong> Created <a href="https://github.com/shatianming5/PaperFarm">PaperFarm</a> (<strong>350+ stars</strong>, PyPI), an unattended multi-agent research engine orchestrating literature discovery, hypothesis planning, critique, and parallel multi-GPU execution across isolated Git worktrees with auto-rollback.</li>
   </ul>
 </div>
 
@@ -122,54 +120,26 @@ I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony B
   </div>
   <div class="card-subtitle"><i class="fas fa-user-tie"></i> Research Assistant &nbsp;·&nbsp; Advisor: <a href="https://kezewang.com/">Dr. Keze Wang</a></div>
   <ul class="card-bullets">
-    <li><strong>ThinkPrior (first author):</strong> External-anchor zero-rollout difficulty priors for cold-start prompt selection in GRPO/RLVR—reducing silent groups by 55% early in training and cutting generated rollouts by <strong>10.6%</strong> with DAPO on Qwen2.5-Math-7B.</li>
-    <li>Led <strong>FAST-CAD</strong> (<em>AAAI 2026 Oral</em>, first author; 2,430 subjects, 92.5% AUC, fairness gap &minus;63%) and co-designed <strong>TsKAN</strong> (<em>ICLR 2025 Workshop</em>, co-first author).</li>
+    <li><strong>Difficulty-aware RLVR sampling (ThinkPrior):</strong> Designed zero-rollout difficulty priors for cold-start prompt selection in GRPO/RLVR, reducing uninformative rollout groups by <strong>55%</strong> (10.6% vs. 23.8%) and cutting generated rollouts by <strong>10.6%</strong> with DAPO on Qwen2.5-Math-7B.</li>
+    <li><strong>Fairness-aware clinical AI (FAST-CAD):</strong> Led a self-supervised stroke diagnosis framework across 2,430 patients (<strong>92.5% AUC</strong>, <strong>&minus;63%</strong> demographic fairness gap; <em>AAAI 2026 Oral</em>), featured by <a href="https://www.mittrchina.com/news/detail/15485">MIT Technology Review China</a>.</li>
   </ul>
 </div>
 
 <span class='anchor' id='projects'></span>
 
-# <span class="section-icon"><i class="fas fa-code-branch"></i></span> Selected Projects &amp; Open Source
+# <span class="section-icon"><i class="fas fa-code-branch"></i></span> Open-Source Systems &amp; Artifacts
 
 <div class="projects-grid">
   <div class="card">
     <div>
-      <div class="card-title"><a href="https://shatianming5.github.io/octopus/">Octopus</a></div>
+      <div class="card-title"><a href="https://github.com/shatianming5/octopus">Octopus Runtime &amp; Corpus</a></div>
       <p class="card-desc">
-        GPU-resident DAG runtime and 1D packed <code>DAG-GRPO</code> trainer (SGLang + AReaL) for latent-KV multi-agent RL: <strong>89.6%</strong> GPU KV hit rate, <strong>21&times;</strong> lower hijack via attention-only KV mounts, lifting <strong>Qwen3.5-4B</strong> to <strong>49.6%</strong> on BrowseComp-Plus (<strong>+17.5 pts</strong>).
+        SGLang + AReaL overlays for GPU-resident radix cursors, attention-only KV mounting, and prefix-tree packed <code>DAG-GRPO</code>, released with pre-built BM25 indices and Harbor container bundles.
       </p>
     </div>
     <div class="card-tags">
-      <a class="venue oral" href="https://shatianming5.github.io/octopus/">Project Page</a>
-      <a class="venue preprint" href="octopus/assets/Octopus.pdf">PDF</a>
-      <a class="venue" href="https://github.com/shatianming5/octopus">Code</a>
-      <a class="venue" href="https://huggingface.co/datasets/Tommysha/octopus-train">&#129303; Data</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <div>
-      <div class="card-title"><a href="https://shatianming5.github.io/thinkprior/">ThinkPrior</a></div>
-      <p class="card-desc">
-        Zero-rollout difficulty priors for cold-start prompt selection in RLVR. Cuts silent rollout groups by 55% (silent@10: 10.6% vs. 23.8%) and reduces generated rollouts by 10.6% when composed with DAPO.
-      </p>
-    </div>
-    <div class="card-tags">
-      <a class="venue oral" href="https://shatianming5.github.io/thinkprior/">Project Page</a>
-      <a class="venue preprint" href="https://shatianming5.github.io/thinkprior/assets/thinkprior.pdf">Preprint PDF</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <div>
-      <div class="card-title"><a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/">XYZ-Aquila &amp; AxisAgentic</a></div>
-      <p class="card-desc">
-        Open-weight Deep Search agents (35B-A3B &amp; 397B-A17B), 7,000 bilingual SFT trajectories, append-only state-faithful AxisAgentic runtime, and 2,000+ rootless udocker RL environments.
-      </p>
-    </div>
-    <div class="card-tags">
-      <a class="venue oral" href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf">Tech Report (PDF)</a>
-      <a class="venue" href="https://huggingface.co/XYZAILab">&#129303; Weights &amp; Data</a>
+      <a class="venue" href="https://github.com/shatianming5/octopus">GitHub</a>
+      <a class="venue" href="https://huggingface.co/datasets/Tommysha/octopus-train">&#129303; Dataset &amp; Corpus</a>
     </div>
   </div>
 
@@ -177,7 +147,7 @@ I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony B
     <div>
       <div class="card-title"><a href="https://github.com/shatianming5/PaperFarm">PaperFarm</a> <img src="https://img.shields.io/github/stars/shatianming5/PaperFarm?style=social" alt="GitHub stars" class="stars-badge"/></div>
       <p class="card-desc">
-        Unattended <em>Scout &rarr; Manager &rarr; Critic &rarr; Experiment</em> research loop across isolated Git worktrees and multi-GPU workers. Compatible with Claude Code, Codex CLI, Aider, OpenCode, Kimi CLI, and Gemini CLI.
+        PyPI package for unattended multi-agent ML experimentation across isolated Git worktrees and multi-GPU workers, supporting Claude Code, Codex CLI, Aider, OpenCode, and Gemini CLI.
       </p>
     </div>
     <div class="card-tags">
@@ -190,25 +160,25 @@ I am an undergraduate in Applied Mathematics &amp; Statistics at <strong>Stony B
     <div>
       <div class="card-title"><a href="https://github.com/LabRAI/LangSkills">LangSkills (SkillCenter)</a> <img src="https://img.shields.io/github/stars/LabRAI/LangSkills?style=social" alt="GitHub stars" class="stars-badge"/></div>
       <p class="card-desc">
-        <strong>119,608</strong> source-grounded procedural skills across 21 domains extracted from PMC, arXiv, eLife, GitHub, and StackOverflow, packaged as 21 offline full-text-searchable SQLite bundles.
+        <strong>119,608</strong> source-grounded procedural skills across 21 scientific and engineering domains, packaged as 21 offline FTS5 SQLite bundles for tool-using agents.
       </p>
     </div>
     <div class="card-tags">
+      <a class="venue" href="https://github.com/LabRAI/LangSkills">GitHub</a>
       <a class="venue preprint" href="https://arxiv.org/abs/2607.07676">arXiv:2607.07676</a>
-      <a class="venue" href="https://github.com/LabRAI/LangSkills">Code</a>
     </div>
   </div>
 
   <div class="card">
     <div>
-      <div class="card-title"><a href="https://github.com/microsoft/RD-Agent">RD-Agent &amp; Agent² Eval</a> <img src="https://img.shields.io/github/stars/microsoft/RD-Agent?style=social" alt="GitHub stars" class="stars-badge"/></div>
+      <div class="card-title"><a href="https://github.com/microsoft/RD-Agent">RD-Agent Evaluation Suite</a> <img src="https://img.shields.io/github/stars/microsoft/RD-Agent?style=social" alt="GitHub stars" class="stars-badge"/></div>
       <p class="card-desc">
-        Built the isolated Docker workspace evaluation infrastructure, grading API, and L1–L3 post-training tasks powering Agent² RL-Bench inside Microsoft's RD-Agent framework.
+        Isolated Docker evaluation workspaces, automated grading API, and post-training benchmark tasks integrated into Microsoft's RD-Agent framework.
       </p>
     </div>
     <div class="card-tags">
-      <span class="venue neurips">NeurIPS 2026 Evaluations</span>
-      <a class="venue preprint" href="https://arxiv.org/abs/2604.10547">arXiv:2604.10547</a>
+      <a class="venue" href="https://github.com/microsoft/RD-Agent">GitHub (15K+ ★)</a>
+      <span class="venue neurips">NeurIPS 2026</span>
     </div>
   </div>
 </div>
@@ -316,8 +286,7 @@ function setPubFilter(mode) {
   <li><strong>URECA Research Award (2026)</strong> — Stony Brook University Undergraduate Research &amp; Creative Activities Award.</li>
   <li><strong>AAAI-26 Student Scholarship &amp; Volunteer Program (2026)</strong> — Travel scholarship and selected student volunteer.</li>
   <li><strong>Dean's List (2025)</strong> — Stony Brook University.</li>
-  <li><strong>China National Olympiad in Informatics (NOI) Winter Camp (2022)</strong> — Silver Medal (roughly comparable to USACO Platinum).</li>
-  <li><strong>NOIP (2021)</strong> — Provincial First Prize (Guangdong) &nbsp;·&nbsp; <strong>National College Mathematical Modeling Competition (2024)</strong> — Provincial First Prize.</li>
+  <li><strong>National College Mathematical Modeling Competition (2024)</strong> — Provincial First Prize.</li>
 </ul>
 
 <span class='anchor' id='interview'></span>
